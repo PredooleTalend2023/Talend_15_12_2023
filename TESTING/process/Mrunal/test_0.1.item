@@ -230,10 +230,10 @@
       <uiProperties shellMaximized="true"/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables name="out" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="ProductID" type="id_Integer"/>
-        <mapperTableEntries name="ProductName" type="id_String"/>
-        <mapperTableEntries name="CategoryName" type="id_String"/>
-        <mapperTableEntries name="UnitPrice" type="id_Object"/>
+        <mapperTableEntries expression="row3.ProductID " name="ProductID" type="id_Integer"/>
+        <mapperTableEntries expression="row1.ProductName " name="ProductName" type="id_String"/>
+        <mapperTableEntries expression="row2.CategoryName " name="CategoryName" type="id_String"/>
+        <mapperTableEntries expression="row1.UnitPrice " name="UnitPrice" type="id_Object"/>
       </outputTables>
       <inputTables lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row1" sizeState="INTERMEDIATE">
         <mapperTableEntries name="ProductID" type="id_Integer"/>
@@ -247,16 +247,16 @@
         <mapperTableEntries name="ReorderLevel" nullable="true" type="id_Short"/>
         <mapperTableEntries name="Discontinued" type="id_Boolean"/>
       </inputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row2" sizeState="INTERMEDIATE">
-        <mapperTableEntries name="CategoryID" type="id_Integer"/>
+      <inputTables innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row1.CategoryID " name="CategoryID" operator="=" type="id_Integer"/>
         <mapperTableEntries name="CategoryName" type="id_String"/>
         <mapperTableEntries name="Description" nullable="true" type="id_String"/>
         <mapperTableEntries name="Picture" nullable="true" type="id_Object"/>
       </inputTables>
-      <inputTables lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row3" sizeState="INTERMEDIATE">
+      <inputTables activateCondensedTool="true" innerJoin="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row3" sizeState="INTERMEDIATE">
         <mapperTableEntries name="Discount" type="id_Float"/>
         <mapperTableEntries name="OrderID" type="id_Integer"/>
-        <mapperTableEntries name="ProductID" type="id_Integer"/>
+        <mapperTableEntries expression="row1.ProductID " name="ProductID" operator="=" type="id_Integer"/>
         <mapperTableEntries name="Quantity" type="id_Short"/>
         <mapperTableEntries name="UnitPrice" type="id_Float"/>
       </inputTables>
@@ -420,13 +420,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cda9e5c9-ae2e-4f01-8969-ad5a6053b8d5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7+f+c2FGI2WSN1xwuTJGIvvYwVfK2vcYl1EgROOrl1fpDwMZa9jwDyROfzO/UsIyUuLRChkL4/eR&#13;
-EVXArJ/mYA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4d7426c2-1162-426d-84f1-3ec499e3fedc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>o0oCAVLf4DBFxK79+ADamr95uuACDEKZP11Kwk0EB/nYHGjOz7QPkEGT8g2OWVMvcrCf9WP0BV8n&#13;
-dM8yhpzUSA==</DigestValue></Reference></SignedInfo><SignatureValue>PPgPNCz6bTInCSQgJpeAXTuUSUpy2MsyIrTEph9SOCJs7ltxRSy7rKL3EOxKxQ04bKmxHlj96ZsB&#13;
-s6xDNjEHviIfNWN30Vbq0izZamwPrQHGfznor206Sv9WJtjirHtFx9jr8gvs3e6c8kQHFcnS8Wur&#13;
-aaZOUi0tUvqBw5hruy8SJ3VIXA+PrKOhmY16+fQnibH0vkfhHtWdd4NeCm/gfwHKbvZHZF3k0dt/&#13;
-tHx43GWESHXkPQBckrnMWYhyOGl1mnbhmObNKwIK/nnRgvoPp5tjxq2QIh9Oj77BlgscpG7Rc7jt&#13;
-b9RHG8WOFjYiBlk/yn+nWp2kbEMR8JV6rmTVIQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_bed6f478-85bf-4e73-ba77-02b91e2e2694"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xEC4bJfQbFLopkdptUgox/yhNktjWvawOnvnF5ntnrHfpCgZxLlgylzEkzFhta8R7xMWkzFU2fik&#13;
+fY7Jr2Nc/Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_59ad3094-a979-4c2f-b794-6bcf4c7dbdcf"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Yuwl6Feks8nll5uzrdtIdEKXkGAWSu386SVnZ8S6TdHmhoqWGnK+74L/fbuS90LQ5iIVUjiEaU9/&#13;
+VEbsGotxaQ==</DigestValue></Reference></SignedInfo><SignatureValue>FD/KxLDQuFLyPfqtI9HSzqcTRr/E8I62RwYuWlQ5Mgow0/DFnI5/sdTKXPG8DA3VYaJ9AgZDX/sC&#13;
+ZRh4eZf+7M+ZYjbDYGsYstfO5z3etrHniafJ/qq8ka+i/lWO6Ms3H8ZT6VAzvOMEEVuvGGHeO/U2&#13;
+SgFn6IsS6NP+rX07R7ZB7hoJmauXXqVCyXN7ZTBqhHyl7twNyFrF2Co2+T7+007M6XmIga+Txp2Q&#13;
+qL/mxJOVhr1uMAwnuP/weeweeU/G78UqsF+ir40NIUZu4tJkWQ17rpI4xajNVjQimWDPNTAdicnE&#13;
+ITEhdEO74yBg8zfay3NvcSz70Y6hmFMUlJ16uQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -448,4 +448,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4d7426c2-1162-426d-84f1-3ec499e3fedc" Target="#_cda9e5c9-ae2e-4f01-8969-ad5a6053b8d5"><Timestamp>2024-01-03 09:01:43</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_59ad3094-a979-4c2f-b794-6bcf4c7dbdcf" Target="#_bed6f478-85bf-4e73-ba77-02b91e2e2694"><Timestamp>2024-01-03 09:03:20</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
