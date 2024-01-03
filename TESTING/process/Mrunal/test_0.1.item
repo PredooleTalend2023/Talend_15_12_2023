@@ -113,30 +113,44 @@
     <routinesParameter id="_wGCCZqb2Ee6_VoOZzBJB9g" name="TalendStringUtil"/>
     <routinesParameter id="_wFzY4Kb2Ee6_VoOZzBJB9g" name="TalendString"/>
   </parameters>
-  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="64">
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="32">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tMSSqlInput"/>
+    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
+    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/MS_SQL_Server"/>
+    <elementParameter field="CHECK" name="START" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMSSqlInput"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tDBConnection_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_csk-UKn_Ee6Oz9Nk5_yvgg"/>
     <elementParameter field="TEXT" name="HOST" value="&quot;20.204.123.250&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
     <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;NorthwindMrunal&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;qdimainuser&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:ke15acvmZZuXzwk9yBnv2BdgKNyWY2DmNFaVTqTwrsw8z7TqTOeCGJ2k"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:4ZB5L83sxYzEWegR3DF+pj3CgvdtKFeU5VoMWsJCm84fP1HTH/AOZPy7"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_csk-UKn_Ee6Oz9Nk5_yvgg - Products"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;Products&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select dbo.Products.CategoryID,dbo.Products.Discontinued,dbo.Products.ProductID,dbo.Products.ProductName,dbo.Products.QuantityPerUnit,dbo.Products.ReorderLevel,dbo.Products.SupplierID,dbo.Products.UnitPrice,dbo.Products.UnitsInStock,dbo.Products.UnitsOnOrder &#10;from dbo.Products&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.Products.ProductID,&#10;&#9;&#9;dbo.Products.ProductName,&#10;&#9;&#9;dbo.Products.SupplierID,&#10;&#9;&#9;dbo.Products.CategoryID,&#10;&#9;&#9;dbo.Products.QuantityPerUnit,&#10;&#9;&#9;dbo.Products.UnitPrice,&#10;&#9;&#9;dbo.Products.UnitsInStock,&#10;&#9;&#9;dbo.Products.UnitsOnOrder,&#10;&#9;&#9;dbo.Products.ReorderLevel,&#10;&#9;&#9;dbo.Products.Discontinued&#10;FROM&#9;dbo.Products&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
     <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
-    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
-    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" value="false"/>
     <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
@@ -164,6 +178,7 @@
     </elementParameter>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="Products" name="tDBInput_1">
       <column comment="" key="true" length="10" name="ProductID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
@@ -181,7 +196,7 @@
       <column comment="" key="false" length="20" name="QuantityPerUnit" nullable="true" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
-      <column comment="" defaultValue="'(0)'" key="false" length="19" name="UnitPrice" nullable="true" pattern="" precision="4" sourceType="FLOAT" type="id_Float" usefulColumn="true">
+      <column comment="" defaultValue="'(0)'" key="false" length="19" name="UnitPrice" nullable="true" pattern="" precision="4" sourceType="MONEY" type="id_Object" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" defaultValue="((0))" key="false" length="5" name="UnitsInStock" nullable="true" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true">
@@ -241,7 +256,7 @@
         <mapperTableEntries name="SupplierID" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="CategoryID" nullable="true" type="id_Integer"/>
         <mapperTableEntries name="QuantityPerUnit" nullable="true" type="id_String"/>
-        <mapperTableEntries name="UnitPrice" nullable="true" type="id_Float"/>
+        <mapperTableEntries name="UnitPrice" nullable="true" type="id_Object"/>
         <mapperTableEntries name="UnitsInStock" nullable="true" type="id_Short"/>
         <mapperTableEntries name="UnitsOnOrder" nullable="true" type="id_Short"/>
         <mapperTableEntries name="ReorderLevel" nullable="true" type="id_Short"/>
@@ -420,13 +435,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_0ac38a73-c34c-477a-9b64-dbffe4bc898d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jTHQWBdlANevMLP3RYXkew86l3qHBh+47D2AFyYFJ5r+yyrrNNzeFRfuU2HDMDLUyOuTplOUFyc4&#13;
-+gp2rP59iw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_bd8c5102-563d-48b2-a995-fa15f50a5ee4"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZlqTRArHeTiv+Hly3pAsbLYSbVXnUK1haF0ZUaz1UR5XETc/T5ExF3SxKSHbQaAObed0A4jpmx0k&#13;
-E+i1M98x5A==</DigestValue></Reference></SignedInfo><SignatureValue>El0zSG/uihkj4sCrCkEemP4OW3biXAoWFf9/vR+p8ydbka6DzQCP8Y3jvRoTcLW1zoSrhf4lOy42&#13;
-E3J/0TX28qk9nPs15FngGKdvj2cbP4TibxREkbNkIQwYBW3zsyvXi3BQyhWNo0Hq4xgRv1ggE5UC&#13;
-2FbrIny2OV4msGXL+EcAKDyYCLBINRl3P7897LE0FWRF2HLxPvo/qi6uiXb83gfIAQcTA0LvHF0f&#13;
-TN2cytSLwqJz5EILvGOby9W/tPTfCYDmcMKE1OjWkG65TllrZFGLgtzdzMqKl3Raom3Cr4ZdiLx5&#13;
-iYTRWvRV6JG6Xiv1AEOgX7KMiH2iPali5ymgXg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_9c3e005f-7925-4aed-bd21-936a96a4c612"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Gktw+pv1Pbh3usWratHhZRB1+tV7cyapfL9BrLwx195aSnp62929Jgs/lMckZgecT6suncKOLfzJ&#13;
+otFe2ToFsA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5d317503-2290-47de-8a11-e293b578db19"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DpXeiNu+XU4M4pEikU3Gg7ixwTlBPVFcW2WgF7bxSCBoGFbxH2fS4B3xYvZA0mxfJB+eEtnfI4ED&#13;
+x2wtRtjjlw==</DigestValue></Reference></SignedInfo><SignatureValue>SUTzYIy81ABVk6bMSwij8IWojWoyFwbM0OFClzZrY0zBzThKRY+vwcFp8NkdG75GloZVtWAw4M8z&#13;
+IOSTQM5TtbfKtwZptoN/i7qI3L9Ky4iDXSQerRVdDLuHGecHYfQ9zYulXfvABfKdn6AtKzdz9ZJq&#13;
+O0Jyisk+B0kwYww142p2RoorzSfVY9Jz903z8nbVvyN0Za5ArTybDeeZLOqUX/8plzO1KfMruz2K&#13;
+NI94ig8UV1QWoJ8KERVoVoU803zUV49MYvENw32byldcMPi5fV0E5jDOGudCJ1IO92ZIn6aNFF6z&#13;
+HPRNlKHY0TxhPfkWwwgerLTBizO52g7BledWFg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -448,4 +463,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_bd8c5102-563d-48b2-a995-fa15f50a5ee4" Target="#_0ac38a73-c34c-477a-9b64-dbffe4bc898d"><Timestamp>2024-01-03 09:06:38</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5d317503-2290-47de-8a11-e293b578db19" Target="#_9c3e005f-7925-4aed-bd21-936a96a4c612"><Timestamp>2024-01-03 09:07:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
