@@ -258,6 +258,7 @@
         <mapperTableEntries name="OrderID" type="id_Integer"/>
         <mapperTableEntries name="ProductID" type="id_Integer"/>
         <mapperTableEntries name="Quantity" type="id_Short"/>
+        <mapperTableEntries name="UnitPrice" type="id_Float"/>
       </inputTables>
     </nodeData>
   </node>
@@ -352,20 +353,20 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value="tDBConnection_1"/>
-    <elementParameter field="TEXT" name="HOST" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;20.204.123.250&quot;"/>
     <elementParameter field="CLOSED_LIST" name="DRIVER" value="MSSQL_PROP"/>
     <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
-    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="DBNAME" value="&quot;&quot;"/>
-    <elementParameter field="TEXT" name="USER" value="&quot;&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:vKMQAVbchBjKzKk/+rrj3+4cwrZhV/lm7ReW1+wC"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;dbo&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;NorthwindMrunal&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;qdimainuser&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Uvd6/9l77mruOs3025qqaCkIzgr6e3xqy6auaCYzAblspql0+8LGZ8/2"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;Order Details&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select dbo.\&quot;Order Details\&quot;.Discount,dbo.\&quot;Order Details\&quot;.OrderID,dbo.\&quot;Order Details\&quot;.ProductID,dbo.\&quot;Order Details\&quot;.Quantity,dbo.\&quot;Order Details\&quot;&#10;from dbo.\&quot;Order Details\&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select dbo.\&quot;Order Details\&quot;.Discount,dbo.\&quot;Order Details\&quot;.OrderID,dbo.\&quot;Order Details\&quot;.ProductID,dbo.\&quot;Order Details\&quot;.Quantity,dbo.\&quot;Order Details\&quot;.UnitPrice &#10;from dbo.\&quot;Order Details\&quot;&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -384,6 +385,8 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="Quantity"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="UnitPrice"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
@@ -393,6 +396,7 @@
       <column comment="" defaultValue="" key="false" length="10" name="OrderID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="10" name="ProductID" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
       <column comment="" defaultValue="" key="false" length="5" name="Quantity" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="SMALLINT" type="id_Short" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="19" name="UnitPrice" nullable="false" originalLength="-1" pattern="" precision="4" sourceType="FLOAT" type="id_Float" usefulColumn="true"/>
     </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
@@ -416,13 +420,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2f3a79da-be60-4221-947c-15957b056f03"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fwf3cMnhgWjcpq2sdBZqE5i7koG8aHV230Ed6tPyMvZ2pSmeKj7+BKXA781rUk/R7IiHN80m2+KN&#13;
-UVHm3XjR7g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_cf15a3bf-8a5e-478d-9cb5-78621f66df63"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>2JzQg5NxAfY3Lo8R1YjkvOfbysl03x+ePcYkG8pzrUl1NDDdrd2z6InsZv1oKJu8ip7ACpeE3hHP&#13;
-NneBBHVbiQ==</DigestValue></Reference></SignedInfo><SignatureValue>En4++PGy4iSi/2Y2LfIvCcWYWgD8sKPwRLhmF7b9kRM3u3GPjMELiSM0z3QqXGzZujU9RgmV0F+8&#13;
-O4aUT6wr5tfnhg/V9VCIjJi7L1KqenG1PG36tDRL/hHP5/RP6CTgFJHeYAIpXNpGH9/74ZQEyc8o&#13;
-IwFaA1K2MNc89y3kT/ULYZaA2LNlDla0utteTYSiiZxL5kp34e6V+uaz4mlVcQMd4nFia71dEucv&#13;
-V2iAWS8dQ6FjxSosVZQccuQ35fVNbcYRMlNYXVsYQm/nTl7ZZrz73yvWFWr6orG3GL9rr3hwfxdI&#13;
-wFTqX9rTjLT6LyG2slCjI0ca6abudmZFnNsKfQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_cda9e5c9-ae2e-4f01-8969-ad5a6053b8d5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7+f+c2FGI2WSN1xwuTJGIvvYwVfK2vcYl1EgROOrl1fpDwMZa9jwDyROfzO/UsIyUuLRChkL4/eR&#13;
+EVXArJ/mYA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_4d7426c2-1162-426d-84f1-3ec499e3fedc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>o0oCAVLf4DBFxK79+ADamr95uuACDEKZP11Kwk0EB/nYHGjOz7QPkEGT8g2OWVMvcrCf9WP0BV8n&#13;
+dM8yhpzUSA==</DigestValue></Reference></SignedInfo><SignatureValue>PPgPNCz6bTInCSQgJpeAXTuUSUpy2MsyIrTEph9SOCJs7ltxRSy7rKL3EOxKxQ04bKmxHlj96ZsB&#13;
+s6xDNjEHviIfNWN30Vbq0izZamwPrQHGfznor206Sv9WJtjirHtFx9jr8gvs3e6c8kQHFcnS8Wur&#13;
+aaZOUi0tUvqBw5hruy8SJ3VIXA+PrKOhmY16+fQnibH0vkfhHtWdd4NeCm/gfwHKbvZHZF3k0dt/&#13;
+tHx43GWESHXkPQBckrnMWYhyOGl1mnbhmObNKwIK/nnRgvoPp5tjxq2QIh9Oj77BlgscpG7Rc7jt&#13;
+b9RHG8WOFjYiBlk/yn+nWp2kbEMR8JV6rmTVIQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -444,4 +448,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_cf15a3bf-8a5e-478d-9cb5-78621f66df63" Target="#_2f3a79da-be60-4221-947c-15957b056f03"><Timestamp>2024-01-03 08:59:32</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_4d7426c2-1162-426d-84f1-3ec499e3fedc" Target="#_cda9e5c9-ae2e-4f01-8969-ad5a6053b8d5"><Timestamp>2024-01-03 09:01:43</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
