@@ -1,0 +1,1036 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" name="Default">
+    <contextParameter comment="" internalId="_l9054F6VEe6oHI2zX7rHXw" name="Last_Success" prompt="Last_Success?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_l9054V6VEe6oHI2zX7rHXw" name="Current_Success" prompt="Current_Success?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </context>
+  <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:5+5+LFUgupdWPerc8Nyb1MjYFECglMk4n1q0rngU"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Users/Predoole/workspace/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="JDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
+    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:+739ZqzQykOhAlf84Rpk+03pHqQWyyqDDoAuC31M"/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+    <routinesParameter id="_3jPewDwiEe6S_b_NUPoAOA" name="DQTechnical"/>
+    <routinesParameter id="_3eHuMDwiEe6S_b_NUPoAOA" name="DataMasking"/>
+    <routinesParameter id="_pN1cEDv5Ee6j4v6uG-X0AQ" name="DataOperation"/>
+    <routinesParameter id="_3iLu0DwiEe6S_b_NUPoAOA" name="DataQualityDependencies"/>
+    <routinesParameter id="_3fnjAjwiEe6S_b_NUPoAOA" name="DataQuality"/>
+    <routinesParameter id="_3i78wDwiEe6S_b_NUPoAOA" name="DqStringHandling"/>
+    <routinesParameter id="_pN1cGjv5Ee6j4v6uG-X0AQ" name="Mathematical"/>
+    <routinesParameter id="_pN_NFjv5Ee6j4v6uG-X0AQ" name="Numeric"/>
+    <routinesParameter id="_pOIXADv5Ee6j4v6uG-X0AQ" name="Relational"/>
+    <routinesParameter id="_pMoiMDv5Ee6j4v6uG-X0AQ" name="SQLike"/>
+    <routinesParameter id="_pOlqADv5Ee6j4v6uG-X0AQ" name="StringHandling"/>
+    <routinesParameter id="_pOwCEDv5Ee6j4v6uG-X0AQ" name="TalendDataGenerator"/>
+    <routinesParameter id="_pPCV8Dv5Ee6j4v6uG-X0AQ" name="TalendDate"/>
+    <routinesParameter id="_pPMG-Dv5Ee6j4v6uG-X0AQ" name="TalendStringUtil"/>
+    <routinesParameter id="_pPCV-jv5Ee6j4v6uG-X0AQ" name="TalendString"/>
+  </parameters>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="64" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_9hovUFg7Ee6Kq4wovtFs1w"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;20.204.123.250&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;Classic_WareHouse&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;ClassicModels&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;qdimainuser&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:juUosPgdVmrME3XGsrbWiSBeLcC6wKE57lOfvo+l5Agk26tkkQuFVuHs"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;customers&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select Classic_WareHouse.customers.customerNumber,Classic_WareHouse.customers.customerName,Classic_WareHouse.customers.contactLastName,Classic_WareHouse.customers.contactFirstName,Classic_WareHouse.customers.phone,Classic_WareHouse.customers.\&quot;addressLine1\&quot;,Classic_WareHouse.customers.\&quot;addressLine2\&quot;,Classic_WareHouse.customers.city,Classic_WareHouse.customers.state,Classic_WareHouse.customers.postalCode,Classic_WareHouse.customers.country,Classic_WareHouse.customers.salesRepEmployeeNumber,Classic_WareHouse.customers.creditLimit &#10;from Classic_WareHouse.customers&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerNumber"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="contactLastName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="contactFirstName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="phone"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine2"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="city"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="state"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postalCode"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="country"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="salesRepEmployeeNumber"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="creditLimit"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_2">
+      <column comment="" defaultValue="" key="false" length="10" name="customerNumber" nullable="false" originalDbColumnName="0000" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="customerName" nullable="false" originalDbColumnName="0001" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="contactLastName" nullable="false" originalDbColumnName="0002" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="contactFirstName" nullable="false" originalDbColumnName="0003" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="phone" nullable="false" originalDbColumnName="0004" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="addressLine1" nullable="false" originalDbColumnName="0005" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="addressLine2" nullable="true" originalDbColumnName="0006" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="city" nullable="false" originalDbColumnName="0007" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="state" nullable="true" originalDbColumnName="0008" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="postalCode" nullable="true" originalDbColumnName="0009" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="country" nullable="false" originalDbColumnName="0010" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="salesRepEmployeeNumber" nullable="true" originalDbColumnName="0011" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="creditLimit" nullable="true" originalDbColumnName="0012" originalLength="-1" pattern="" precision="2" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tDataprepRun" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDataprepRun_2"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;https://tdp.ap.cloud.talend.com/&quot;"/>
+    <elementParameter field="TEXT" name="USERNAME" value="&quot;georgek@predoolecom_nfr&quot;"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:gre10du7h4Zdw0nUDTVZ6aSQdoE66mtrlT03tS8JLbZtNQLmDIkezTQ="/>
+    <elementParameter field="CHECK" name="USE_PREP_PATH" value="false"/>
+    <elementParameter field="DATA_PREP_ID" name="PREPARATION_ID" value="&quot;2ce2206d-acf8-456a-884b-16b8fa8eeff3&quot;"/>
+    <elementParameter field="TEXT" name="PREPARATION_NAME" show="false" value="DEV_PROJECT_DemoFlow_1_tDataprepRun_1_0.1_Default"/>
+    <elementParameter field="DP_VERSION" name="VERSION_NAME" value=""/>
+    <elementParameter field="TEXT" name="VERSION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="PREPARATION_PATH" show="false" value="&quot;folder/preparation&quot;"/>
+    <elementParameter field="TEXT" name="PREPARATION_VERSION" show="false" value="&quot;Current state&quot;"/>
+    <elementParameter field="FETCH_SCHEMA" name="FETCH_SCHEMA" value=""/>
+    <elementParameter field="TEXT" name="LIMIT_PREVIEW" value="1000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDataprepRun_2">
+      <column comment="" key="false" length="-1" name="customerNumber" nullable="false" originalDbColumnName="0000" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerName" nullable="false" originalDbColumnName="0001" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="contactLastName" nullable="false" originalDbColumnName="0002" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="contactFirstName" nullable="false" originalDbColumnName="0003" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="phone" nullable="false" originalDbColumnName="0004" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="addressLine1" nullable="false" originalDbColumnName="0005" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="addressLine2" nullable="false" originalDbColumnName="0006" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="city" nullable="false" originalDbColumnName="0007" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="state" nullable="false" originalDbColumnName="0008" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postalCode" nullable="false" originalDbColumnName="0009" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="country" nullable="false" originalDbColumnName="0010" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="salesRepEmployeeNumber" nullable="false" originalDbColumnName="0011" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="creditLimit" nullable="false" originalDbColumnName="0012" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_BigDecimal" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="448" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerNumber"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="contactLastName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="contactFirstName"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="phone"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine1"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine2"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="city"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="state"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postalCode"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="country"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="salesRepEmployeeNumber"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="creditLimit"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column comment="" key="false" length="-1" name="customerNumber" nullable="false" originalLength="10" pattern="" precision="-1" sourceType="String" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="customerName" nullable="false" originalLength="60" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="contactLastName" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="contactFirstName" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="phone" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="addressLine1" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="addressLine2" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="city" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="state" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="postalCode" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="country" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="salesRepEmployeeNumber" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="String" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="creditLimit" nullable="false" originalLength="10" pattern="" precision="-1" sourceType="String" type="id_BigDecimal" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="608" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_3"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_fre3YHL0Ee6S356RZfkpGg"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;20.204.123.250&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;Pranita_Talend&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;monty&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Bx8MBIXl3dP1oDY4xXTrDQB5Z2oZ7kpkRE0/NHkqaNz+cWeL6K95Mf7jew=="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;CustomerMaster&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT_OR_UPDATE"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="mysql_id"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&amp;enabledTLSProtocols=TLSv1.2,TLSv1.1,TLSv1&quot;"/>
+    <elementParameter field="CHECK" name="EXTENDINSERT" show="false" value="true"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="(Not compatible with reject links)"/>
+    <elementParameter field="TEXT" name="NB_ROWS_PER_INSERT" show="false" value="100"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" show="false" value="10000"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerNumber"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerName"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="phone"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine1"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine2"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="city"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="state"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postalCode"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="country"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="salesRepEmployeeNumber"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="creditLimit"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="ON_DUPLICATE_KEY_UPDATE" show="false" value="false"/>
+    <elementParameter field="TABLE" name="DUPLICATED_KEYS" show="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Customer_Master"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBOutput_3">
+      <column comment="" key="true" length="10" name="customerNumber" nullable="false" originalLength="10" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="125" name="customerName" nullable="false" originalLength="60" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="phone" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="addressLine1" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="addressLine2" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="city" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="state" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="postalCode" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="country" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="salesRepEmployeeNumber" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="creditLimit" nullable="false" originalLength="10" pattern="" precision="-1" sourceType="DOUBLE" type="id_BigDecimal" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="true" length="10" name="customerNumber" nullable="false" originalLength="10" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="125" name="customerName" nullable="false" originalLength="60" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="phone" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="addressLine1" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="100" name="addressLine2" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="city" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="state" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="postalCode" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="country" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="salesRepEmployeeNumber" nullable="false" originalLength="80" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="80" name="creditLimit" nullable="false" originalLength="10" pattern="" precision="-1" sourceType="DOUBLE" type="id_BigDecimal" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_9hovUFg7Ee6Kq4wovtFs1w"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;20.204.123.250&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;Classic_WareHouse&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;ClassicModels&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;qdimainuser&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:EsboKliK+fupKWlpmcUClYEjjY1WOavI6dfUuaO/CB5pHBsRRV95RvWE"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;customers&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT Classic_WareHouse.customers.customerNumber,&#10;&#9;&#9;Classic_WareHouse.customers.customerName,&#10;&#9;&#9;Classic_WareHouse.customers.contactLastName,&#10;&#9;&#9;Classic_WareHouse.customers.contactFirstName,&#10;&#9;&#9;Classic_WareHouse.customers.phone,&#10;&#9;&#9;Classic_WareHouse.customers.addressLine1,&#10;&#9;&#9;Classic_WareHouse.customers.addressLine2,&#10;&#9;&#9;Classic_WareHouse.customers.city,&#10;&#9;&#9;Classic_WareHouse.customers.state,&#10;&#9;&#9;Classic_WareHouse.customers.postalCode,&#10;&#9;&#9;Classic_WareHouse.customers.country,&#10;&#9;&#9;Classic_WareHouse.customers.salesRepEmployeeNumber,&#10;&#9;&#9;Classic_WareHouse.customers.creditLimit&#10;FROM&#9;Classic_WareHouse.customers&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerNumber"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="contactLastName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="contactFirstName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="phone"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine2"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="city"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="state"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postalCode"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="country"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="salesRepEmployeeNumber"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="creditLimit"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_3">
+      <column comment="" defaultValue="" key="false" length="10" name="customerNumber" nullable="false" originalDbColumnName="0000" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="customerName" nullable="false" originalDbColumnName="0001" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="contactLastName" nullable="false" originalDbColumnName="0002" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="contactFirstName" nullable="false" originalDbColumnName="0003" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="phone" nullable="false" originalDbColumnName="0004" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="addressLine1" nullable="false" originalDbColumnName="0005" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="addressLine2" nullable="true" originalDbColumnName="0006" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="city" nullable="false" originalDbColumnName="0007" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="state" nullable="true" originalDbColumnName="0008" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="postalCode" nullable="true" originalDbColumnName="0009" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="country" nullable="false" originalDbColumnName="0010" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="salesRepEmployeeNumber" nullable="true" originalDbColumnName="0011" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="creditLimit" nullable="true" originalDbColumnName="0012" originalLength="-1" pattern="" precision="2" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tDataprepRun" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDataprepRun_3"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;https://tdp.ap.cloud.talend.com/&quot;"/>
+    <elementParameter field="TEXT" name="USERNAME" value="&quot;georgek@predoolecom_nfr&quot;"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:30oa1EpUHP5vVQbaSk4BXdHq7Vl4wLvK+CtAZyDAMUB5KKTY5bPVN7k="/>
+    <elementParameter field="CHECK" name="USE_PREP_PATH" value="false"/>
+    <elementParameter field="DATA_PREP_ID" name="PREPARATION_ID" value="&quot;5e829238-5175-4af2-b904-0c35297c1d3a&quot;"/>
+    <elementParameter field="TEXT" name="PREPARATION_NAME" show="false" value="DEV_PROJECT_Flow_1_DataPrep_tDataprepRun_1_0.1_Default Preparation"/>
+    <elementParameter field="DP_VERSION" name="VERSION_NAME" value=""/>
+    <elementParameter field="TEXT" name="VERSION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="PREPARATION_PATH" show="false" value="&quot;folder/preparation&quot;"/>
+    <elementParameter field="TEXT" name="PREPARATION_VERSION" show="false" value="&quot;Current state&quot;"/>
+    <elementParameter field="FETCH_SCHEMA" name="FETCH_SCHEMA" value=""/>
+    <elementParameter field="TEXT" name="LIMIT_PREVIEW" value="1000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDataprepRun_3">
+      <column comment="" defaultValue="" key="false" length="-1" name="customerNumber" nullable="false" originalDbColumnName="0000" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="customerName" nullable="false" originalDbColumnName="0001" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="contactLastName" nullable="false" originalDbColumnName="0002" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="contactFirstName" nullable="false" originalDbColumnName="0003" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="phone" nullable="false" originalDbColumnName="0004" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="addressLine1" nullable="false" originalDbColumnName="0005" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="addressLine2" nullable="false" originalDbColumnName="0006" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="city" nullable="false" originalDbColumnName="0007" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="state" nullable="false" originalDbColumnName="0008" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="postalCode" nullable="false" originalDbColumnName="0009" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="country" nullable="false" originalDbColumnName="0010" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="salesRepEmployeeNumber" nullable="false" originalDbColumnName="0011" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="creditLimit" nullable="false" originalDbColumnName="0012" originalLength="-1" pattern="" precision="-1" sourceType="String" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="512" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_9mDVQFg7Ee6Kq4wovtFs1w"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;20.204.123.250&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;Classic_Masters&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;Classicmodels&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;qdimainuser&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:dUipRrawC/vfLHVFy1HKMbPe/hDWn9SrQ4rxiTSzhJJT+EemZwYvj7QS"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;CustomerMaster&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+    <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
+    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="customerNumber"/>
+    <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
+    <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerNumber"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerName"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="contactLastName"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="contactFirstName"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="phone"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine1"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine2"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="city"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="state"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postalCode"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="country"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="salesRepEmployeeNumber"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="creditLimit"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
+    <elementParameter field="TEXT" name="LABEL" value="Demo_Target_Mssql_"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBOutput_2">
+      <column comment="" defaultValue="" key="false" length="-1" name="customerNumber" nullable="false" originalDbColumnName="0000" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="customerName" nullable="false" originalDbColumnName="0001" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="contactLastName" nullable="false" originalDbColumnName="0002" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="contactFirstName" nullable="false" originalDbColumnName="0003" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="phone" nullable="false" originalDbColumnName="0004" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="addressLine1" nullable="false" originalDbColumnName="0005" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="addressLine2" nullable="false" originalDbColumnName="0006" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="city" nullable="false" originalDbColumnName="0007" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="state" nullable="false" originalDbColumnName="0008" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="postalCode" nullable="false" originalDbColumnName="0009" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="country" nullable="false" originalDbColumnName="0010" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="salesRepEmployeeNumber" nullable="false" originalDbColumnName="0011" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="creditLimit" nullable="false" originalDbColumnName="0012" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" defaultValue="" key="false" length="-1" name="customerNumber" nullable="false" originalDbColumnName="0000" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="customerName" nullable="false" originalDbColumnName="0001" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="contactLastName" nullable="false" originalDbColumnName="0002" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="contactFirstName" nullable="false" originalDbColumnName="0003" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="phone" nullable="false" originalDbColumnName="0004" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="addressLine1" nullable="false" originalDbColumnName="0005" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="addressLine2" nullable="false" originalDbColumnName="0006" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="city" nullable="false" originalDbColumnName="0007" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="state" nullable="false" originalDbColumnName="0008" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="postalCode" nullable="false" originalDbColumnName="0009" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="country" nullable="false" originalDbColumnName="0010" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="salesRepEmployeeNumber" nullable="false" originalDbColumnName="0011" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="creditLimit" nullable="false" originalDbColumnName="0012" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_9hovUFg7Ee6Kq4wovtFs1w"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;20.204.123.250&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;Classic_WareHouse&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;ClassicModels&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;qdimainuser&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:1fqLEOvlwOZi8fcJVT4Qa2os6Oc1en6HxcnBesY3KFTgLJRnm0hML4qy"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;customers&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select Classic_WareHouse.customers.customerNumber,Classic_WareHouse.customers.customerName,Classic_WareHouse.customers.contactLastName,Classic_WareHouse.customers.contactFirstName,Classic_WareHouse.customers.phone,Classic_WareHouse.customers.\&quot;addressLine1\&quot;,Classic_WareHouse.customers.\&quot;addressLine2\&quot;,Classic_WareHouse.customers.city,Classic_WareHouse.customers.state,Classic_WareHouse.customers.postalCode,Classic_WareHouse.customers.country,Classic_WareHouse.customers.salesRepEmployeeNumber,Classic_WareHouse.customers.creditLimit,Classic_WareHouse.customers.Created_At,Classic_WareHouse.customers.Modified_At &#10;from Classic_WareHouse.customers&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerNumber"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="contactLastName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="contactFirstName"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="phone"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine1"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine2"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="city"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="state"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postalCode"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="country"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="salesRepEmployeeNumber"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="creditLimit"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Created_At"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Modified_At"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_1">
+      <column comment="" defaultValue="" key="false" length="10" name="customerNumber" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="customerName" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="contactLastName" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="contactFirstName" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="phone" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="addressLine1" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="addressLine2" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="city" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="state" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="postalCode" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="country" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="salesRepEmployeeNumber" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="creditLimit" nullable="true" originalLength="-1" pattern="" precision="2" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="26" name="Created_At" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Modified_At" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tDataprepRun" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDataprepRun_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="TEXT" name="URL" value="&quot;https://tdp.ap.cloud.talend.com/&quot;"/>
+    <elementParameter field="TEXT" name="USERNAME" value="&quot;georgek@predoolecom_nfr&quot;"/>
+    <elementParameter field="PASSWORD" name="PASSWORD" value="enc:system.encryption.key.v1:CR51maQU/Y7LUVKAYDGoliwMjPpohz39knp4KUdd+THOyZB2X17LY3k="/>
+    <elementParameter field="CHECK" name="USE_PREP_PATH" value="false"/>
+    <elementParameter field="DATA_PREP_ID" name="PREPARATION_ID" value="&quot;5a544c8e-9659-410a-beb8-bc1bb778c633&quot;"/>
+    <elementParameter field="TEXT" name="PREPARATION_NAME" show="false" value="DEV_PROJECT_Flow_1_DataPrep_tDataprepRun_1_0.1_Default"/>
+    <elementParameter field="DP_VERSION" name="VERSION_NAME" value=""/>
+    <elementParameter field="TEXT" name="VERSION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="PREPARATION_PATH" show="false" value="&quot;folder/preparation&quot;"/>
+    <elementParameter field="TEXT" name="PREPARATION_VERSION" show="false" value="&quot;Current state&quot;"/>
+    <elementParameter field="FETCH_SCHEMA" name="FETCH_SCHEMA" value=""/>
+    <elementParameter field="TEXT" name="LIMIT_PREVIEW" value="1000"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDataprepRun_1">
+      <column comment="" defaultValue="" key="false" length="10" name="customerNumber" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="customerName" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="contactLastName" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="contactFirstName" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="phone" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="addressLine1" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="addressLine2" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="city" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="state" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="postalCode" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="country" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="salesRepEmployeeNumber" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="creditLimit" nullable="true" originalLength="-1" pattern="" precision="2" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="26" name="Created_At" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Modified_At" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="448">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_9mDVQFg7Ee6Kq4wovtFs1w"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;20.204.123.250&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;Classic_Masters&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;Classicmodels&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;qdimainuser&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:qUsbQOG3JVXCZtqvUJEUHO97hh04xQOl4AcJcGYdAECiHlmyDQ9J2vVT"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;CustomerMaster1&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
+    <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT_OR_UPDATE"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
+    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="customerNumber"/>
+    <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
+    <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerNumber"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="customerName"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="contactLastName"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="contactFirstName"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="phone"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine1"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine2"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="city"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="state"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="postalCode"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="country"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="salesRepEmployeeNumber"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="creditLimit"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Created_At"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Modified_At"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" show="false" value="10000"/>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
+    <elementParameter field="TEXT" name="LABEL" value="Demo_Target_Mssql_"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBOutput_1">
+      <column comment="" defaultValue="" key="true" length="10" name="customerNumber" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="customerName" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="contactLastName" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="contactFirstName" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="phone" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="addressLine1" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="addressLine2" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="city" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="state" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="postalCode" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="country" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="salesRepEmployeeNumber" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="creditLimit" nullable="true" originalLength="-1" pattern="" precision="2" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="26" name="Created_At" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Modified_At" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" defaultValue="" key="true" length="10" name="customerNumber" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="customerName" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="contactLastName" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="contactFirstName" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="phone" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="addressLine1" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="addressLine2" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="city" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="state" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="postalCode" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="country" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="NVARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="salesRepEmployeeNumber" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="creditLimit" nullable="true" originalLength="-1" pattern="" precision="2" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="26" name="Created_At" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column comment="" key="false" length="50" name="Modified_At" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATETIME" type="id_Date" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row3" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tDataprepRun_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
+  </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tDataprepRun_2" offsetLabelX="0" offsetLabelY="0" source="tDataprepRun_2" target="tLogRow_1">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="Modified_At"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="Created_At"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
+  </connection>
+  <connection connectorName="FLOW" label="row7" lineStyle="0" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tDBOutput_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row7"/>
+  </connection>
+  <connection connectorName="FLOW" label="row5" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tDataprepRun_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row5"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="0" metaname="tDataprepRun_3" offsetLabelX="0" offsetLabelY="0" source="tDataprepRun_3" target="tDBOutput_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row6"/>
+  </connection>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDataprepRun_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDataprepRun_1" offsetLabelX="0" offsetLabelY="0" source="tDataprepRun_1" target="tDBOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_2"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Data Preparation Demo"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_3"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="TEXT" name="SUBJOB_TITLE" value="Data Preparation Demo"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d70d40d7-2a6e-4dc5-8224-84f2964d9884"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Goq7Lu0skFtU4wdm/qHOthRQ0Ax6B7BZysCSAx28oAFyOKtcLTPvE75+kD2+lHN/9bF4MzNMr8/J&#13;
+1FiWQF0eVw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_372c7ba2-991d-4a2e-b9d1-fe30451b04ab"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3jFYy7EXnx2HGxvBfAUNjtN/d/hnOIabOZJF6q8zc2gwQ7GVlcmGEMmFvjsD3JCiPaOkza18HRGG&#13;
+l33Z6AzWBQ==</DigestValue></Reference></SignedInfo><SignatureValue>NkfKqeqz/hexcbCcAIhxdu+eQxk1oaF4pqdsZ6QXKwtSfpwk+l9W6/yeAqXAPt27hW9FTOzUZ5PX&#13;
+IxE3S1SZV0/93EfXeEt4Ra/ErgJMZ9e6kwRW40hoVmL2j89wjegNR/LqyYJJfYLPjqXgx0Uznk/p&#13;
+Mx4inYZgxUpxzBTeIT9UmE0S+SFrgZSdU50IulVBTpxabniQ7pGCr2yZzkwGoewuaa/E6P+fgpxI&#13;
+ieC3uJcN+g1BxcZt4IaU0FVS6D9sfAGefUvPlzDshXL1RLO3Bod+vKogyAofBUtpcohSJsElcETi&#13;
+DG+SFI7T6pNlTJVS5e1d6MHpjI6KGVimRGgkRg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_372c7ba2-991d-4a2e-b9d1-fe30451b04ab" Target="#_d70d40d7-2a6e-4dc5-8224-84f2964d9884"><Timestamp>2024-01-04 05:25:33</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

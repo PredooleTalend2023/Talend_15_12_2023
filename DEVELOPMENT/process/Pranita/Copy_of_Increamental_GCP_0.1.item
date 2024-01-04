@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+  <context confirmationNeeded="false" hide="false" name="Default">
+    <contextParameter comment="" internalId="_RIO6YInfEe6O69lu3P9QxQ" name="last_success" prompt="last_success?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_RIO6YYnfEe6O69lu3P9QxQ" name="Current_run" prompt="Current_run?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_RIO6YonfEe6O69lu3P9QxQ" name="delete_sql" prompt="delete_sql?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+  </context>
+  <parameters>
+    <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
+    <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_HADOOP_VERSION" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USERNAME" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_GROUP" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_USE_KEYTAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KT_PRINCIPAL" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_KEY_TAB" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_ENABLE_OO_KERBEROS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_NAME_NODE_END_POINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_JOB_TRACKER_ENDPOINT" show="false" value=""/>
+    <elementParameter field="TEXT" name="OOZIE_END_POINT" show="false" value=""/>
+    <elementParameter field="CHECK" name="IMPLICITCONTEXT_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STATANDLOG_USE_PROJECT_SETTINGS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="MULTI_THREAD_EXECATION" value="false"/>
+    <elementParameter field="TEXT" name="PARALLELIZE_UNIT_SIZE" value="25000"/>
+    <elementParameter field="CHECK" name="IMPLICIT_TCONTEXTLOAD" value="false"/>
+    <elementParameter field="RADIO" name="FROM_FILE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="RADIO" name="FROM_DATABASE_FLAG_IMPLICIT_CONTEXT" show="false" value="false"/>
+    <elementParameter field="FILE" name="IMPLICIT_TCONTEXTLOAD_FILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="OVERRIDE_ENCODING_FLAG" show="false" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="OVERRIDE_ENCODING_IN_EXTRA" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="OVERRIDE_ENCODING_IN_EXTRA:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION_IMPLICIT_CONTEXT" show="false" value=""/>
+    <elementParameter field="TEXT" name="URL_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR_IMPLICIT_CONTEXT" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" show="false" value="enc:system.encryption.key.v1:5+5+LFUgupdWPerc8Nyb1MjYFECglMk4n1q0rngU"/>
+    <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="LOAD_NEW_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CLOSED_LIST" name="NOT_LOAD_OLD_VARIABLE" show="false" value="Warning"/>
+    <elementParameter field="CHECK" name="PRINT_OPERATIONS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_WARNINGS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="DISABLE_INFO" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_STATCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_LOGCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_METERCATCHER_FLAG" value="false"/>
+    <elementParameter field="CHECK" name="ON_CONSOLE_FLAG" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ON_FILES_FLAG" show="false" value="false"/>
+    <elementParameter field="DIRECTORY" name="FILE_PATH" show="false" value="&quot;C:/Users/Predoole/workspace/.metadata&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_STATS" show="false" value="&quot;stats_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_LOGS" show="false" value="&quot;logs_file.txt&quot;"/>
+    <elementParameter field="TEXT" name="FILENAME_METTER" show="false" value="&quot;meter_file.txt&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="ISO-8859-15"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ON_DATABASE_FLAG" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_TYPE" show="false" value="JDBCOutput"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" show="false" value="ORACLE_12"/>
+    <elementParameter field="TEXT" name="URL" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="DRIVER_JAR" show="false"/>
+    <elementParameter field="TEXT" name="DRIVER_CLASS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="HOST" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PORT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DATASOURCE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROPERTIES" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" show="false" value="enc:system.encryption.key.v1:+739ZqzQykOhAlf84Rpk+03pHqQWyyqDDoAuC31M"/>
+    <elementParameter field="FILE" name="DBFILE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_STATS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_LOGS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE_METER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CATCH_RUNTIME_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_ERRORS" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_USER_WARNING" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CATCH_REALTIME_STATS" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_HEADERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="HEADER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HEADER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADER_IMPORT" show="false" value=""/>
+    <elementParameter field="TEXT" name="HEADERFOOTER_FOOTERID" show="false" value=""/>
+    <elementParameter field="CHECK" name="FOOTER_ENABLED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FOOTER_LIBRARY" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
+    <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
+    <routinesParameter id="_3jPewDwiEe6S_b_NUPoAOA" name="DQTechnical"/>
+    <routinesParameter id="_3eHuMDwiEe6S_b_NUPoAOA" name="DataMasking"/>
+    <routinesParameter id="_pN1cEDv5Ee6j4v6uG-X0AQ" name="DataOperation"/>
+    <routinesParameter id="_3iLu0DwiEe6S_b_NUPoAOA" name="DataQualityDependencies"/>
+    <routinesParameter id="_3fnjAjwiEe6S_b_NUPoAOA" name="DataQuality"/>
+    <routinesParameter id="_3i78wDwiEe6S_b_NUPoAOA" name="DqStringHandling"/>
+    <routinesParameter id="_pN1cGjv5Ee6j4v6uG-X0AQ" name="Mathematical"/>
+    <routinesParameter id="_pN_NFjv5Ee6j4v6uG-X0AQ" name="Numeric"/>
+    <routinesParameter id="_pOIXADv5Ee6j4v6uG-X0AQ" name="Relational"/>
+    <routinesParameter id="_pMoiMDv5Ee6j4v6uG-X0AQ" name="SQLike"/>
+    <routinesParameter id="_pOlqADv5Ee6j4v6uG-X0AQ" name="StringHandling"/>
+    <routinesParameter id="_pOwCEDv5Ee6j4v6uG-X0AQ" name="TalendDataGenerator"/>
+    <routinesParameter id="_pPCV8Dv5Ee6j4v6uG-X0AQ" name="TalendDate"/>
+    <routinesParameter id="_pPMG-Dv5Ee6j4v6uG-X0AQ" name="TalendStringUtil"/>
+    <routinesParameter id="_pPCV-jv5Ee6j4v6uG-X0AQ" name="TalendString"/>
+  </parameters>
+  <node componentName="tPrejob" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="96" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tBigQueryInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="256" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBigQueryInput_1"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tBigQueryInput"/>
+    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
+    <elementParameter field="TEXT" name="FAMILY" show="false" value="Big Data/Google BigQuery"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="true"/>
+    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tBigQueryInput"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="D:\Talend_New\studio\configuration\lib\java"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="bigquery_id"/>
+    <elementParameter field="DYNAMIC_GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_MODE" value="SERVICEACCOUNT"/>
+    <elementParameter field="PASSWORD" name="ACCESS_TOKEN" show="false" value="enc:system.encryption.key.v1:nG3SvGts5UqC5VZdHKHnzs/uxcUhva1IOeztKQb2"/>
+    <elementParameter field="LABEL" name="ACCESS_TOKEN_WARNING" show="false" value="*Note: If the Access Token Expire we won't be able to refresh it!&quot;"/>
+    <elementParameter field="FILE" name="SERVICE_ACCOUNT_CREDENTIALS_FILE" value="&quot;C:/Users/Laptop_User/Downloads/replicate-40-7d7a23ff43b3.json&quot;"/>
+    <elementParameter field="TEXT" name="CLIENT_ID" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="CLIENT_SECRET" show="false" value="enc:system.encryption.key.v1:klXOO5voMs1L1vcoFoQUmg9h+25OhqV6a4rqjlZ4"/>
+    <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;replicate-40&quot;"/>
+    <elementParameter field="TEXT" name="AUTHORIZATION_CODE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_LEGACY_SQL" value="false"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT&#13;&#10;*&#13;&#10;FROM&#13;&#10;`Replicate_increamental.Products` &quot;"/>
+    <elementParameter field="CLOSED_LIST" name="RESULT_SIZE" value="SMALL"/>
+    <elementParameter field="CHECK" name="USE_REGION_ENDPOINT" value="false"/>
+    <elementParameter field="TEXT" name="REGION_ENDPOINT_BQ" show="false" value="&quot;https://bigquery.googleapis.com&quot;"/>
+    <elementParameter field="FILE" name="TOKEN_NAME" show="false" value="&quot;C:/Users/Laptop_User/workspace/token.properties&quot;"/>
+    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
+    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CUSTOM_TEMPORARY_DATASET" show="false" value="false"/>
+    <elementParameter field="TEXT" name="TEMPORARY_DATASET_NAME" show="false" value="&quot;temp_dataset&quot;"/>
+    <elementParameter field="CHECK" name="FORCE_SINGLE_QUERY_EXEC" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tBigQueryInput_1">
+      <column comment="" defaultValue="" key="false" length="-1" name="product_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT64" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="product_name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="price" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Operation" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UpdatedOn" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="TIMESTAMP" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tBigQueryOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBigQueryOutput_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="bigquery_id"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;D:/Talend_Doc/biquery_incremental_bulk_P&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_MODE" value="SERVICEACCOUNT"/>
+    <elementParameter field="PASSWORD" name="ACCESS_TOKEN" show="false" value="enc:system.encryption.key.v1:oOSd6nLn9ygxMA+L3JMEg0V4Fdp5PzaosZ/f3HuL"/>
+    <elementParameter field="LABEL" name="ACCESS_TOKEN_WARNING" show="false" value="*Note: If the Access Token Expire we won't be able to refresh it!&quot;"/>
+    <elementParameter field="FILE" name="SERVICE_ACCOUNT_CREDENTIALS_FILE" value="&quot;C:/Users/Laptop_User/Downloads/replicate-40-7d7a23ff43b3.json&quot;"/>
+    <elementParameter field="TEXT" name="CLIENT_ID" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="CLIENT_SECRET" show="false" value="enc:system.encryption.key.v1:TrUUPA5odOJWNxdOC3ES6TsHyHQjztnkx7AULGOQ"/>
+    <elementParameter field="TEXT" name="AUTHORIZATION_CODE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;replicate-40&quot;"/>
+    <elementParameter field="TEXT" name="DATASET" value="&quot;Talend&quot;"/>
+    <elementParameter field="TEXT" name="TABLE" value="&quot;Products_Increamental_P&quot;"/>
+    <elementParameter field="CHECK" name="CREATE_TABLE_IF_NOT_EXIST" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="ACTION_ON_DATA" value="APPEND"/>
+    <elementParameter field="CHECK" name="BULK_FILE_ALREADY_EXIST" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="GS_SERVICE_ACCOUNT"/>
+    <elementParameter field="FILE" name="GS_SERVICE_ACCOUNT_KEY" value="&quot;C:/Users/Laptop_User/Downloads/replicate-40-7d7a23ff43b3.json&quot;"/>
+    <elementParameter field="PASSWORD" name="GS_ACCESS_TOKEN" show="false" value="enc:system.encryption.key.v1:rCQzZBumTzUFir9+JlEj2ekEXAqcCVo7eXRAK2/L"/>
+    <elementParameter field="LABEL" name="GS_ACCESS_TOKEN_WARNING" show="false" value="*Note: If the Access Token Expire we won't be able to refresh it!&quot;"/>
+    <elementParameter field="TEXT" name="BUCKET_NAME" value="&quot;talendbuc&quot;"/>
+    <elementParameter field="TEXT" name="GS_FILE" value="&quot;gs://talendbuc/biquery_incremental_bulk_P.text&quot;"/>
+    <elementParameter field="TEXT" name="GS_FILE_HEADER" value="1"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
+    <elementParameter field="CHECK" name="USE_REGION_ENDPOINT" value="false"/>
+    <elementParameter field="TEXT" name="REGION_ENDPOINT_GS" show="false" value="&quot;https://storage.googleapis.com&quot;"/>
+    <elementParameter field="TEXT" name="REGION_ENDPOINT_BQ" show="false" value="&quot;https://bigquery.googleapis.com&quot;"/>
+    <elementParameter field="FILE" name="TOKEN_NAME" show="false" value="&quot;C:/Users/Laptop_User/workspace/token.properties&quot;"/>
+    <elementParameter field="CHECK" name="USE_12_HOUR_FORMAT" value="false"/>
+    <elementParameter field="CHECK" name="SET_FIELD_DELIMITER" show="false" value="true"/>
+    <elementParameter field="TEXT" name="FIELD_DELIMITER" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="CHECK" name="DROP" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;\\&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;\&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_CUSTOM_NULL_MARKER" value="false"/>
+    <elementParameter field="TEXT" name="CUSTOM_NULL_MARKER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
+    <elementParameter field="CHECK" name="RECORDS_CONTAIN_NULL_VALUE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CHECK_DISK_SPACE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tBigQueryOutput_1">
+      <column comment="" defaultValue="" key="false" length="10" name="product_id" nullable="true" pattern="" precision="-1" sourceType="INT64" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="product_name" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="30" name="price" nullable="true" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="Operation" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="UpdatedOn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tBigQueryOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="384">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBigQueryOutput_2"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="bigquery_id"/>
+    <elementParameter field="FILE" name="FILENAME" value="&quot;C:/Users/Laptop_User/workspace/biquery_bulk.txt&quot;"/>
+    <elementParameter field="CHECK" name="APPEND" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_MODE" value="SERVICEACCOUNT"/>
+    <elementParameter field="PASSWORD" name="ACCESS_TOKEN" show="false" value="enc:system.encryption.key.v1:O5OB3eNpfjqYQxK93zjr6gGnbzd6wkvLVQU8FR6I"/>
+    <elementParameter field="LABEL" name="ACCESS_TOKEN_WARNING" show="false" value="*Note: If the Access Token Expire we won't be able to refresh it!&quot;"/>
+    <elementParameter field="FILE" name="SERVICE_ACCOUNT_CREDENTIALS_FILE" value="&quot;C:/Users/Laptop_User/Downloads/replicate-40-7d7a23ff43b3.json&quot;"/>
+    <elementParameter field="TEXT" name="CLIENT_ID" show="false" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="CLIENT_SECRET" show="false" value="enc:system.encryption.key.v1:irYiMT5wCqt2cWkoJZQ8DPF5k3oMxWWopriKkata"/>
+    <elementParameter field="TEXT" name="AUTHORIZATION_CODE" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="PROJECT_ID" value="&quot;replicate-40&quot;"/>
+    <elementParameter field="TEXT" name="DATASET" value="&quot;Talend&quot;"/>
+    <elementParameter field="TEXT" name="TABLE" value="&quot;Incremental_P&quot;"/>
+    <elementParameter field="CHECK" name="CREATE_TABLE_IF_NOT_EXIST" value="true"/>
+    <elementParameter field="CLOSED_LIST" name="ACTION_ON_DATA" value="TRUNCATE"/>
+    <elementParameter field="CHECK" name="BULK_FILE_ALREADY_EXIST" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="GS_SERVICE_ACCOUNT"/>
+    <elementParameter field="FILE" name="GS_SERVICE_ACCOUNT_KEY" value="&quot;C:/Users/Laptop_User/Downloads/replicate-40-7d7a23ff43b3.json&quot;"/>
+    <elementParameter field="PASSWORD" name="GS_ACCESS_TOKEN" show="false" value="enc:system.encryption.key.v1:+ayVy8mUyz4QFTVxmxZq6ynsRrW3/lrouR36rj0t"/>
+    <elementParameter field="LABEL" name="GS_ACCESS_TOKEN_WARNING" show="false" value="*Note: If the Access Token Expire we won't be able to refresh it!&quot;"/>
+    <elementParameter field="TEXT" name="BUCKET_NAME" value="&quot;talendbuc&quot;"/>
+    <elementParameter field="TEXT" name="GS_FILE" value="&quot;gs://talendbuc/biquery_bulk.txt&quot;"/>
+    <elementParameter field="TEXT" name="GS_FILE_HEADER" value="0"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="CHECK" name="USE_REGION_ENDPOINT" value="false"/>
+    <elementParameter field="TEXT" name="REGION_ENDPOINT_GS" show="false" value="&quot;https://storage.googleapis.com&quot;"/>
+    <elementParameter field="TEXT" name="REGION_ENDPOINT_BQ" show="false" value="&quot;https://bigquery.googleapis.com&quot;"/>
+    <elementParameter field="FILE" name="TOKEN_NAME" show="false" value="&quot;C:/Users/Laptop_User/workspace/token.properties&quot;"/>
+    <elementParameter field="CHECK" name="USE_12_HOUR_FORMAT" value="false"/>
+    <elementParameter field="CHECK" name="SET_FIELD_DELIMITER" show="false" value="true"/>
+    <elementParameter field="TEXT" name="FIELD_DELIMITER" show="false" value="&quot;,&quot;"/>
+    <elementParameter field="TEXT" name="ROWSEPARATOR" show="false" value="&quot;\n&quot;"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;,&quot;"/>
+    <elementParameter field="CHECK" name="DROP" value="false"/>
+    <elementParameter field="TEXT" name="ESCAPE_CHAR" show="false" value="&quot;\\&quot;"/>
+    <elementParameter field="TEXT" name="TEXT_ENCLOSURE" show="false" value="&quot;\&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_CUSTOM_NULL_MARKER" value="false"/>
+    <elementParameter field="TEXT" name="CUSTOM_NULL_MARKER" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="CREATE" value="true"/>
+    <elementParameter field="CHECK" name="FLUSHONROW" value="false"/>
+    <elementParameter field="TEXT" name="FLUSHONROW_NUM" show="false" value="1"/>
+    <elementParameter field="CHECK" name="RECORDS_CONTAIN_NULL_VALUE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="CHECK_DISK_SPACE" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tBigQueryOutput_2">
+      <column comment="" defaultValue="" key="false" length="10" name="product_id" nullable="true" pattern="" precision="-1" sourceType="INT64" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="product_name" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="30" name="price" nullable="true" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="Operation" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="UpdatedOn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMSSqlOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="864" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_5gOkwHFoEe6OT4Dc5fYbHw"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="DRIVER" value="JTDS"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;20.204.123.250&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1433&quot;"/>
+    <elementParameter field="TEXT" name="DB_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;Pranita_Talend&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MSSQL"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;qdimainuser&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:msWuyUzgEs366Ba4LbzG4hbJI8ZbxO19eKWVz+iX6IilmMyfgAF6xDRU"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;Incremental&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_IF_EXISTS_AND_CREATE"/>
+    <elementParameter field="CHECK" name="IDENTITY_INSERT" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT"/>
+    <elementParameter field="LABEL" name="NOTE" show="false" value="NOTE: batch size must be less than or equal to total number of parameter markers divided by number of columns"/>
+    <elementParameter field="CHECK" name="SPECIFY_IDENTITY_FIELD" value="false"/>
+    <elementParameter field="COLUMN_LIST" name="IDENTITY_FIELD" show="false" value="product_id"/>
+    <elementParameter field="TEXT" name="START_VALUE" show="false" value="1"/>
+    <elementParameter field="TEXT" name="STEP" show="false" value="1"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="id_MSSQL"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="ACTIVE_DIR_AUTH" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" show="false" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="product_id"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="product_name"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="price"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Operation"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="UpdatedOn"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="IGNORE_DATE_OUTOF_RANGE" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000"/>
+    <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
+    <elementParameter field="TEXT" name="LABEL" value="Pranita_Talend"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBOutput_1">
+      <column comment="" defaultValue="" key="false" length="10" name="product_id" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="product_name" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="30" name="price" nullable="true" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="Operation" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="UpdatedOn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" defaultValue="" key="false" length="10" name="product_id" nullable="true" pattern="" precision="-1" sourceType="INT" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="30" name="product_name" nullable="true" pattern="" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="30" name="price" nullable="true" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="10" name="Operation" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="20" name="UpdatedOn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="DATE" type="id_Date" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="512" posY="320">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="CHECK" name="DUMMY" show="false" value="true"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#13;&#10;output_row.product_id = input_row.product_id;&#13;&#10;output_row.product_name = input_row.product_name;&#13;&#10;output_row.price = input_row.price;&#13;&#10;output_row.Operation = input_row.Operation;&#13;&#10;output_row.UpdatedOn =TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss.SSS&quot;, TalendDate.formatDate(&quot;yyyy-MM-dd HH:mm:ss.SSS&quot;,new java.util.Date((Long.parseLong(input_row.UpdatedOn) * 1000))));&#10;;&#13;&#10;"/>
+    <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJavaRow_1">
+      <column comment="" defaultValue="" key="false" length="-1" name="product_id" nullable="true" pattern="" precision="-1" sourceType="INTEGER" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="product_name" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="price" nullable="true" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Operation" nullable="true" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UpdatedOn" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="TIMESTAMP" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="608" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CLOSED_LIST" name="LINK_STYLE" value="AUTO"/>
+    <elementParameter field="DIRECTORY" name="TEMPORARY_DATA_DIRECTORY" value=""/>
+    <elementParameter field="IMAGE" name="PREVIEW" value="_5LOh4IqSEe6O69lu3P9QxQ-tMap_1-PREVIEW.bmp"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="true"/>
+    <elementParameter field="CHECK" name="LKUP_PARALLELIZE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="LEVENSHTEIN" show="false" value="0"/>
+    <elementParameter field="TEXT" name="JACCARD" show="false" value="0"/>
+    <elementParameter field="CHECK" name="ENABLE_AUTO_CONVERT_TYPE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ROWS_BUFFER_SIZE" value="2000000"/>
+    <elementParameter field="CHECK" name="CHANGE_HASH_AND_EQUALS_FOR_BIGDECIMAL" value="true"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata name="out1">
+      <column comment="" defaultValue="" key="false" length="-1" name="product_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT64" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="product_name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="price" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Operation" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UpdatedOn" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendMapper:MapperData">
+      <uiProperties shellMaximized="true"/>
+      <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
+      <outputTables name="out1" sizeState="INTERMEDIATE">
+        <mapperTableEntries expression="row1.product_id " name="product_id" nullable="true" type="id_Long"/>
+        <mapperTableEntries expression="row1.product_name " name="product_name" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="row1.price " name="price" nullable="true" type="id_BigDecimal"/>
+        <mapperTableEntries expression="row1.Operation " name="Operation" nullable="true" type="id_String"/>
+        <mapperTableEntries expression="TalendDate.parseDate(&quot;yyyy-MM-dd HH:mm:ss&quot;,row1.UpdatedOn) " name="UpdatedOn" nullable="true" type="id_Date"/>
+      </outputTables>
+    </nodeData>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="50" offsetLabelY="0" posX="768" posY="96">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="product_id"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="product_name"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="price"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Operation"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="UpdatedOn"/>
+      <elementValue elementRef="LENGTH" value="10"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1">
+      <column comment="" defaultValue="" key="false" length="-1" name="product_id" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT64" type="id_Long" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="product_name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="price" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="NUMERIC" type="id_BigDecimal" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="Operation" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="STRING" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="UpdatedOn" nullable="true" originalLength="-1" pattern="&quot;yyyy-MM-dd HH:mm:ss&quot;" precision="-1" sourceType="TIMESTAMP" type="id_Date" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="COMPONENT_OK" label="OnComponentOk" lineStyle="3" metaname="tPrejob_1" offsetLabelX="0" offsetLabelY="0" source="tPrejob_1" target="tBigQueryInput_1">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnComponentOk1"/>
+  </connection>
+  <connection connectorName="FLOW" label="out1" lineStyle="0" metaname="out1" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out1"/>
+  </connection>
+  <subjob>
+    <elementParameter field="CHECK" name="SHOW_SUBJOB_TITLE" show="false" value="true"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tPrejob_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="230;100;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="255;220;180"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBigQueryInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBigQueryOutput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tBigQueryOutput_2"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tMap_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1cf87651-9f5c-4498-bee7-0aaf64f6099b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bZWTLB4splODxJJ9t3tUhzQs1f0mBreu/E4OUAYG9fBcwLZXIOu+IylUQnG++KpO7DnwvzDDYUZX&#13;
+ZTiAPcUxbg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_eef472ce-a3d3-43dd-95dc-208b00cc8178"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PAsPEPnq49jlwxrCNwTDGxDZDqFuj/dQKUcIN74vvEUWhAcvbVdLtcahPpGNJjD6eBMIVhKeFs/a&#13;
+2nIsfjO5Mg==</DigestValue></Reference></SignedInfo><SignatureValue>DTgS5zJ7RXFD6bLuJHihIEECD4KjIeroIOx2LYXZCIyaYGT6ASwlcASj7pUDryVwaziI2hjjYsOS&#13;
++no++m4HFNt01tjNFe5qzUZtfkcBvK8aSc9Ff+uBn2qdJ+3WLKIQtRV3E5Xs2HQqIJu6eUJn5Nx2&#13;
+t3peJvfwiljxpRUtB6qjySa3qCY18SLEopUlh9lU6LLdxTGc5M3gkDROoA4051UtsSewP9tizuko&#13;
+O7Kl7688rRkcWFDSWM2mHPAK/jHDSqBC7m+9y+b8LDJCDyXOU8OMq9L/g/eUUVbXgHEtPbvUeRlB&#13;
+T7Esi45v6sjGzkg7vFPKv6mA2QoaZEJZnz/nJw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
+VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
+QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
+YWxlbmQgQ29kZSBTaWduaW5nIGNlcnRpZmljYXRlMQwwCgYDVQQLDANSJkQxFDASBgNVBAoTC1Rh&#13;
+bGVuZCBJbmMuMQ4wDAYDVQQHEwVQYXJpczEOMAwGA1UECBMFUGFyaXMxCzAJBgNVBAYTAkZSMIIB&#13;
+IjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAp5TMF8BmRt8dY51t9kIDdDkoOKVVytJN2gn2&#13;
+DhMGi8hzpUofNDykJDhe9SPqyJdGZ6o/h7laTA0/CivKyPT1OJQ9E2gMHKs8cTZM/cO2w0Atlqkl&#13;
+alIxepol0DNnUtmECVBqdnVsJesfmdoeptxgJAtxYbquFsTsrATNY2cscXpwmOca/Ewip48WQLFx&#13;
+e5s067jaIsAQGRIqpIup3bOtWBySrtImJ40lQCPeEcl96qzkv3utaVaNc3ukkhYkCDbMbK8NVd1B&#13;
+CVeeIBAe+n/SdpHH20o+6eIiZecsBGDLwlTYrFvuVqAa6xI7y8Vdz6irjPAVBEtG/iOc782aJ/lZ&#13;
+TwIDAQABo3UwczAMBgNVHRMBAf8EAjAAMA4GA1UdDwEB/wQEAwIHgDATBgNVHSUEDDAKBggrBgEF&#13;
+BQcDAzAdBgNVHQ4EFgQUGdfzQEbjQnANq28sfhEMTx+rsOcwHwYDVR0jBBgwFoAU530Lcvy1gZnG&#13;
+gCvZLOyCczK1qPcwDQYJKoZIhvcNAQELBQADggIBAEr22wnaQwZm2dhbUCqD+qZpTq2AF/tzxqAM&#13;
+eL/CiTjPbTblS4SNNwCKvTgMe9ucpUbenXmK7xE+DU9dN4om+t3VHbkOLQVyuLcd2WGsy7ZGwRvA&#13;
+f+TFwLbwjyTukOGm6Sd1qyZgvCPzBsKnft6vscvGy2yEpmFCeHJyBP8pvchg607zguRdNbkGYZXw&#13;
+G6jNipAbTtzdPTFKKr1bEf0sUGqMrlZIMPjflh2Vewu8ImNdX5IZdvBD6DdFVOC5wqV6u+W9ukE/&#13;
+mXZxDBYNl2AF7FTh04ucEVN3mHv7m2L0uFvUlhxchcagJhJsdQG+A0LVCemHbp6CSNQJx02KxqUG&#13;
+hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13;
+WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
+gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
+qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_eef472ce-a3d3-43dd-95dc-208b00cc8178" Target="#_1cf87651-9f5c-4498-bee7-0aaf64f6099b"><Timestamp>2024-01-04 05:25:30</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
