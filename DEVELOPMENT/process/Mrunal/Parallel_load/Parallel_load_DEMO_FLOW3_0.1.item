@@ -162,6 +162,7 @@
     </elementParameter>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_1">
       <column comment="" key="false" length="20" name="Account_Number" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="Account_Type" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -212,7 +213,7 @@
       <column comment="" key="false" length="20" name="Phone_Number" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables minimized="true" name="Var" sizeState="INTERMEDIATE"/>
       <outputTables activateCondensedTool="true" activateExpressionFilter="true" expressionFilter="row1.Branch_ID.equals(&quot;A&quot;)" name="BranchA" sizeState="INTERMEDIATE">
         <mapperTableEntries expression="row1.Account_Number " name="Account_Number" nullable="true" type="id_String"/>
@@ -339,6 +340,7 @@
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
     <elementParameter field="TEXT" name="LABEL" value="Branch_A"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_1">
       <column comment="" key="false" length="20" name="Account_Number" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="Account_Type" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -454,6 +456,7 @@
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
     <elementParameter field="TEXT" name="QUERY_TIMEOUT_IN_SECONDS" show="false" value="30"/>
     <elementParameter field="TEXT" name="LABEL" value="Branch_B"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBOutput_2">
       <column comment="" key="false" length="20" name="Account_Number" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="50" name="Account_Type" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
@@ -481,26 +484,20 @@
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="RADIO" name="PARTITIONER" value="true"/>
-    <elementParameter field="RADIO" name="NONE" value="false"/>
-    <elementParameter field="TEXT" name="NUM_PARTITIONS" value="4"/>
-    <elementParameter field="TEXT" name="PART_QUEUE_SIZE" value="25000"/>
-    <elementParameter field="CHECK" name="HASH_PARTITION" value="true"/>
-    <elementParameter field="TABLE" name="HASH_KEYS">
+    <elementParameter field="TEXT" name="NUM_PARTITIONS" show="false" value="4"/>
+    <elementParameter field="TEXT" name="PART_QUEUE_SIZE" show="false" value="25000"/>
+    <elementParameter field="CHECK" name="HASH_PARTITION" show="false" value="true"/>
+    <elementParameter field="TABLE" name="HASH_KEYS" show="false">
       <elementValue elementRef="KEY_COLUMN" value="Customer_ID"/>
     </elementParameter>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="FLOW" label="BranchA" lineStyle="0" metaname="BranchA" offsetLabelX="50" offsetLabelY="-50" outputId="1" source="tMap_1" target="tDBOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="RADIO" name="DEPARTITIONER" value="true"/>
-    <elementParameter field="RADIO" name="NONE" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="BranchA"/>
   </connection>
   <connection connectorName="FLOW" label="BranchB" lineStyle="0" metaname="BranchB" offsetLabelX="0" offsetLabelY="0" outputId="2" source="tMap_1" target="tDBOutput_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="RADIO" name="DEPARTITIONER" value="true"/>
-    <elementParameter field="RADIO" name="NONE" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="BranchB"/>
   </connection>
   <subjob>
@@ -509,13 +506,13 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
     <elementParameter field="CHECK" name="SUBJOB_DISPLAYED" show="false" value="false"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_396df7cf-4c71-4319-ac64-a8ccbb598fc5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>saeMydqFDK2vbh9X6OW6gGh7HZBLGZ/UodrxGiE1LuqJJgeSkt3XQnn0+rv56TNtiYwqxHBetWwJ&#13;
-Op4ChuPevg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_bf6b5464-cd47-4678-9697-f9263b2d7637"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sawU8+9tjQMJzOqUNdjoDZuY6UcCMYfkcb60JnloDUD16PG0SRhpNKel6f0VQwG4w1VEApaKweux&#13;
-wqYlvsqJ3Q==</DigestValue></Reference></SignedInfo><SignatureValue>cKxMhwWq5RNbubllO7Boyv4sT0P3UFYxRrJCACKNfgH7m9WElmbNCtj6PmOVtKXZLoeRxd2FTPGS&#13;
-k+AliivhtPnn9raliyqYG852AvcQvaBGAHlGxbrq3b8LST2EZ4kMlxh+8IEPQjH5KcBAEgtjwgsa&#13;
-6w6r4yFQJFyT1SJHB6YpN2fkxnTVokoNvTADUBXV2HoFIwAWiQrm4NhKetUKnTxJAfZfxD/UIRTB&#13;
-voNMtlGDgIgZO1IAWnSHXLmYwIfjNARYhcbtwKlxf6CY+ddcYB092tudE0DkaJf45K5Azmys+Z5Z&#13;
-4gdklnin4cHyVTSXpBqMeLrM5pp5i46inA6gzA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c6e2a9b0-4ecf-4c29-bf11-24f0e127f11d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>NGHAbKuaczIV8mh9eGAAp59RiENrZExpXITxgDWJ95CWzEbjGVqsYboRBVoJoE5nSSb4ONsevNfS&#13;
+EIBIACK+Dw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_cbcf3492-38a1-4b3a-983b-5544271e5a58"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>zk5EmaU0jwSKvKOp1s8F7lajWQEY7vh3fUzv37DQdrzOwRH2zo/w3xVdpQIkt641JefabG9TpqFB&#13;
+aoRIBxBn3w==</DigestValue></Reference></SignedInfo><SignatureValue>SJbeyMRTwogoFqN+gQ5Ot9EtCmmesXNgSFXLGzWgGpkPvuQdVNxGmwl1ekcAUZylx3W6XHd0D8Yl&#13;
+yZg/GX9Nfz/Bo8WEMMF/VWCFpZbxH55tQXcTet0kvSAYblC3ajbmcrBio6H8z3NsdAy4WX3NfEiP&#13;
+9mZNtr4aVERLefIzGVKDf0y44ltGbGVQLqxjl6q6c5x8Z5gZBCYz45EqJ6qd+3JZguyzFpSgyE26&#13;
+kXXn6EECEbvbDIZWpiM/yvXEOQ+t9GdecfZnnz0BnMcctKMpCCpcuKAdeOryTlrhR8E3XX6kkpYJ&#13;
+Jzt3iEydAvFMRrAfN69r5ph9TsnfF4MRUXt5/A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -537,4 +534,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_bf6b5464-cd47-4678-9697-f9263b2d7637" Target="#_396df7cf-4c71-4319-ac64-a8ccbb598fc5"><Timestamp>2024-01-04 07:32:45</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_cbcf3492-38a1-4b3a-983b-5544271e5a58" Target="#_c6e2a9b0-4ecf-4c29-bf11-24f0e127f11d"><Timestamp>2024-01-04 09:20:51</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
