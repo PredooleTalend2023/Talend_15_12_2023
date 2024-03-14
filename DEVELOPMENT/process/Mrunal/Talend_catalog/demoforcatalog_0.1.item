@@ -429,7 +429,7 @@
     <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
     <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/MySQL"/>
     <elementParameter field="CHECK" name="STARTABLE" show="false" value="false"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="false"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="true"/>
     <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMysqlOutput"/>
     <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
@@ -464,7 +464,33 @@
     <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
     <elementParameter field="TABLE" name="ADD_COLS"/>
     <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
-    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="brand_name"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="list_price"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="quantity"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="brand_id"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="store_id"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
     <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
     <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
@@ -473,8 +499,39 @@
     <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
     <elementParameter field="TEXT" name="LABEL" value="Mysqldemocatalog"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDBOutput_1"/>
+    <metadata connector="FLOW" name="tDBOutput_1">
+      <column comment="" key="false" length="255" name="brand_name" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="list_price" nullable="false" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="quantity" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="brand_id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="true" length="10" name="store_id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
     <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="false" length="255" name="brand_name" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="list_price" nullable="false" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="quantity" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="brand_id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="true" length="10" name="store_id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -495,23 +552,22 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
+  <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tAggregateRow_1" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_1" target="tDBOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
+  </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_ae25de5f-cfa5-4a52-88fb-bd87e8a8a774"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>XbZ38sc0AARlWStc5cTVal1Z9/StbKO/VzIZILsNt94Q5Bg9uzq1CNVMpgUu30SGnPuedwZJvmJn&#13;
-3TTC9FODww==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9a46fc9c-ef5a-4359-8fbb-d3d110e54d26"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xdFaLmD89Di5sdyMxO5Sr3TOKuV3YR1ZhPCPuOa6BV6J/ooF50jxoKNpsPp4igtcJ2IoItvEUXkW&#13;
-TH9shMeT3g==</DigestValue></Reference></SignedInfo><SignatureValue>dHAxkv5NCU26KhyO1MrBhdEcpdOdO0JV0zsw3UM2115PtUzJ7aur7744Ir2Vay+zQe3F/elt+nJI&#13;
-taw+N0YFDPEznDxrRcZSHvz/D0VZQpP6R4M+lYxROn6aof4mMey9zIlIcHTQmSrSyw2CEfc/k2Cv&#13;
-5ZxodY8ucn7vJ/v8ot6zCr2MDnvR8wIRZf0a1upgtCNaCDX5NLwARuZUansWpBmNkVVuQd77F4v0&#13;
-AYaIZRbUvAJB9wjESxDRVr/XkUoIGE94Rt6w8fqL8XXg9sgF8MOf9DcKHX+VMY2iKCuhDMap6Cq1&#13;
-XRFRxL3CS4cQmsHqS8EULbkAo6Iro4KagKILQQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e6884559-eee4-46fd-a687-fb778758ff07"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>JwrogHid3r0Mwgd2ypq83QWNtooLAbvX0U4Tl/jEKiJDCdGt8Pmg94VbkyCRQ4+U5tR42MdvjyId&#13;
+YJ5E3efp4A==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_2dd8af4a-1a6b-4775-a0e1-bdefe88780c5"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>4oz2S/vP40M7EqEjyvCHJRiT9E560s/cP8V7Ken5klj7FvK+xDL4am1Zq180HIbVshw+xme2gQ3e&#13;
+cRN92OrDHQ==</DigestValue></Reference></SignedInfo><SignatureValue>CywtNhlnEPXtDrjRZ7YJ9XtlRVgk8HQWGtaTznk8oiCuaJIVQJUjq+LBEJQOfWPevSrcAiLfPSNu&#13;
+/SuX5MFKJy9/AnscUrFcdobSlotP9eDX10ZCS13xseAr9bwYALSbmmNn/zQUq05S3Y2SM6gUDocb&#13;
+jm9ii65YSR7Z+L8pZYwdTxhHqboLvFAd8zxeNopJWRWnR7JRhbcVSRLAmu7mYL5pWgGMiAJ3tHjy&#13;
+ZPXbXY56Wrii5g22NcF5gGCLUvGYpPnUJ+ALwSBhX4rFK56v4quI3ggqUu51kJzl/JlE9kcK/ygi&#13;
+r6oKWd/S3jsLSHZhJiOL3Ru29iCr0sSrAp6NXQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -533,4 +589,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9a46fc9c-ef5a-4359-8fbb-d3d110e54d26" Target="#_ae25de5f-cfa5-4a52-88fb-bd87e8a8a774"><Timestamp>2024-03-14 08:24:49</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_2dd8af4a-1a6b-4775-a0e1-bdefe88780c5" Target="#_e6884559-eee4-46fd-a687-fb778758ff07"><Timestamp>2024-03-14 08:25:10</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
