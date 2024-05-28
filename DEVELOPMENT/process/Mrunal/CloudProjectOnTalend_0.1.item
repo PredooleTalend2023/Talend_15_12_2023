@@ -337,29 +337,38 @@
   </node>
   <node componentName="JDBCOutput" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="448" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBOutput_1"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="Output"/>
     <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="bmV3amRiYyNKREJDI091dHB1dA"/>
+    <elementParameter field="TEXT" name="VERSION" show="false" value="1"/>
+    <elementParameter field="TEXT" name="FAMILY" show="false" value="JDBC"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="true"/>
+    <elementParameter field="TEXT" name="HELP" show="false" value="HELP"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.enableDBType" show="false" value="false"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.dbType" show="false" value="JDBC"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.setRawUrl" show="false" value="true"/>
-    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrl" value="&quot;jdbc:snowflake://hkhamhw-vj84409.snowflakecomputing.com?db=TALEND_DB&amp;warehouse=COMPUTE_WH&amp;schema=TALEND_SCHEMA&amp;tracing=ALL&quot;"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrl" value="&quot;jdbc:snowflake://hkhamhw-vj84409.snowflakecomputing.com?db=TALEND_DB&amp;warehouse=COMPUTE_WH&amp;schema=TALEND_SCHEMA&quot;"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.port" show="false" value="&quot;80&quot;"/>
     <elementParameter field="TABLE" name="configuration.dataSet.dataStore.parameters" show="false"/>
     <elementParameter field="TABLE" name="configuration.dataSet.dataStore.jdbcDriver">
       <elementValue elementRef="configuration.dataSet.dataStore.jdbcDriver[].path" value="mvn:net.snowflake/snowflake-jdbc/3.13.30/jar"/>
       <elementValue elementRef="configuration.dataSet.dataStore.jdbcDriver[].path" value="mvn:org.talend.libraries/snowflake-jdbc-3.0.16/6.0.0-SNAPSHOT/jar"/>
     </elementParameter>
-    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.dataStore.jdbcClass" value="net.snowflake.client.jdbc.SnowflakeDriver"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.dataStore.jdbcClass" value="&quot;net.snowflake.client.jdbc.SnowflakeDriver&quot;"/>
     <elementParameter field="TEXT" name="configuration.dataSet.dataStore.userId" value="&quot;ADMIN&quot;"/>
-    <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.password" value="enc:system.encryption.key.v1:fiO3Ugw2Z+tnC5EX1hDJrel9WNiXt8Rd6mRBTS4="/>
+    <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.password" value="enc:system.encryption.key.v1:abjNvgAp3qyeGLx74LB7ayEwVmYnmz39gaUPZ28Nv9sTR24d4tDc5kw="/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.useSharedDBConnection" show="false" value="false"/>
     <elementParameter field="CHECK" name="configuration.dataSet.dataStore.useDataSource" value="false"/>
-    <elementParameter field="MAPPING_TYPE" name="configuration.dataSet.dataStore.dbMapping" show="false" value="&quot;snowflake_id&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="configuration.dataSet.dataStore.dbMapping" show="false" value="&quot;mysql_id&quot;"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.authenticationType" show="false" value="&quot;BASIC&quot;"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.grantType" show="false" value="CLIENT_CREDENTIALS"/>
-    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="&quot;MASTER&quot;"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="&quot;&quot;"/>
     <elementParameter field="CLOSED_LIST" name="configuration.dataAction" value="INSERT"/>
     <elementParameter field="CHECK" name="configuration.clearData" value="false"/>
     <elementParameter field="CHECK" name="configuration.dieOnError" value="false"/>
@@ -427,6 +436,7 @@
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" show="false" value="-1"/>
     <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" show="false" value="-1"/>
+    <elementParameter field="TEXT" name="DATASTORE_PATH" show="false" value="configuration.dataSet.dataStore"/>
     <metadata connector="FLOW" name="tDBOutput_1">
       <column comment="" key="false" length="45" name="first_name" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
@@ -450,8 +460,52 @@
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
-    <metadata connector="LOOKUP" name="LOOKUP"/>
-    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="LOOKUP" name="LOOKUP">
+      <column comment="" key="false" length="45" name="first_name" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="45" name="last_name" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="age" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="25" name="city" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="45" name="course" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="amount_paid" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="true" length="45" name="admission_no" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+    <metadata connector="MERGE" name="MERGE">
+      <column comment="" key="false" length="45" name="first_name" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="45" name="last_name" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="age" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="25" name="city" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="45" name="course" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="amount_paid" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="true" length="45" name="admission_no" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
     <metadata connector="reject" name="reject">
       <column comment="" key="false" length="45" name="first_name" nullable="false" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
         <additionalField key="Comment" value=""/>
@@ -636,13 +690,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c06a40a2-9230-484f-a2b1-98e297ef5782"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>C2kQYRfY/EmUDOzWiQiuxaC38twJBRXk4dkqL1fPbl/XDbMvfh61ZtbVCoC9eN9KdVHgTaqPYrBr&#13;
-w6tDuJTdTg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_08be324e-3736-457a-a4b4-27314d063941"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8nlRIKOfLoWZ2hb9Tb5BCCmTdyzf45jeLXSGvmsxHj+0Em9n1PYmBMUxtGcaxbaLot1yafQVz/CG&#13;
-0o7OKOG0Fw==</DigestValue></Reference></SignedInfo><SignatureValue>i2hz8vH98Z5Wb/Ela1S2EnGURZoeX5BGWchP0GsBotkutBgHJzkiOcVW+Uj0zaP4i/+HiEXUr0S5&#13;
-AnmURBkXu6IqjMTIdlxtzZZhTW4bPfQgR0LYqwTJRBygnqI5uVVl0V/BaUJxQC7g44HzKkp6P8Es&#13;
-M25a0lHia6OEz6qm+N4NYzjBcp62ztYU87+bmi/0MEDfVW6AUZtByeBMlDBRb5avBlDHNNDn7/Qm&#13;
-Ax4Y2WfBuBPhqHbXGgrd36o4mXReyGNFP+Xoi5sThkoh/BCazdQgNJP+Cn9E1Iw1FW06QgtaarKh&#13;
-iw4YibaH3xPkPl+wNHPh0uZpHVH4asfgUk0RUg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_44726bd0-d290-4212-be2f-33059427e77b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>E6lwcZIqwoZP5ii7dlK389+OB0pG+JGIwWBCqdNjMdX8I2oCs9xJnIVlmwaEXk7gahPWQErjUI1q&#13;
+i8EtcCyu6w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0bd04a29-0ad5-4194-b301-33737914e512"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>1PN7pF12PBmhVLHT+z2jzfYxxvk3ix/FCF2ZBwnkrv1egGIqWZKE5DwBUy898yye6jUL5OfO4Gkp&#13;
+LGkgrZA3Bw==</DigestValue></Reference></SignedInfo><SignatureValue>oTjHzTDXJVDipBGt0ShLMEPd9qkD24kR+jqWGXANWd1e69nzEV7J66YHSK0oZvlaUfIqWLFRENUP&#13;
+DG6RCzr8AF1j7QU6y1fXCZh35TvgZE+VuumQQg67Sb92V9Txp01Hm42FrZIWIeNwj7jZudnMjz7K&#13;
+M0ADawBIyzaBLH4XDtemkUaBfZynWJjOpNzEJYT7C+hP+5P2lYu7tMAf4VjcMGy5O75QBHnE8uMD&#13;
+eGt4iQRhHKbNGXTO9xmtI/ZCrTH1S6fn6sEQ4AUf2Ps8SeLxjSP/1Q/1K8t6BBi9wP+WtF1kHnhw&#13;
+gfNoTSMVZn8w+FNJDEJsQzctcnk0PRf3lQrwjQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -664,4 +718,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_08be324e-3736-457a-a4b4-27314d063941" Target="#_c06a40a2-9230-484f-a2b1-98e297ef5782"><Timestamp>2024-05-28 09:01:28</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0bd04a29-0ad5-4194-b301-33737914e512" Target="#_44726bd0-d290-4212-be2f-33059427e77b"><Timestamp>2024-05-28 09:04:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
