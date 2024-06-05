@@ -12,31 +12,13 @@
 			<xsd:element name="ESB2OperationRequest">
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="id" type="xsd:string"></xsd:element>
+						<xsd:element name="in" type="xsd:string"></xsd:element>
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
 			<xsd:element name="ESB2OperationResponse">
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="Phone" type="xsd:string"></xsd:element>
-						<xsd:element name="Email" type="xsd:string">
-						</xsd:element>
-					</xsd:sequence>
-				</xsd:complexType>
-			</xsd:element>
-			<xsd:element name="NewOperation">
-				<xsd:complexType>
-					<xsd:sequence>
-
-						<xsd:element name="in" type="xsd:string"></xsd:element>
-					</xsd:sequence>
-				</xsd:complexType>
-			</xsd:element>
-			<xsd:element name="NewOperationResponse">
-				<xsd:complexType>
-					<xsd:sequence>
-
 						<xsd:element name="out" type="xsd:string"></xsd:element>
 					</xsd:sequence>
 				</xsd:complexType>
@@ -51,17 +33,11 @@
 		<wsdl:part name="parameters" element="tns:ESB2OperationResponse"></wsdl:part>
 	</wsdl:message>
 
-	<wsdl:message name="NewOperationRequest">
-		<wsdl:part name="parameters" element="tns:NewOperation"></wsdl:part>
-	</wsdl:message>
-	<wsdl:message name="NewOperationResponse">
-		<wsdl:part name="parameters" element="tns:NewOperationResponse"></wsdl:part>
-	</wsdl:message>
 	<wsdl:portType name="ESB2PortType">
 		<wsdl:operation name="ESB2Operation">
 			<wsdl:input message="tns:ESB2OperationRequest"></wsdl:input>
 			<wsdl:output message="tns:ESB2OperationResponse"></wsdl:output>
-		</wsdl:operation>
+		</wsdl:operation>
 	</wsdl:portType>
 
 	<wsdl:binding name="ESB2Binding" type="tns:ESB2PortType">
