@@ -144,14 +144,18 @@
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row1">
-        <nodes name="id" type="id_String" xpath="row1/id"/>
+        <nodes name="id" outgoingConnections="//@node.1/@nodeData/@connections.0" type="id_String" xpath="row1/id"/>
       </inputTrees>
       <outputTrees name="out1">
         <nodes expression="" name="payload" type="id_Document" xpath="out1/payload">
-          <children loop="true" main="true" name="root" type="id_String" xpath="out1.payload:/root" xsi:type="TalendXMLMap:OutputTreeNode"/>
+          <children main="true" name="tns:ESB_PranitaOperationRequest" type="id_String" xpath="out1.payload:/tns:ESB_PranitaOperationRequest" xsi:type="TalendXMLMap:OutputTreeNode">
+            <children defaultValue="http://www.talend.org/service/" name="tns" nodeType="NAME_SPACE" type="id_String" xpath="out1.payload:/tns:ESB_PranitaOperationRequest/xmlns:tns" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression=" row1.id" incomingConnections="//@node.1/@nodeData/@connections.0" loop="true" name="id" type="id_String" xpath="out1.payload:/tns:ESB_PranitaOperationRequest/id" xsi:type="TalendXMLMap:OutputTreeNode"/>
+          </children>
         </nodes>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
+      <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.0" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tESBConsumer" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="288" posY="96">
@@ -179,15 +183,15 @@
     <elementParameter field="TEXT" name="CORRELATION_VALUE" show="false" value="&quot;&quot;"/>
     <elementParameter field="CHECK" name="ENABLE_CXF_MESSAGE_GZIP" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_ERROR" value="true"/>
-    <elementParameter field="TEXT" name="ESB_ENDPOINT" value="&quot;http://localhost:8090/services/ESB2&quot;"/>
-    <elementParameter field="TEXT" name="ENDPOINT" show="false" value="&quot;C:/Users/Laptop_User/workspace/TalendCloud-1424914096/TALEND_PROJECT_PRANITA/services/ESB2_0.1.wsdl&quot;"/>
+    <elementParameter field="TEXT" name="ESB_ENDPOINT" value="&quot;http://localhost:8090/services/ESB_Pranita&quot;"/>
+    <elementParameter field="TEXT" name="ENDPOINT" show="false" value="&quot;http://localhost:8090/services/ESB_Pranita?WSDL&quot;"/>
     <elementParameter field="TEXT" name="SERVICE_NS" show="false" value="http://www.talend.org/service/"/>
-    <elementParameter field="TEXT" name="SERVICE_NAME" show="false" value="ESB2"/>
+    <elementParameter field="TEXT" name="SERVICE_NAME" show="false" value="ESB_Pranita"/>
     <elementParameter field="TEXT" name="PORT_NS" show="false" value="http://www.talend.org/service/"/>
-    <elementParameter field="TEXT" name="PORT_NAME" show="false" value="ESB2Port"/>
-    <elementParameter field="TEXT" name="METHOD_NS" show="false" value=""/>
-    <elementParameter field="TEXT" name="METHOD" show="false" value="ESB2Operation(ESB2OperationRequest):ESB2OperationResponse"/>
-    <elementParameter field="TEXT" name="SOAP_ACTION" show="false" value="http://www.webserviceX.NET/GetWeather"/>
+    <elementParameter field="TEXT" name="PORT_NAME" show="false" value="ESB_PranitaPort"/>
+    <elementParameter field="TEXT" name="METHOD_NS" show="false" value="http://www.talend.org/service/"/>
+    <elementParameter field="TEXT" name="METHOD" show="false" value="ESB_PranitaOperation(ESB_PranitaOperationRequest):ESB_PranitaOperationResponse"/>
+    <elementParameter field="TEXT" name="SOAP_ACTION" show="false" value="http://www.talend.org/service/ESB_PranitaOperation"/>
     <elementParameter field="TEXT" name="COMMUNICATION_STYLE" show="false" value="request-response"/>
     <elementParameter field="CHECK" name="LOG_MESSAGES" value="false"/>
     <elementParameter field="CHECK" name="FOLLOW_REDIRECTS" value="false"/>
@@ -207,7 +211,7 @@
     <elementParameter field="TEXT" name="PROXY_PORT" show="false" value="8080"/>
     <elementParameter field="TEXT" name="PROXY_USERNAME" show="false" value="&quot;&quot;"/>
     <elementParameter field="PASSWORD" name="PROXY_PASSWORD" show="false" value="enc:system.encryption.key.v1:2962kl3uvQBlIUqbBIgumuShs1CRSnvsgFquzYnA"/>
-    <elementParameter field="TEXT" name="WSDL_CONTENT" show="false" value="eJwL8GZmEWHg4OBguBp7NIIBCXACcW5iZp5eeXFKztmw6PzLBiJ1ekL/D36yLo2Oc9tiZMg5L8En&#13;&#10;Z3KFaWemrmpZx92lf7/LxBdnelzOmlyRVfyn9vj9nTf37bspblmVNvVR0JqPRfsOdHSGpMXkXPvx&#13;&#10;8uPp3do1nz++nf06KrVy0sb7MQW8Aa0sujek6ut2xCYuydya+ItPZ9USzRnbo6ZzKpbGnjc9O/PE&#13;&#10;s023BI6uSp9n1CSYoxWSVOO2xmv7mgVZfN5ely4J8Sgs4o7bcDmjuUtE90qIbvXU0gVfq7mjdcW8&#13;&#10;P32+fZ19dzyD9J1MzTTbX+bep69mTjpcmnHZg8V5pkBR66X2SZq/ecU4dAuvbOZm1UvbPPPrgaIw&#13;&#10;g4XRpf/jNnXNSvtx8N+bGZfk3j5YqXNqzlt5xw5z691GERPdHk8o1luwtGHHsWkLtTPcfBZJGz04&#13;&#10;LtlvVpr2vjbLYFXLvzR9sbN/w7jMxC4sWNL0qabhSkHVxL1RRe8iZIuL8/z+LZbafnjHliPKD0/M&#13;&#10;rdtbYXO7b4N00aXZReZfDa525d1IOFLo9HZiwkPVtU01P7j3S61jtPh391w2z/L0S+v3pU72yF/9&#13;&#10;cbf/lcshD4oc3eP0hL+t3/zGJnFxXJzLjaWa0uXGoVGa2rmztix9e2/2rkkpN7I0uhh4E/ROzXWr&#13;&#10;236yc8uaeeozDgSvY1Mu3zNPt+CWJidnxtMn4uLPFl7h+nIt8lCkgItM6qk7Nyau+6LIXqB2ee5K&#13;&#10;qQnaWlNu5n95tX37vsjtz8/8ZN0gJbXh558pWb/5ZOrFSmQnLZzkFt0Tmsa+JVhB/fmFxSb5n/1C&#13;&#10;vwrlT379avUFrdX9m/8eecs3d01JPo/Bp7xZs9rDXqjOSYtkte0qmnnJb1Ov4n2vpZNXH2139di2&#13;&#10;6Wae1p0vSdZs/Gb8pZfqVzZ/1A/wZufYLFO1vZaJgeEZNwNDgDcjkwgDItUiy3EyoAN4Gg7wZmUD&#13;&#10;CTACoTmQ3sIE4gEA/bFX/w==&#13;&#10;"/>
+    <elementParameter field="TEXT" name="WSDL_CONTENT" show="false" value="eJwL8GZmEWHg4OBgUGg6GsGABDiBODcxM0+vvDglZ2uYb760ooDt7qD/zI/ikpdPL5nqe8Xj7Ur5&#13;&#10;wMkee0NLpt/y0Ak4sPHve+sNOvf0b2Zr20amPbO9d0Y6Iu9d2VQH/TMR61L6pn9mdfMRW/WkaOrj&#13;&#10;58vPv1/38e7b2+bm0dFda1LqdzzhC9KdtCXJ8t+Xiv+vDwZELJGwzAo7U9vccHVLw4tblnMFN93N&#13;&#10;e97HpXZ6p5F20szKh6zKEgfvXUqbZ/X0VtJZraznApu6XjF84NTc/UjUeu7bzUJHPK1DT5+bNvfK&#13;&#10;298TyrZG6Jw8vz5e7nCd76bz1rpHjwvv59dd79f8ag9fjlRHQgH3wlv626+fafu/gWlpqumXnMUN&#13;&#10;SWazWePOH2JZPaPksOCPdTMX1tnUbdgvnRbLci6Kiys082CZ/wIdtuQtgS8mbvI4KCJ7d/Z0g1KH&#13;&#10;qY8bStmOiU1mNJRM7Jt1YsWKAK3Mt+WO7Gvakg/9q+b+EuVZtob7+EMDvpieA8JVS3jX34/ckXAi&#13;&#10;0e41p9pewXXuUm7XLonOvvFTQeWBienK5CsH1jdb87/bFeXS97DvhNrGiS7Xp0mmztU0kZ10/cJN&#13;&#10;1dlawdqP91g7z+U3vHR1+SzefpFrClI806seB9z5fUeIaYf7CrM8pccrKk33bL+WcOtt1qzLr67n&#13;&#10;6/3dXhjxt1Y2oy/I/9KCmf/W+aVce8ua4BWas+f0AUaN1+X2VS/bf987fjhx/43FCk8bPtbbi+nt&#13;&#10;Ye+rF3erPDnj5/a11ivWxUyt3rJRwa9gRoHWrR3Bx+IPmd38/MLz9KeIdye6l1cXTZX8qVDx2LBr&#13;&#10;SfPGjLZl6Wy63sybe1u0Mo5z7Fe4dmrXm6qPiRclEm/7yaQ9NDj89pfSsf0vPf4Hsnf/ZwjwZufQ&#13;&#10;5Ne6msrEwCDIxQDkMzKJMCBSJ7IcJwM6gKfVAG9WNpAAIxCaA+k5TCAeAP/ASu0=&#13;&#10;"/>
     <elementParameter field="TABLE" name="HEADERS"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tESBConsumer_1">
@@ -266,13 +270,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="255;255;255"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_62ff1f65-bade-42d0-9479-021165098125"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7DZc7kY1K4HanTYcQvggZ0DBSYcaRvr8TcYrEiJOvkGeIFIg3ggyRmPauzTcDvQG9hLv6tOAE+NU&#13;
-cltZQIapMg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_bd7a3796-733f-4c6f-a5d1-e7b25606bae3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>H/g9gOe7EWZNtyKh53KXTo7ojM4QuNtE1t/6sKQRVqg5zFRdXxg/sRGWvzmOOp5lDuaZANhlqlIV&#13;
-9zFq8y2qYg==</DigestValue></Reference></SignedInfo><SignatureValue>ir39iFLcXM6m6aFVkeZjvFsmjmk99z8byTzjiCaGIYLWKZ90rEbzwCWmFJ/T+miCopBkfxUWu6Wq&#13;
-EMhgfZxHvzzSIYkaKDl/SyULpp3WEroAldsvaZedgs1SIpUVgZxNNgYxx/+nO8MG4L2469CIGBa/&#13;
-xOcChS3fNdAaDH3PGVsWvfmm8FTqmkKGsMFSrxhwHw0hUFuvzkyojcdtq6l0bG35/SJBuVaD40xA&#13;
-e6SuS1Qr/gWwLGMoe66mWqnp41zQ4p28omZwAirsltFU37SRqLcsf5cR7XaSBuVbsoMvQZOkgol1&#13;
-dj5UbnUo83dLHPoyPneh7AJGXCkRBhagZ9S40w==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_e59b6fed-27b9-40aa-99bf-2b5d6adac93d"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>C+sz2zO3t6uyuT6fjRLA7kg8+guG2kwpLmxhOMsyKEvahYC1Nz5pnBwuUXQnQ+BmM7+kFA8Qk64N&#13;
+Q8alaBm1Rw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_69c7e6c2-6816-4b73-9303-d326e9ce1172"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ruXIP7pMdq6/s8GG/7xqeffa8VIUilGNk1qvPvfDaRPfq95/3Vcs5IxOjSqIBc6e29b4vbx2RTTa&#13;
+hESVP4whZQ==</DigestValue></Reference></SignedInfo><SignatureValue>mgNFYZjjH3bHw9gvkJZvFi4HkjXNOUtAPOewcQiuFse/KAMSHnBiFKVFpxsnnWqkJ737SND3cbro&#13;
+TU/xfx7TzH7PDsxe61H7OvQy7Zp+xV6PBKiVrbEae5KzhWostTJqj62hi1bQAcJZ/uhaF9evCuny&#13;
+C5ZH4ma/E5Y9/ERVBdsKEe1jOjHUbJkcb+Is78f4GTc4dRKQeYABg/x6YfEvKxbQ1qzrPI4KdIbO&#13;
+wlGSkxh9dNTN+pCR7AWZL/oREjZGgu3JGHJ5yERWzYsMLns5ATRxFEkTsgE3C3HaobYZkPxlhpL5&#13;
+vNl+/tCFa7lkxz2DE2FS0BJbeqZAA/ZaJ4LDqw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -294,4 +298,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_bd7a3796-733f-4c6f-a5d1-e7b25606bae3" Target="#_62ff1f65-bade-42d0-9479-021165098125"><Timestamp>2024-06-05 10:28:12</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_69c7e6c2-6816-4b73-9303-d326e9ce1172" Target="#_e59b6fed-27b9-40aa-99bf-2b5d6adac93d"><Timestamp>2024-06-05 10:47:11</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
