@@ -1,7 +1,9 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendXMLMap="http://www.talend.org/xmlmap" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" hide="false" name="Default"/>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -111,13 +113,150 @@
     <routinesParameter id="_Cxm7Rqb4Ee61bMsFHcflUw" name="TalendStringUtil"/>
     <routinesParameter id="_CxwFMKb4Ee61bMsFHcflUw" name="DataMasking"/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fc9b5b82-dd0b-422d-9b0d-a60cd0a39d03"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Rhm/gDP9bDO5LfqSWlFEM5PRtdtVoLR/qCQV4HWdwBRmM4FuE809it8ub1YMq+lrJwP07LMQqrtZ&#13;
-PjrS9+jx9g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d239d590-1ed2-49b3-852d-1e2a0778d766"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gGfyX2WZA+CViYSJgkYbEAJbtk+dO0y0K1Kc8crvzAgeQsbkw6rxtffTQ3d+3immg13E8DuRvOuu&#13;
-hyTxvGq4zQ==</DigestValue></Reference></SignedInfo><SignatureValue>JBtmhbOS5oUDF8KUUhWR4RFEsVg8VynZV6xY+6xiQxuy8R7tKczreg6BW7Z8Zo9Cm4tI8W5LqPrK&#13;
-Ak87C+BXARx9mqgZMI+JcCBylka2vXTeHHVhqv6AxdwbgrvZorVlSos3gGhRtgM/YcjtXXnWWh6c&#13;
-y4m2LQdzr+m6jSVVVoJHxGLR5VFMqwQXk0+TKMytNaigZVQ6cA9T9PdzG+YDrBiN/oHAibr7o84/&#13;
-OhKHVRCkARMWtVmIfsbJYMiiJ3HszICVotKnSZskXHZK/ALP4CXQan2zSFrdqiFuqjRwXmK/hwgN&#13;
-3KaWdF1BweTjL8cBIX+TtN8nvtI/iVji4wCHqQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <node componentName="tESBProviderRequest" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="120" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tESBProviderRequest_1"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tESBProviderRequest"/>
+    <elementParameter field="TEXT" name="VERSION" show="false" value="0.100 (ALPHA)"/>
+    <elementParameter field="TEXT" name="FAMILY" show="false" value="ESB/Web Services"/>
+    <elementParameter field="CHECK" name="START" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tESBProviderRequest"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_tUYI0CMmEe-L6KF6vGbAOA - _tUoAcCMmEe-L6KF6vGbAOA - _tUoAcSMmEe-L6KF6vGbAOA"/>
+    <elementParameter field="CHECK" name="KEEPLISTENING" value="true"/>
+    <elementParameter field="TEXT" name="WSDL_LOCATION" show="false" value="E:/talend_new_updated/Talend_15_12_2023-1921442151/DEVELOPMENT/services/ESB_Pranita_0.1.wsdl"/>
+    <elementParameter field="TEXT" name="ENDPOINT_URI" show="false" value="http://localhost:8090/services/ESB_Pranita"/>
+    <elementParameter field="TEXT" name="SERVICE_NS" show="false" value="http://www.talend.org/service/"/>
+    <elementParameter field="TEXT" name="SERVICE_NAME" show="false" value="ESB_Pranita"/>
+    <elementParameter field="TEXT" name="PORT_NS" show="false" value="http://www.talend.org/service/"/>
+    <elementParameter field="TEXT" name="PORT_NAME" show="false" value="ESB_PranitaPort"/>
+    <elementParameter field="TEXT" name="OPERATION_NS" show="false" value=""/>
+    <elementParameter field="TEXT" name="OPERATION_NAME" show="false" value="ESB_PranitaOperation"/>
+    <elementParameter field="TEXT" name="COMMUNICATION_STYLE" show="false" value="request-response"/>
+    <elementParameter field="CHECK" name="LOG_MESSAGES" value="false"/>
+    <elementParameter field="TEXT" name="EXCHANGE_TIMEOUT" value="50"/>
+    <elementParameter field="TEXT" name="MAX_PARALLEL_REQUESTS" value="1000"/>
+    <elementParameter field="TEXT" name="REQUEST_PROCESSING_TIMEOUT" value="120"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tESBProviderRequest_1">
+      <column defaultValue="" key="false" length="0" name="payload" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="240" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tXMLMap_1"/>
+    <elementParameter field="EXTERNAL" name="MAP" value=""/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
+    <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="out">
+      <column defaultValue="" key="false" length="0" name="payload" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
+    <nodeData xsi:type="TalendXMLMap:XmlMapData">
+      <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row1">
+        <nodes expression="" name="payload" type="id_Document" xpath="row1/payload">
+          <children main="true" name="tns:ESB_PranitaOperationRequest" type="id_String" xpath="row1.payload:/tns:ESB_PranitaOperationRequest">
+            <children defaultValue="http://www.talend.org/service/" name="tns" nodeType="NAME_SPACE" type="id_String" xpath="row1.payload:/tns:ESB_PranitaOperationRequest/xmlns:tns"/>
+            <children lookupOutgoingConnections="//@node.1/@nodeData/@connections.0" loop="true" name="id" type="id_String" xpath="row1.payload:/tns:ESB_PranitaOperationRequest/id"/>
+          </children>
+        </nodes>
+      </inputTrees>
+      <inputTrees lookup="true" lookupMode="LOAD_ONCE" matchingMode="UNIQUE_MATCH" name="row2">
+        <nodes expression="[row1.payload:/tns:ESB_PranitaOperationRequest/id]" lookupIncomingConnections="//@node.1/@nodeData/@connections.0" name="id" nullable="false" type="id_String" xpath="row2/id"/>
+        <nodes name="phone" nullable="false" outgoingConnections="//@node.1/@nodeData/@connections.1" type="id_String" xpath="row2/phone"/>
+        <nodes name="email" nullable="false" outgoingConnections="//@node.1/@nodeData/@connections.2" type="id_String" xpath="row2/email"/>
+      </inputTrees>
+      <outputTrees name="out">
+        <nodes expression="" name="payload" type="id_Document" xpath="out/payload">
+          <children main="true" name="tns:ESB_PranitaOperationResponse" type="id_String" xpath="out.payload:/tns:ESB_PranitaOperationResponse" xsi:type="TalendXMLMap:OutputTreeNode">
+            <children defaultValue="http://www.talend.org/service/" name="tns" nodeType="NAME_SPACE" type="id_String" xpath="out.payload:/tns:ESB_PranitaOperationResponse/xmlns:tns" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row2.phone " incomingConnections="//@node.1/@nodeData/@connections.1" loop="true" name="phone" type="id_String" xpath="out.payload:/tns:ESB_PranitaOperationResponse/phone" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row2.email" incomingConnections="//@node.1/@nodeData/@connections.2" name="email" type="id_String" xpath="out.payload:/tns:ESB_PranitaOperationResponse/email" xsi:type="TalendXMLMap:OutputTreeNode"/>
+          </children>
+        </nodes>
+      </outputTrees>
+      <varTables minimized="true" name="Var"/>
+      <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.1" target="//@node.1/@nodeData/@inputTrees.1/@nodes.0" xsi:type="TalendXMLMap:LookupConnection"/>
+      <connections source="//@node.1/@nodeData/@inputTrees.1/@nodes.1" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.1/@nodeData/@inputTrees.1/@nodes.2" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
+    </nodeData>
+  </node>
+  <node componentName="tESBProviderResponse" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="360" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tESBProviderResponse_1"/>
+    <elementParameter field="TABLE" name="SERVICE_ACTIVITY_CUSTOM_PROPERTIES" show="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tESBProviderResponse_1">
+      <column defaultValue="" key="false" length="0" name="payload" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="240" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;20.204.123.250&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;pranita_source&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MySQL"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;chirag&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:SVeRyHiUX0J/UbJfNav0p3Kw3TiV+2llqpB1NgalogsQqeSIr4w3NZtH"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;customer&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select  *&#10;from customer&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="mysql_id"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;noDatetimeStringSync=true&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="ENABLE_STREAM" value="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="phone"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="email"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_1">
+      <column comment="" key="false" length="10" name="id" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="15" name="phone" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="255" name="email" nullable="false" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tESBProviderRequest_1" offsetLabelX="0" offsetLabelY="0" source="tESBProviderRequest_1" target="tXMLMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <connection connectorName="FLOW" label="out" lineStyle="0" metaname="out" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_1" target="tESBProviderResponse_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="8" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tXMLMap_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tESBProviderRequest_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="255;255;255"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="47;47;47"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d5f728a9-0549-4d74-bea1-cab2a8db3040"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>v1v6/cO6W4XAWCsHy1G5bJeXOLdVHnOARC11Xk2xtHWXH1+KZuqIp4A+G7+zOyr268yh7t518Vr4&#13;
+cHK8eRpFKw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_909c0ab8-21a5-4ed6-9a7d-398d411cfd39"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>VHVSrs6tqUbR7TrjvBjTx2E74Jvh7tzbdeWDagzXXumTZoQys5WDpKkfqXq/oUf4wD24O5Ox0Zqo&#13;
++mLbzQZ83g==</DigestValue></Reference></SignedInfo><SignatureValue>Vud7EGJ/ovq/UlzWXGSU2gecfynI12vWtoQeJUGEmAsT+84OFfoH3lgYZLmTaHQ7FgiL3sJmT3qj&#13;
+sFcYu+OclnwqiGdRjnN1Nc0xBhBCczonqouU54HCYIoRso9E1IMBB75v6RvIXB8iJWQhE2vTVVeh&#13;
+lqktjZ7BYBKjyXRZ3cMXHvjYJ2BJ+AQKGgajYFFQr7DJ5MLSlP6R24cYw7H0h4JzKqcKYYY6XaN2&#13;
+Ui7wgP5C9qtY2cU5RJE45R0es0Cj+s+ECY9Wbaxo9l7K58cWOAJw4qKTcTTMqoJctp01sh2+xUDY&#13;
+HOQD5/rZC3sVDIGxIhufXpqLdjZwOjZOIIqtdg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -139,4 +278,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d239d590-1ed2-49b3-852d-1e2a0778d766" Target="#_fc9b5b82-dd0b-422d-9b0d-a60cd0a39d03"><Timestamp>2024-06-05 10:43:38</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_909c0ab8-21a5-4ed6-9a7d-398d411cfd39" Target="#_d5f728a9-0549-4d74-bea1-cab2a8db3040"><Timestamp>2024-06-05 10:45:43</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
