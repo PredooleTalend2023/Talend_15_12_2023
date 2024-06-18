@@ -100,7 +100,6 @@
   </parameters>
   <node componentName="tKafkaInput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="200" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tKafkaInput_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="OUTPUT_TYPE" value="STRING"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tKafkaConnection_1"/>
@@ -153,7 +152,6 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="360" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -178,7 +176,6 @@
   </node>
   <node componentName="tKafkaConnection" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tKafkaConnection_1"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="KAFKA_VERSION" value="KAFKA_3_2_3"/>
     <elementParameter field="TEXT" name="BROKER_LIST" value="&quot;20.204.123.250:9092&quot;"/>
     <elementParameter field="CHECK" name="USE_HTTPS" value="false"/>
@@ -202,6 +199,7 @@
     <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
     <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tOracleInput"/>
     <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="E:\Talend_Studio_Workplace\studio\configuration\lib\java"/>
@@ -278,6 +276,7 @@
   </node>
   <node componentName="tKafkaOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tKafkaOutput_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="INPUT_TYPE" value="BYTES"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_TlFN4CltEe-3e8SViGswFA - EMPLOYEES"/>
@@ -335,15 +334,14 @@
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tKafkaInput_1" offsetLabelX="0" offsetLabelY="0" source="tKafkaInput_1" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tKafkaConnection_1" offsetLabelX="0" offsetLabelY="0" source="tKafkaConnection_1" target="tKafkaInput_1">
-    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tKafkaOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <subjob>
@@ -361,13 +359,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f9a4d4ba-dc48-4eca-9ae9-4e5e28a207dd"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>PToLN3ivq0DsFbKlkPdQFJRJqyCYbnoutvMU8kn4T67iFVwO9Ei7qqyDSsaoszecsaJ8C09EqRg6&#13;
-kPqkdn9ACQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_b62aae73-a3bf-46d6-8849-046c824ac519"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lHB6Er6l8/xUnv77OUozt9My71Cqo0cUZPU+Jo0Q6N+cQ++xk3JlkORTm454fvlJSk4XhD1sOtcj&#13;
-jkm2/Ov9ww==</DigestValue></Reference></SignedInfo><SignatureValue>MHsQhaQ/QGaebQfbDKv05xcpsfXMKj/hcIs6+Ogg/24Q7PyjmFjg3X/WNDczKXxIfWw5lTugORPp&#13;
-hf90epd30FSUP+y2fUPhXULZt7aDYf9bixLKvZgxFDgF/4V2q67DRrwmh2Uwu+im1kA3AZ/WSfDo&#13;
-Y0ZAuAvo5kTrgdfPBF/JeenbBjE9Ztn2rubVt+Qe7Uuuw7eAuUY3tY/DdBAC7UqddU3N/mt3omXL&#13;
-6hHM7gH8cUhEqCOd/pFDVWDVo1hVCARMMIhOO/I2fZOkiTKNABNE6h5Kb71VcLFrv3CkanY9SPYQ&#13;
-DyNpTe+5YB/5g47rfp+O4+6Jg9atU9oXLB3ACw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_67614ecc-6091-41fc-aa8c-1cb2f4faba60"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>26k32vgPE1DQ3gtKhP+aVRuUS4DS7OSeJqMYvAq5nTtARaf5+XXq5aPEvYyzSabh2q28eNfEAdBV&#13;
+tDh2DGdrfQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9e8c0da2-e609-49ea-a4e0-587ebcec95fc"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>F/zz9a//dwe2F9UEThYrL3JYiscN3yePVDweOjeA6tWIJX9C3bpEhL1lR4d3kDqk/4zudZoY5QaP&#13;
+MyDKPfLnfQ==</DigestValue></Reference></SignedInfo><SignatureValue>faRN8MDQu/aUkJG3q/unH+2bLc4CodkpH5ytQZd7TmoQwhvM690jIZDUAM2korMdfsjw5ar5seWV&#13;
+rmSqy5MmWC5eX00DicrRK8JUhK2r+a5sSYZMKmerSUc899vf4dJR0eT6zYW5kAnB6ZjPwNXomyFw&#13;
+KnKHJTjqTBBEMyDSe6Phr7gaxzpq+Z4VMsvCI+76A89E7oCxN6XnR8yRLCzrVAC9OJgBjuddJKMG&#13;
+LPWXvxBY8QZ4WonwxGRsEkB9SfsD4+4bSbBZyxW8xaHENiHNHHN2pUej0yzsiS+kJMjbRcv4mg8t&#13;
+w2HMm6yJuQhIRGY4FMKNz6NCwci9WVdmLX4oBw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -389,4 +387,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_b62aae73-a3bf-46d6-8849-046c824ac519" Target="#_f9a4d4ba-dc48-4eca-9ae9-4e5e28a207dd"><Timestamp>2024-06-18 09:14:38</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9e8c0da2-e609-49ea-a4e0-587ebcec95fc" Target="#_67614ecc-6091-41fc-aa8c-1cb2f4faba60"><Timestamp>2024-06-18 09:16:26</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
