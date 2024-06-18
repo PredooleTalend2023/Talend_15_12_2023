@@ -100,13 +100,14 @@
   </parameters>
   <node componentName="tKafkaInput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="200" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tKafkaInput_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="OUTPUT_TYPE" value="STRING"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="tKafkaConnection_1"/>
     <elementParameter field="CLOSED_LIST" name="KAFKA_VERSION" show="false" value="KAFKA_3_2_3"/>
     <elementParameter field="TEXT" name="BROKER_LIST" show="false" value="&quot;20.204.123.250:9092&quot;"/>
     <elementParameter field="TEXT" name="KAFKA_TOPIC" value="&quot;test-topic&quot;"/>
-    <elementParameter field="TEXT" name="GROUP_ID" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="GROUP_ID" value="&quot;console-consumer-c4d965f0-7107-475b-b140-8903045d88c9&quot;"/>
     <elementParameter field="CHECK" name="RESET_OFFSET" value="false"/>
     <elementParameter field="CLOSED_LIST" name="AUTO_OFFSET_RESET_NEW" value="LATEST"/>
     <elementParameter field="CHECK" name="AUTO_COMMIT_OFFSET" value="true"/>
@@ -152,6 +153,7 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="360" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -174,8 +176,9 @@
       <column defaultValue="" key="false" length="0" name="payload" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tKafkaConnection" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="240" posY="40">
+  <node componentName="tKafkaConnection" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="40">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tKafkaConnection_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="CLOSED_LIST" name="KAFKA_VERSION" value="KAFKA_3_2_3"/>
     <elementParameter field="TEXT" name="BROKER_LIST" value="&quot;20.204.123.250:9092&quot;"/>
     <elementParameter field="CHECK" name="USE_HTTPS" value="false"/>
@@ -190,12 +193,142 @@
     <elementParameter field="FILE" name="KRB5_CONF" show="false" value="&quot;/etc/kafka/krb5.conf&quot;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
+  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="480" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tOracleInput"/>
+    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
+    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/Oracle"/>
+    <elementParameter field="CHECK" name="START" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tOracleInput"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="E:\Talend_Studio_Workplace\studio\configuration\lib\java"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_TlFN4CltEe-3e8SViGswFA"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SERVICE_NAME"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
+    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;20.204.123.250&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;20.204.123.250&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="ORACLE_SERVICE_NAME"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1521&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;orcl&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;orcl&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;User1&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:UGjiUZ3XhhqXMVWZTRKDeLfvzis/1C2vWcF1FO1rmsoRdluAEobcS4Yc"/>
+    <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_TlFN4CltEe-3e8SViGswFA - EMPLOYEES"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;EMPLOYEES&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#10;  USER1.EMPLOYEES.EMPLOYEE_ID, &#10;  USER1.EMPLOYEES.FIRST_NAME, &#10;  USER1.EMPLOYEES.LAST_NAME, &#10;  USER1.EMPLOYEES.EMAIL, &#10;  USER1.EMPLOYEES.PHONE_NUMBER&#10;FROM USER1.EMPLOYEES&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="oracle_id"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CHECK" name="IS_CONVERT_XMLTYPE" value="false"/>
+    <elementParameter field="TABLE" name="CONVERT_XMLTYPE" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="EMPLOYEE_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FIRST_NAME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LAST_NAME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EMAIL"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PHONE_NUMBER"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" label="EMPLOYEES" name="tDBInput_1">
+      <column comment="" key="true" length="0" name="EMPLOYEE_ID" nullable="false" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="FIRST_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="LAST_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="50" name="EMAIL" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="PHONE_NUMBER" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+    </metadata>
+  </node>
+  <node componentName="tKafkaOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tKafkaOutput_1"/>
+    <elementParameter field="CLOSED_LIST" name="INPUT_TYPE" value="BYTES"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="KAFKA_VERSION" value="KAFKA_3_2_3"/>
+    <elementParameter field="TEXT" name="BROKER_LIST" value="&quot;20.204.123.250:9092&quot;"/>
+    <elementParameter field="TEXT" name="KAFKA_TOPIC" value="&quot;test-topic&quot;"/>
+    <elementParameter field="CHECK" name="COMPRESS" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="COMPRESSION" show="false" value="GZIP"/>
+    <elementParameter field="CHECK" name="USE_HTTPS" value="false"/>
+    <elementParameter field="CHECK" name="SET_KEYSTORE" show="false" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="HTTPS_SETTING" show="false" value=""/>
+    <elementParameter field="CHECK" name="USE_KRB" value="false"/>
+    <elementParameter field="FILE" name="JAAS_CONF" show="false" value="&quot;/etc/kafka/kafka_client_jaas.conf&quot;"/>
+    <elementParameter field="TEXT" name="KRB_SERVICE_NAME" show="false" value="&quot;kafka&quot;"/>
+    <elementParameter field="CHECK" name="SET_KINIT_PATH" show="false" value="false"/>
+    <elementParameter field="FILE" name="KINIT_PATH" show="false" value="&quot;/usr/bin/kinit&quot;"/>
+    <elementParameter field="CHECK" name="SET_KRB5_CONF" show="false" value="false"/>
+    <elementParameter field="FILE" name="KRB5_CONF" show="false" value="&quot;/etc/kafka/krb5.conf&quot;"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="TABLE" name="KAFKA_PRODUCER_PROPERTIES"/>
+    <elementParameter field="CHECK" name="APPLY_SECURITY_PROPERTIES_AFTER_ADVANCED" show="false" value="false"/>
+    <elementParameter field="CHECK" name="HEADERS" value="false"/>
+    <elementParameter field="TABLE" name="KAFKA_HEADERS_PROPERTIES" show="false"/>
+    <elementParameter field="CHECK" name="USE_SCHEMA_REGISTRY" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_REGISTRY_URL" show="false" value=""/>
+    <elementParameter field="CHECK" name="SCHEMA_REGISTRY_BASIC_AUTH" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_REGISTRY_USERNAME" show="false" value=""/>
+    <elementParameter field="PASSWORD" name="SCHEMA_REGISTRY_PASSWORD" show="false" value=""/>
+    <elementParameter field="CHECK" name="SCHEMA_REGISTRY_SET_KEYSTORE" show="false" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="SCHEMA_REGISTRY_KEYSTORE_SETTINGS" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="SCHEMA_REGISTRY_KEY_SERIALIZER" show="false" value="AVRO"/>
+    <elementParameter field="TEXT" name="SCHEMA_REGISTRY_CUSTOM_KEY_SERIALIZER" show="false" value="&quot;org.apache.kafka.common.serialization.ByteArraySerializer&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="SCHEMA_REGISTRY_VALUE_SERIALIZER" show="false" value="AVRO"/>
+    <elementParameter field="TEXT" name="SCHEMA_REGISTRY_CUSTOM_VALUE_SERIALIZER" show="false" value="&quot;org.apache.kafka.common.serialization.ByteArraySerializer&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tKafkaOutput_1">
+      <column defaultValue="" key="false" length="0" name="serializedValue" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_byte[]" usefulColumn="true"/>
+    </metadata>
+  </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tKafkaInput_1" offsetLabelX="0" offsetLabelY="0" source="tKafkaInput_1" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
   <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tKafkaConnection_1" offsetLabelX="0" offsetLabelY="0" source="tKafkaConnection_1" target="tKafkaInput_1">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
+  </connection>
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tKafkaOutput_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tKafkaInput_1"/>
@@ -207,13 +340,18 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_14bdc3c8-9e49-4a17-b790-83627a96ab70"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lWghBwRZht3xKFvjBHKp+LZHdHmOQH5hmlTY1MNlSWsjXmBO4PYvGP6xZup86MY0DHjOWYRD9SAb&#13;
-ycmHOo1HAw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9d771d69-2398-4951-98c7-8ee328acc997"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>p1tb/8tXe+BBOvFfIfNBVKBEMZyFm4/2IC0E8R/j+Cjq/Z1sFJtF93i/avbC94h5fqqX9vkoJ0jJ&#13;
-jiBM+Bucsw==</DigestValue></Reference></SignedInfo><SignatureValue>KfCQ6hjCD2mMBIN++/FgdxV+1BspLFfjg2DEtlDv8ezo60tSx9WVOp4Dawp0gMWEb8hWOXAd0z75&#13;
-5yRCyNVo++mtZHwHnZHpjb285t3gjJJ/Fb0kwZbFJwaVvINe3jjM9CnCQkYlJi1jVeW/VeIINT14&#13;
-pvb+SNcD6Aq5HD1V3PlB41RxORFW90t7gNl4viyqo1/q+a+mJ+8ylO/pWDt2iXcdQ+4cdxAJGX86&#13;
-zk9MRygnN2FI5HCS8omRxVQTtskJGgLJtxs6rTRYDyFHXv+QOXzt3T9GA/5qaFBHz8Ozg5F6zfXZ&#13;
-sq+Zhwh8NNTNFomszt6sKSZgVi2yDSYaS4yQog==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_3c54b2b8-11b2-4166-8354-5795748a7a06"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>m6/Cx1QtkUxt4ofAGarehVfiXJKKNHbusVoxpG2T6vHNyET4wVVvE7KnfUBSAwIT3o7hRrnnkMWI&#13;
+NDVpOWYG9g==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ef9fdbf0-66c4-4915-86dd-0e34ac28eba9"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>os1KTznVWSESlMrsUDSDgcI6Rl2T1t5lOR8/2M2ykYJ08u29ROuRlbiPNrHYUqq68U+MrE8Smq9D&#13;
+7wI9iDIibA==</DigestValue></Reference></SignedInfo><SignatureValue>AiciwxIOl9xBXUKXBHkWjFHgH8Yl3vqQqc0S8qfaN/8Fx9Y4w9P3bgCA/j6ORqstK/t7Kx2rRLYY&#13;
+d/wWyPkdDR/HCL/y0HwfXQgzFPXeSNres2ZrB6hSEHaFLHjFsDpJkGi1RHRILQDTLs+TDGhRwWe5&#13;
+FNjnWXeulbpV1BfSJ8eMa7cxjFL3bOuACkSVGNGkUjHEunqTDAP45NPNAKhPJQoZN+O1iAYJL+iz&#13;
+8O1NRd+k4Cp6L4kllmaVgewPpEwIJjUsvIhKRuf6B14DrrA1WxDsidO6Fyf1Ql5ZMRbNtS8eiiRZ&#13;
+fi2qakoTbCKmX4ZvLXA7pHUEkyhJLPZNOZnHrA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -235,4 +373,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9d771d69-2398-4951-98c7-8ee328acc997" Target="#_14bdc3c8-9e49-4a17-b790-83627a96ab70"><Timestamp>2024-06-18 07:03:36</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ef9fdbf0-66c4-4915-86dd-0e34ac28eba9" Target="#_3c54b2b8-11b2-4166-8354-5795748a7a06"><Timestamp>2024-06-18 07:11:38</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
