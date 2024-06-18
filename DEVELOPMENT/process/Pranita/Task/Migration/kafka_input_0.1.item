@@ -98,10 +98,25 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
   </parameters>
-  <node componentName="tKafkaConnection" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="120">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tKafkaConnection_1"/>
+  <node componentName="tKafkaInput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="200" posY="160">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tKafkaInput_1"/>
+    <elementParameter field="CLOSED_LIST" name="OUTPUT_TYPE" value="STRING"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="CLOSED_LIST" name="KAFKA_VERSION" value="KAFKA_3_2_3"/>
-    <elementParameter field="TEXT" name="BROKER_LIST" value="&quot;qdi4:9092&quot;"/>
+    <elementParameter field="TEXT" name="BROKER_LIST" value="&quot;20.204.123.250:9092&quot;"/>
+    <elementParameter field="TEXT" name="KAFKA_TOPIC" value="&quot;test-topic&quot;"/>
+    <elementParameter field="TEXT" name="GROUP_ID" value="&quot;console-consumer-c4d965f0-7107-475b-b140-8903045d88c9&quot;"/>
+    <elementParameter field="CHECK" name="RESET_OFFSET" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="AUTO_OFFSET_RESET_NEW" value="EARLIEST"/>
+    <elementParameter field="CHECK" name="AUTO_COMMIT_OFFSET" value="true"/>
+    <elementParameter field="TEXT" name="KAFKA_COMMIT_INTERVAL" value="5000"/>
+    <elementParameter field="CHECK" name="USE_BATCH_MAX_DURATION" value="false"/>
+    <elementParameter field="TEXT" name="BATCH_MAX_DURATION" show="false" value="600000"/>
+    <elementParameter field="CHECK" name="USE_BATCH_MAX_SIZE" value="false"/>
+    <elementParameter field="TEXT" name="BATCH_MAX_SIZE" show="false" value="5000"/>
+    <elementParameter field="CHECK" name="USE_BATCH_MESSAGE_TIMEOUT" value="false"/>
+    <elementParameter field="TEXT" name="BATCH_MESSAGE_TIMEOUT" show="false" value="10000"/>
     <elementParameter field="CHECK" name="USE_HTTPS" value="false"/>
     <elementParameter field="CHECK" name="SET_KEYSTORE" show="false" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="HTTPS_SETTING" show="false" value=""/>
@@ -112,48 +127,41 @@
     <elementParameter field="FILE" name="KINIT_PATH" show="false" value="&quot;/usr/bin/kinit&quot;"/>
     <elementParameter field="CHECK" name="SET_KRB5_CONF" show="false" value="false"/>
     <elementParameter field="FILE" name="KRB5_CONF" show="false" value="&quot;/etc/kafka/krb5.conf&quot;"/>
+    <elementParameter field="TABLE" name="KAFKA_CONSUMER_PROPERTIES"/>
+    <elementParameter field="CHECK" name="APPLY_SECURITY_PROPERTIES_AFTER_ADVANCED" show="false" value="false"/>
+    <elementParameter field="TEXT" name="KAFKA_CONSUMER_TIMEOUT" value="-1"/>
+    <elementParameter field="CHECK" name="SAVE_OFFSET" value="false"/>
+    <elementParameter field="CHECK" name="CUSTOM_ENCODING" value="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;UTF-8&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" show="false" value="UTF-8"/>
+    <elementParameter field="CHECK" name="USE_SCHEMA_REGISTRY" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_REGISTRY_URL" show="false" value=""/>
+    <elementParameter field="CHECK" name="SCHEMA_REGISTRY_BASIC_AUTH" show="false" value="false"/>
+    <elementParameter field="TEXT" name="SCHEMA_REGISTRY_USERNAME" show="false" value=""/>
+    <elementParameter field="PASSWORD" name="SCHEMA_REGISTRY_PASSWORD" show="false" value=""/>
+    <elementParameter field="CHECK" name="SCHEMA_REGISTRY_SET_KEYSTORE" show="false" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="SCHEMA_REGISTRY_KEYSTORE_SETTINGS" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="SCHEMA_REGISTRY_KEY_DESERIALIZER" show="false" value="AVRO"/>
+    <elementParameter field="TEXT" name="SCHEMA_REGISTRY_CUSTOM_KEY_DESERIALIZER" show="false" value="&quot;org.apache.kafka.common.serialization.ByteArrayDeserializer&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="SCHEMA_REGISTRY_VALUE_DESERIALIZER" show="false" value="AVRO"/>
+    <elementParameter field="TEXT" name="SCHEMA_REGISTRY_CUSTOM_VALUE_DESERIALIZER" show="false" value="&quot;org.apache.kafka.common.serialization.ByteArrayDeserializer&quot;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tKafkaInput_1">
+      <column defaultValue="" key="false" length="0" name="payload" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
   </node>
-  <node componentName="tKafkaCreateTopic" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="320" posY="120">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tKafkaCreateTopic_1"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
-    <elementParameter field="CLOSED_LIST" name="KAFKA_VERSION" value="KAFKA_3_2_3"/>
-    <elementParameter field="TEXT" name="BROKER_LIST" value="&quot;20.204.123.250:9092&quot;"/>
-    <elementParameter field="CLOSED_LIST" name="TOPICACTION" value="CREATE_TOPIC"/>
-    <elementParameter field="TEXT" name="KAFKA_TOPIC" value="&quot;test-talend&quot;"/>
-    <elementParameter field="TEXT" name="KAFKA_REPLICATION" value="1"/>
-    <elementParameter field="TEXT" name="KAFKA_PARTITION" value="4"/>
-    <elementParameter field="CHECK" name="KAFKA_RETENTION_CHECK" value="false"/>
-    <elementParameter field="TEXT" name="KAFKA_RETENTION" show="false" value="604800000"/>
-    <elementParameter field="CHECK" name="USE_HTTPS" value="false"/>
-    <elementParameter field="CHECK" name="SET_KEYSTORE" show="false" value="false"/>
-    <elementParameter field="COMPONENT_LIST" name="HTTPS_SETTING" show="false" value=""/>
-    <elementParameter field="TABLE" name="KAFKA_TOPIC_PROPERTIES"/>
-    <elementParameter field="TABLE" name="KAFKA_PROPERTIES"/>
-    <elementParameter field="TEXT" name="KAFKA_TIMEOUT" value="10000"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-  </node>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tKafkaConnection_1" offsetLabelX="0" offsetLabelY="0" source="tKafkaConnection_1" target="tKafkaCreateTopic_1">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
-  </connection>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tKafkaConnection_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tKafkaInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tKafkaCreateTopic_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
-  </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_29566088-d8e2-4616-83bf-213140199594"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7WnJBeQApvuR80iLmVilsUo7AGIYea0iseZOqWzR0s15GGX1BB1DJzH1MAAnd2BOVI1THV14oX87&#13;
-1CNnm3IMpg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5d1f86e9-068f-40f0-b570-26758bbee625"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>YO/RcYIE4dZCegWwWMpoo1sLRgqFZe5WoENsgaI9/nh/LjmzvvnoF+LrVMOtY/EkucEa39dPDFdU&#13;
-niCjt0tdbg==</DigestValue></Reference></SignedInfo><SignatureValue>nDGTrOJJ7vzcQQ9XRTkzS52B6Af61SsXk+csXIPhpCsadzE6QVCPuNsWTnZ1tyxAjSZ4bjGwRwNB&#13;
-mwSVeV1BVNiPKhMVP0icMncSoewnm3IGhC6X5eXmt8DVC1xq4iIsEnHG1B9yGm6Cw86ta/giWRy2&#13;
-vUGbNR4z+eBDqTjFNQZTwJDuxNHg5zcAfk5VOzR6eSpTF5gcCY0E//cCeN9RM0eknk35CkbYCgNX&#13;
-lh5N4I8AQ/RKGEaYX7jl38Zakxg3AhpH/b+9vDRv2ZpSf+UZN7qPmxbSyk6fVhMff+uxpMEpRO7u&#13;
-OXe6i91k/1SzJk8G1ka+ZkyOQZ8ccHaHeQgmTA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_a8ceecab-12a0-4ac3-bee7-88ad53eec074"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>FyQ0H6k7hVu/Jz0BAHWmkHfaiZdG1nm/2zWLxxuCjS7quAFlid3wjlqZLE2C1LVHBzpCbV+20QiX&#13;
+UzMhhdK6Bg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_7ef968aa-64eb-4d37-89b0-b0ee771cc841"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GE9xyaiFV8QdAQ3YLvzKvv0g6jQ7e3JMSVykoJJVI2x13CLjllBhWxD6rUdU0ieB7OAaEYKYLeo5&#13;
+hFOAxgEOMg==</DigestValue></Reference></SignedInfo><SignatureValue>l3Xp3VfcconbOmEHdIKs45f0IC26u4tEgCHm5JDM4hQwpBDD4C5YnDOW/4WDaSnZfrpjmAM6V8dR&#13;
+BPGxds+8uehN/xElybjrc0wc73gXiWkZwcKfjPYdBj7+S4cDHg9TS0Hgxfs86iyKh84MDLDbhNw8&#13;
+GvLFQ5Ra1xW0qtrbWAx8cIH1ue0gQ6kPQpCar/oBoD1dfmOjn6cAx6+noh9O5YMG6DQmVLgVgJlL&#13;
+r+AYFb3DCQwcE28Q49s25w/opi+ql764RSN04Jx6tQ1fv46mDxBUTx8QyXXJFxwtAQ4GVzRjL4q5&#13;
+BFMtvn4xTUOBVpPGLJN13s+Ll0WUl+8F+misHA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -175,4 +183,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5d1f86e9-068f-40f0-b570-26758bbee625" Target="#_29566088-d8e2-4616-83bf-213140199594"><Timestamp>2024-06-18 06:07:23</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_7ef968aa-64eb-4d37-89b0-b0ee771cc841" Target="#_a8ceecab-12a0-4ac3-bee7-88ad53eec074"><Timestamp>2024-06-18 06:09:55</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
