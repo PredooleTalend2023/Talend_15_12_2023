@@ -193,188 +193,105 @@
     <elementParameter field="FILE" name="KRB5_CONF" show="false" value="&quot;/etc/kafka/krb5.conf&quot;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tFileInputJSON" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="280" posY="280">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputJSON_1"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tFileInputJSON"/>
+  <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="280" posY="280">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tOracleInput"/>
     <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="File/Input|Internet"/>
+    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/Oracle"/>
     <elementParameter field="CHECK" name="START" show="false" value="true"/>
     <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
     <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tFileInputJSON"/>
+    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tOracleInput"/>
     <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="E:\Talend_Studio_Workplace\studio\configuration\lib\java"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_ZfTRgHoREe6x4oBuoNLQYQ"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_TlFN4CltEe-3e8SViGswFA"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SERVICE_NAME"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
+    <elementParameter field="TEXT" name="RAC_URL" show="false" value="&quot;20.204.123.250&quot;"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;20.204.123.250&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="ORACLE_SERVICE_NAME"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1521&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;orcl&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" show="false" value="&quot;orcl&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;User1&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:WaT2aZtJylH40PLw9xcnRU1F+EnqVfD9uMDv9yF6I2ySDdW5nBMDnPNK"/>
+    <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_ZfTRgHoREe6x4oBuoNLQYQ - metadata"/>
-    <elementParameter field="CLOSED_LIST" name="READ_BY" value="JSONPATH"/>
-    <elementParameter field="CLOSED_LIST" name="JSON_PATH_VERSION" value="2_1_0"/>
-    <elementParameter field="CHECK" name="USEURL" value="false"/>
-    <elementParameter field="TEXT" name="URLPATH" show="false" value="&quot;D:/Talend/Talend_Doc/Customers.json&quot;"/>
-    <elementParameter field="FILE" name="FILENAME" value="&quot;D:/Talend/Talend_Doc/Customers.json&quot;"/>
-    <elementParameter field="TEXT" name="LOOP_QUERY" show="false" value="&quot;$[*]&quot;"/>
-    <elementParameter field="TEXT" name="JSON_LOOP_QUERY" value="&quot;$[*]&quot;"/>
-    <elementParameter field="TABLE" name="MAPPING" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="country"/>
-      <elementValue elementRef="QUERY" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="city"/>
-      <elementValue elementRef="QUERY" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="contactFirstName"/>
-      <elementValue elementRef="QUERY" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="postalCode"/>
-      <elementValue elementRef="QUERY" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="salesRepEmployeeNumber"/>
-      <elementValue elementRef="QUERY" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="customerNumber"/>
-      <elementValue elementRef="QUERY" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="customerName"/>
-      <elementValue elementRef="QUERY" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="phone"/>
-      <elementValue elementRef="QUERY" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine1"/>
-      <elementValue elementRef="QUERY" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="creditLimit"/>
-      <elementValue elementRef="QUERY" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="contactLastName"/>
-      <elementValue elementRef="QUERY" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine2"/>
-      <elementValue elementRef="QUERY" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="state"/>
-      <elementValue elementRef="QUERY" value=""/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_TlFN4CltEe-3e8SViGswFA - EMPLOYEES"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;EMPLOYEES&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#10;  USER1.EMPLOYEES.EMPLOYEE_ID, &#10;  USER1.EMPLOYEES.FIRST_NAME, &#10;  USER1.EMPLOYEES.LAST_NAME, &#10;  USER1.EMPLOYEES.EMAIL, &#10;  USER1.EMPLOYEES.PHONE_NUMBER&#10;FROM USER1.EMPLOYEES&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="oracle_id"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CHECK" name="IS_CONVERT_XMLTYPE" value="false"/>
+    <elementParameter field="TABLE" name="CONVERT_XMLTYPE" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" show="false" value="&quot;ISO-8859-15&quot;"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="EMPLOYEE_ID"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FIRST_NAME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="LAST_NAME"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="EMAIL"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="PHONE_NUMBER"/>
+      <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
-    <elementParameter field="TABLE" name="MAPPING_JSONPATH">
-      <elementValue elementRef="SCHEMA_COLUMN" value="country"/>
-      <elementValue elementRef="QUERY" value="&quot;country&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="city"/>
-      <elementValue elementRef="QUERY" value="&quot;city&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="contactFirstName"/>
-      <elementValue elementRef="QUERY" value="&quot;contactFirstName&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="postalCode"/>
-      <elementValue elementRef="QUERY" value="&quot;postalCode&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="salesRepEmployeeNumber"/>
-      <elementValue elementRef="QUERY" value="&quot;salesRepEmployeeNumber&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="customerNumber"/>
-      <elementValue elementRef="QUERY" value="&quot;customerNumber&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="customerName"/>
-      <elementValue elementRef="QUERY" value="&quot;customerName&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="phone"/>
-      <elementValue elementRef="QUERY" value="&quot;phone&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine1"/>
-      <elementValue elementRef="QUERY" value="&quot;addressLine1&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="creditLimit"/>
-      <elementValue elementRef="QUERY" value="&quot;creditLimit&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="contactLastName"/>
-      <elementValue elementRef="QUERY" value="&quot;contactLastName&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine2"/>
-      <elementValue elementRef="QUERY" value="&quot;addressLine2&quot;"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="state"/>
-      <elementValue elementRef="QUERY" value="&quot;state&quot;"/>
-    </elementParameter>
-    <elementParameter field="TABLE" name="MAPPINGXPATH" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="country"/>
-      <elementValue elementRef="QUERY" value="&quot;country&quot;"/>
-      <elementValue elementRef="NODECHECK" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="city"/>
-      <elementValue elementRef="QUERY" value="&quot;city&quot;"/>
-      <elementValue elementRef="NODECHECK" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="contactFirstName"/>
-      <elementValue elementRef="QUERY" value="&quot;contactFirstName&quot;"/>
-      <elementValue elementRef="NODECHECK" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="postalCode"/>
-      <elementValue elementRef="QUERY" value="&quot;postalCode&quot;"/>
-      <elementValue elementRef="NODECHECK" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="salesRepEmployeeNumber"/>
-      <elementValue elementRef="QUERY" value="&quot;salesRepEmployeeNumber&quot;"/>
-      <elementValue elementRef="NODECHECK" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="customerNumber"/>
-      <elementValue elementRef="QUERY" value="&quot;customerNumber&quot;"/>
-      <elementValue elementRef="NODECHECK" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="customerName"/>
-      <elementValue elementRef="QUERY" value="&quot;customerName&quot;"/>
-      <elementValue elementRef="NODECHECK" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="phone"/>
-      <elementValue elementRef="QUERY" value="&quot;phone&quot;"/>
-      <elementValue elementRef="NODECHECK" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine1"/>
-      <elementValue elementRef="QUERY" value="&quot;addressLine1&quot;"/>
-      <elementValue elementRef="NODECHECK" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="creditLimit"/>
-      <elementValue elementRef="QUERY" value="&quot;creditLimit&quot;"/>
-      <elementValue elementRef="NODECHECK" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="contactLastName"/>
-      <elementValue elementRef="QUERY" value="&quot;contactLastName&quot;"/>
-      <elementValue elementRef="NODECHECK" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="addressLine2"/>
-      <elementValue elementRef="QUERY" value="&quot;addressLine2&quot;"/>
-      <elementValue elementRef="NODECHECK" value=""/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="state"/>
-      <elementValue elementRef="QUERY" value="&quot;state&quot;"/>
-      <elementValue elementRef="NODECHECK" value=""/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA_REJECT:REPOSITORY_SCHEMA_TYPE" show="false" value="_ZfTRgHoREe6x4oBuoNLQYQ - metadata"/>
-    <elementParameter field="CLOSED_LIST" name="JDK_VERSION" show="false" value="JDK_8"/>
-    <elementParameter field="CHECK" name="ADVANCED_SEPARATOR" value="false"/>
-    <elementParameter field="TEXT" name="THOUSANDS_SEPARATOR" show="false" value="&quot;,&quot;"/>
-    <elementParameter field="TEXT" name="DECIMAL_SEPARATOR" show="false" value="&quot;.&quot;"/>
-    <elementParameter field="CHECK" name="CHECK_DATE" show="false" value="false"/>
-    <elementParameter field="CHECK" name="USE_LOOP_AS_ROOT" value="false"/>
-    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;UTF-8&quot;"/>
-    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="UTF-8"/>
-    <elementParameter field="TEXT" name="LABEL" value="metadata"/>
+    <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NLS" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="metadata" name="tFileInputJSON_1">
-      <column comment="" key="false" length="12" name="country" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="17" name="city" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="11" name="contactFirstName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="postalCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="salesRepEmployeeNumber" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="customerNumber" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="34" name="customerName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="18" name="phone" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="32" name="addressLine1" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="creditLimit" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="2" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="contactLastName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="24" name="addressLine2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="13" name="state" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-    </metadata>
-    <metadata connector="REJECT" label="metadata" name="REJECT">
-      <column comment="" key="false" length="12" name="country" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="17" name="city" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="11" name="contactFirstName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="postalCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="salesRepEmployeeNumber" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="customerNumber" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="34" name="customerName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="18" name="phone" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="32" name="addressLine1" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="creditLimit" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="2" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="contactLastName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="24" name="addressLine2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="13" name="state" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
+    <metadata connector="FLOW" label="EMPLOYEES" name="tDBInput_1">
+      <column comment="" key="true" length="0" name="EMPLOYEE_ID" nullable="false" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="FIRST_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="LAST_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="50" name="EMAIL" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="PHONE_NUMBER" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
     </metadata>
   </node>
   <node componentName="tKafkaOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tKafkaOutput_1"/>
     <elementParameter field="CLOSED_LIST" name="INPUT_TYPE" value="PRODUCER_RECORD"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
-    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_ZfTRgHoREe6x4oBuoNLQYQ - metadata"/>
-    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
-    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
-    <elementParameter field="CLOSED_LIST" name="KAFKA_VERSION" show="false" value="KAFKA_3_2_3"/>
-    <elementParameter field="TEXT" name="BROKER_LIST" show="false" value="&quot;20.204.123.250:9092&quot;"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_TlFN4CltEe-3e8SViGswFA - EMPLOYEES"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="CLOSED_LIST" name="KAFKA_VERSION" value="KAFKA_3_2_3"/>
+    <elementParameter field="TEXT" name="BROKER_LIST" value="&quot;20.204.123.250:9092&quot;"/>
     <elementParameter field="TEXT" name="KAFKA_TOPIC" show="false" value="&quot;test-topic&quot;"/>
     <elementParameter field="CHECK" name="COMPRESS" value="false"/>
     <elementParameter field="CLOSED_LIST" name="COMPRESSION" show="false" value="GZIP"/>
-    <elementParameter field="CHECK" name="USE_HTTPS" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_HTTPS" value="false"/>
     <elementParameter field="CHECK" name="SET_KEYSTORE" show="false" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="HTTPS_SETTING" show="false" value=""/>
-    <elementParameter field="CHECK" name="USE_KRB" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_KRB" value="false"/>
     <elementParameter field="FILE" name="JAAS_CONF" show="false" value="&quot;/etc/kafka/kafka_client_jaas.conf&quot;"/>
     <elementParameter field="TEXT" name="KRB_SERVICE_NAME" show="false" value="&quot;kafka&quot;"/>
     <elementParameter field="CHECK" name="SET_KINIT_PATH" show="false" value="false"/>
@@ -398,21 +315,22 @@
     <elementParameter field="CLOSED_LIST" name="SCHEMA_REGISTRY_VALUE_SERIALIZER" show="false" value="AVRO"/>
     <elementParameter field="TEXT" name="SCHEMA_REGISTRY_CUSTOM_VALUE_SERIALIZER" show="false" value="&quot;org.apache.kafka.common.serialization.ByteArraySerializer&quot;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="metadata" name="tKafkaOutput_1">
-      <column comment="" key="false" length="12" name="country" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="17" name="city" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="11" name="contactFirstName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="9" name="postalCode" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="4" name="salesRepEmployeeNumber" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="3" name="customerNumber" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="34" name="customerName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="18" name="phone" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="32" name="addressLine1" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="8" name="creditLimit" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="2" type="id_Float" usefulColumn="true"/>
-      <column comment="" key="false" length="15" name="contactLastName" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="24" name="addressLine2" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="13" name="state" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
-      <column defaultValue="" key="false" length="0" name="serializedValue" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_byte[]" usefulColumn="true"/>
+    <metadata connector="FLOW" label="EMPLOYEES" name="tKafkaOutput_1">
+      <column comment="" key="true" length="0" name="EMPLOYEE_ID" nullable="false" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="FIRST_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="LAST_NAME" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="50" name="EMAIL" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="20" name="PHONE_NUMBER" nullable="true" pattern="" precision="0" sourceType="VARCHAR2" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
     </metadata>
   </node>
   <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tKafkaInput_1" offsetLabelX="0" offsetLabelY="0" source="tKafkaInput_1" target="tLogRow_1">
@@ -424,7 +342,7 @@
     <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="OnSubjobOk1"/>
   </connection>
-  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tFileInputJSON_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputJSON_1" target="tKafkaOutput_1">
+  <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tKafkaOutput_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row2"/>
   </connection>
@@ -439,17 +357,17 @@
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
   <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputJSON_1"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_51063609-9bc6-45e9-8527-5ba1264b705a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sNoLmd7rPsv/kOFJXPcZRtpscbYvC0DyXAZ2PaKRjyBKYOO+UIPWA1e5mtfDr20Fs1b4zlhMYKXt&#13;
-KzXQkEhN8Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d9647ee3-15ab-4a63-b79e-2a3f4c68b00f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DBHM1HsjdHppfsSQDN29po8cUDhGtGZpEFFsOyBKGDXNtGzT+y5Kaw+R7Zk7sJn9ATIttHlOrHeW&#13;
-NjvEyMxpEQ==</DigestValue></Reference></SignedInfo><SignatureValue>OOatxDMGPyS0rcZ9a4Gyng6rfiLx3/4H72ccgiA1hcwlg7pS4eSYmObxSFhQVWFWjs7m5GEATipw&#13;
-WZWsSw6FIklVlWTXNdUgcAnKcJN1Lg8O1BlH8NfFVy7Ou83yDmSlbo6i8iJylzZI2hlc7x/qqsWi&#13;
-vEgmTXMney8CYbjdADk26xWJmtpXTWWO/zTuTcvpXRMEQAhIye8vmAnXPgu+zh2zYg+KVMgvQOQR&#13;
-p8nRI4HitSGvDDI5l9tbPGfvyEdEjUJMaBjF5cdYiNcx9+mON7VxeM3C8pT59fVZ2aemZdg88yrM&#13;
-/Z2hoCRvQUz/Y5dyVaJsHLFFEzT8Zg1UCvkDpg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_da0f2729-6a39-468d-8dd2-44b31453bb80"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>+8FGt7UqcFI8Ioje936PVCm8S21BBw7zE39SN7XCY9ilmc4Q2YW0keSKB3BUMSyHeH7qskUenNAq&#13;
+GKUMPvpsOw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0e1ae2aa-049c-4d1a-9777-656eb2e24716"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>vKlaLboiOPbK3Jq7dIp7VAf0DoLi9knvt1x3rxph/dcAqdaTdWTxTcSf+6FBpGivypfr5tAAzehe&#13;
+GfnBmDlPJg==</DigestValue></Reference></SignedInfo><SignatureValue>SEGqdClOkiIVClj0xClem2fJzNvbP/sCTJHsNTbXKxdSFCAl1aHZp3ktqBl+KCd97wmi5TYq7U0t&#13;
+ozawm47nLKw24bsxL8977rpMn+KDx2Y9J5YtllR/RgfYYJm0kY2Y1PGS7ieKS+i4L3SE0CZZtu1z&#13;
+63qbMhCo99nRZ6iCkjUgqpu0Y4ZL658GSiJCYmsCdgjrymSfhyT9xjKj++ZxcKu5nKdhDDDl3+2x&#13;
+lglPaDcEDXk+1p+jlI3d7ewZa9a+eCx4gFiSPT569wer5bgpkYRN7G+ZVVrh8TacemMzMvPNFoO8&#13;
+NXo2gdzZlYaib+lYTuTWDDzFIcV1KslrcpKDGg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -471,4 +389,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d9647ee3-15ab-4a63-b79e-2a3f4c68b00f" Target="#_51063609-9bc6-45e9-8527-5ba1264b705a"><Timestamp>2024-06-18 07:13:22</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0e1ae2aa-049c-4d1a-9777-656eb2e24716" Target="#_da0f2729-6a39-468d-8dd2-44b31453bb80"><Timestamp>2024-06-18 09:12:52</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
