@@ -193,7 +193,7 @@
     <elementParameter field="FILE" name="KRB5_CONF" show="false" value="&quot;/etc/kafka/krb5.conf&quot;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
   </node>
-  <node componentName="tFileInputJSON" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="440" posY="40">
+  <node componentName="tFileInputJSON" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="280" posY="280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tFileInputJSON_1"/>
     <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tFileInputJSON"/>
     <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
@@ -359,16 +359,16 @@
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <node componentName="tKafkaOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="40">
+  <node componentName="tKafkaOutput" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="280">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tKafkaOutput_1"/>
-    <elementParameter field="CLOSED_LIST" name="INPUT_TYPE" value="BYTES"/>
+    <elementParameter field="CLOSED_LIST" name="INPUT_TYPE" value="PRODUCER_RECORD"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_ZfTRgHoREe6x4oBuoNLQYQ - metadata"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="true"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
     <elementParameter field="CLOSED_LIST" name="KAFKA_VERSION" show="false" value="KAFKA_3_2_3"/>
     <elementParameter field="TEXT" name="BROKER_LIST" show="false" value="&quot;20.204.123.250:9092&quot;"/>
-    <elementParameter field="TEXT" name="KAFKA_TOPIC" value="&quot;test-topic&quot;"/>
+    <elementParameter field="TEXT" name="KAFKA_TOPIC" show="false" value="&quot;test-topic&quot;"/>
     <elementParameter field="CHECK" name="COMPRESS" value="false"/>
     <elementParameter field="CLOSED_LIST" name="COMPRESSION" show="false" value="GZIP"/>
     <elementParameter field="CHECK" name="USE_HTTPS" show="false" value="false"/>
@@ -386,7 +386,7 @@
     <elementParameter field="CHECK" name="APPLY_SECURITY_PROPERTIES_AFTER_ADVANCED" show="false" value="false"/>
     <elementParameter field="CHECK" name="HEADERS" value="false"/>
     <elementParameter field="TABLE" name="KAFKA_HEADERS_PROPERTIES" show="false"/>
-    <elementParameter field="CHECK" name="USE_SCHEMA_REGISTRY" show="false" value="false"/>
+    <elementParameter field="CHECK" name="USE_SCHEMA_REGISTRY" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_REGISTRY_URL" show="false" value=""/>
     <elementParameter field="CHECK" name="SCHEMA_REGISTRY_BASIC_AUTH" show="false" value="false"/>
     <elementParameter field="TEXT" name="SCHEMA_REGISTRY_USERNAME" show="false" value=""/>
@@ -443,13 +443,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8d3c72dc-4deb-42ed-8318-34e048b5981a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZEuqjMpZofwrTUY2rv4cTu12QULcBU4KWfJPRTQhE0VCFv4whVH5LVQzrSQSwWDkHd4sxUHjHuJb&#13;
-Fp6SEa9Kkg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_43b500b4-e8dc-4c09-a663-209772e62cc3"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>gwUENidl/FMNQDmmFI6g+UHlWS7jEBsh8X5ZV9fqzqUNBY4mRLJ3aVr6RTkyfMU2aJslm298Z5y+&#13;
-AvLaA0DoCA==</DigestValue></Reference></SignedInfo><SignatureValue>cJOSgEIsGYjs/gBDKS+9x3dSu2Hlv/s50N3I1yQPXNvQNCdK4PgohXO5raWiJwBvjIiUXuAalWB1&#13;
-lLGpJddOmPsb06ijG1RBiKSq2rUOjthmgnrNxfYjzg3PHjSYer45uNOY3cTvZcW16enCVdlKy+FF&#13;
-3uO50uCRQEcPjx2bo28pXJTtnn7bta3HfSgRnrU4HnbObY9ZVGCFaD/VfQ/ENGgqAxXm0yICVL1U&#13;
-AyjdbpX3zFCOUggxOkVszWKwMjHHjQvCJKDM8UtOXdyk+e29zZ4zlUpMuVFwEDYuZXx5VrZPzY4M&#13;
-rFAOt6qUbQWhDxcGOvPfhqAV4ycTVJlHyvTDUw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_51063609-9bc6-45e9-8527-5ba1264b705a"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>sNoLmd7rPsv/kOFJXPcZRtpscbYvC0DyXAZ2PaKRjyBKYOO+UIPWA1e5mtfDr20Fs1b4zlhMYKXt&#13;
+KzXQkEhN8Q==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_d9647ee3-15ab-4a63-b79e-2a3f4c68b00f"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>DBHM1HsjdHppfsSQDN29po8cUDhGtGZpEFFsOyBKGDXNtGzT+y5Kaw+R7Zk7sJn9ATIttHlOrHeW&#13;
+NjvEyMxpEQ==</DigestValue></Reference></SignedInfo><SignatureValue>OOatxDMGPyS0rcZ9a4Gyng6rfiLx3/4H72ccgiA1hcwlg7pS4eSYmObxSFhQVWFWjs7m5GEATipw&#13;
+WZWsSw6FIklVlWTXNdUgcAnKcJN1Lg8O1BlH8NfFVy7Ou83yDmSlbo6i8iJylzZI2hlc7x/qqsWi&#13;
+vEgmTXMney8CYbjdADk26xWJmtpXTWWO/zTuTcvpXRMEQAhIye8vmAnXPgu+zh2zYg+KVMgvQOQR&#13;
+p8nRI4HitSGvDDI5l9tbPGfvyEdEjUJMaBjF5cdYiNcx9+mON7VxeM3C8pT59fVZ2aemZdg88yrM&#13;
+/Z2hoCRvQUz/Y5dyVaJsHLFFEzT8Zg1UCvkDpg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -471,4 +471,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_43b500b4-e8dc-4c09-a663-209772e62cc3" Target="#_8d3c72dc-4deb-42ed-8318-34e048b5981a"><Timestamp>2024-06-18 07:12:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_d9647ee3-15ab-4a63-b79e-2a3f4c68b00f" Target="#_51063609-9bc6-45e9-8527-5ba1264b705a"><Timestamp>2024-06-18 07:13:22</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
