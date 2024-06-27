@@ -140,23 +140,37 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFlowToIterate_1"/>
   </node>
-  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="416" posY="128">
+  <node componentName="tMysqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="440" posY="120">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tMysqlInput"/>
+    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
+    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/MySQL"/>
+    <elementParameter field="CHECK" name="START" show="false" value="false"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="false"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMysqlInput"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
+    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_ODITEACuEe-fnrjVUvxrRQ"/>
     <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="MYSQL_8"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
     <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
     <elementParameter field="TEXT" name="HOST" value="&quot;20.204.123.250&quot;"/>
     <elementParameter field="TEXT" name="PORT" value="&quot;3306&quot;"/>
     <elementParameter field="TEXT" name="DBNAME" value="&quot;talendcatelog&quot;"/>
-    <elementParameter field="TEXT" name="TYPE" show="false" value="MySQL"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="MYSQL"/>
     <elementParameter field="TEXT" name="USER" value="&quot;chirag&quot;"/>
-    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:6GFJai/YkdQ87H+w6dSvmnVAfH8K+ckmZI/OVRe5mgXRPl4rhdu2CCUE"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:820dCFmGVMGXFXLhW6f2WuFntzT/a2ig+mC237yjd9jm6czxBmaZowJD"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:SCHEMA_TYPE" show="false" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="SCHEMA:REPOSITORY_SCHEMA_TYPE" show="false" value="_ODITEACuEe-fnrjVUvxrRQ - products"/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;products&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#10;  `products`.`id`, &#10;  `products`.`name`, &#10;  `products`.`publisher`, &#10;  `products`.`numrating`,  &#10;  `products`.`icon`, &#10;  `products`.`description`, &#10;  `products`.`price`&#10;FROM `products`&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT &#10;  `products`.`id`, &#10;  `products`.`name`, &#10;  `products`.`publisher`, &#10;  `products`.`numRating`, &#10;  `products`.`rating`, &#10;  `products`.`icon`, &#10;  `products`.`description`, &#10;  `products`.`price`&#10;FROM `products`&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -173,6 +187,8 @@
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="publisher"/>
       <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="numRating"/>
+      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="rating"/>
       <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="icon"/>
@@ -182,15 +198,33 @@
       <elementValue elementRef="SCHEMA_COLUMN" value="price"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tDBInput_1">
-      <column comment="" defaultValue="" key="false" length="10" name="id" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="name" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="publisher" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="2" name="rating" nullable="true" originalLength="-1" pattern="" precision="1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
-      <column comment="" key="false" length="255" name="icon" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="16383" name="description" nullable="true" originalLength="-1" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true"/>
-      <column comment="" defaultValue="" key="false" length="5" name="price" nullable="true" originalLength="-1" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true"/>
+    <metadata connector="FLOW" label="products" name="tDBInput_1">
+      <column comment="" key="false" length="10" name="id" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="name" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="publisher" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="10" name="numRating" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="2" name="rating" nullable="true" pattern="" precision="1" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="255" name="icon" nullable="true" pattern="" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="65535" name="description" nullable="true" pattern="" precision="0" sourceType="TEXT" type="id_String" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
+      <column comment="" key="false" length="5" name="price" nullable="true" pattern="" precision="2" sourceType="DECIMAL" type="id_BigDecimal" usefulColumn="true">
+        <additionalField key="Comment" value=""/>
+      </column>
     </metadata>
   </node>
   <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="640" posY="160">
@@ -204,21 +238,21 @@
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row1">
-        <nodes name="id" outgoingConnections="//@node.3/@nodeData/@connections.0" type="id_String" xpath="row1/id"/>
+        <nodes name="id" outgoingConnections="//@node.3/@nodeData/@connections.0" type="id_Integer" xpath="row1/id"/>
         <nodes name="name" outgoingConnections="//@node.3/@nodeData/@connections.1" type="id_String" xpath="row1/name"/>
         <nodes name="publisher" outgoingConnections="//@node.3/@nodeData/@connections.2" type="id_String" xpath="row1/publisher"/>
-        <nodes name="numRating" outgoingConnections="//@node.3/@nodeData/@connections.3" type="id_String" xpath="row1/numRating"/>
-        <nodes name="rating" outgoingConnections="//@node.3/@nodeData/@connections.4" type="id_String" xpath="row1/rating"/>
+        <nodes name="numRating" outgoingConnections="//@node.3/@nodeData/@connections.3" type="id_Integer" xpath="row1/numRating"/>
+        <nodes name="rating" outgoingConnections="//@node.3/@nodeData/@connections.4" type="id_BigDecimal" xpath="row1/rating"/>
         <nodes name="icon" outgoingConnections="//@node.3/@nodeData/@connections.5" type="id_String" xpath="row1/icon"/>
         <nodes name="description" outgoingConnections="//@node.3/@nodeData/@connections.6" type="id_String" xpath="row1/description"/>
-        <nodes name="price" outgoingConnections="//@node.3/@nodeData/@connections.7" type="id_String" xpath="row1/price"/>
+        <nodes name="price" outgoingConnections="//@node.3/@nodeData/@connections.7" type="id_BigDecimal" xpath="row1/price"/>
       </inputTrees>
       <outputTrees activateCondensedTool="true" activateExpressionFilter="true" allInOne="true" name="response">
         <nodes expression="" name="body" type="id_Document" xpath="response/body">
           <children expression="" main="true" name="products" type="id_String" xpath="response.body:/products" xsi:type="TalendXMLMap:OutputTreeNode">
             <children expression="" loop="true" main="true" name="catalog" type="id_String" xpath="response.body:/products/catalog" xsi:type="TalendXMLMap:OutputTreeNode">
               <children expression="" name="id" type="id_String" xpath="response.body:/products/catalog/id" xsi:type="TalendXMLMap:OutputTreeNode">
-                <children expression="row1.id" incomingConnections="//@node.3/@nodeData/@connections.0" name="id" type="id_String" xpath="response.body:/products/catalog/id/id" xsi:type="TalendXMLMap:OutputTreeNode"/>
+                <children expression=" row1.id" incomingConnections="//@node.3/@nodeData/@connections.0" name="id" type="id_String" xpath="response.body:/products/catalog/id/id" xsi:type="TalendXMLMap:OutputTreeNode"/>
               </children>
               <children expression="" name="name" type="id_String" xpath="response.body:/products/catalog/name" xsi:type="TalendXMLMap:OutputTreeNode">
                 <children expression="row1.name" incomingConnections="//@node.3/@nodeData/@connections.1" name="name" type="id_String" xpath="response.body:/products/catalog/name/name" xsi:type="TalendXMLMap:OutputTreeNode"/>
@@ -291,13 +325,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_8e6c0bb4-2f06-46e9-b72a-3ec82628fd57"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>BdhzbmwtToPIWc//qkcfvrUo7KlqdYNCX0Bu9vh+P0V3eieD6om8WBX0RFC2WN+da9NxVOu51uiL&#13;
-Qw6pWXc1AQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_374b7423-3ddf-4104-930f-0acd478bfbe1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>E6lCHPmqrbe/CYmYSMpemn516Za8cHex2HqhtYuo7MT2D5WsJYvvBejZCdNrt1/L89ktojOk1UWA&#13;
-cr6eXBzJhw==</DigestValue></Reference></SignedInfo><SignatureValue>C0CDaqlckVqg/Z3xIvEr2XowurRsnDXm8a1dQlUpIbaB0r2fygciRJ7xQxQSkNoqr2uLmOVFtdU7&#13;
-t2WKEc8Id7YQl3lfUNNjHl0EvipVU+HiN/MpGWMuyXyFrJpgUhfk2l3ttbmOIZxXPLLKrAxf1iG/&#13;
-Fn+lNfvdrcOZ9mgbqZvesTBsjwRPlBg/47gOGkdxFNTQ4i+cGQXRgSv9hvGK6E4RVaF8KViJJxVD&#13;
-b+DII9HjnGrA2AJRjNHU+4sXxaf3CEbs/j1jneexqz6PEyIpBrk2FZ41oQSnMeWW+Jn7tgyfCsYl&#13;
-EG2WHM3iIeXJoZ0u7EY/ABsBGFC13WMJ67NyTg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_d8a6badb-1892-4579-9a2f-18175272f7af"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>7TV70BDc/ICP8z/0ftdSMqCHHsCMb6t+auBdQYm7AAwiXhb50Wwsa+wPJLIH2VogpGqMTNnYJenD&#13;
+1OcKUedJNw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9ccce363-7753-4253-ba13-dd74bd0cf313"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wtizndp1wfJ0+oRoA5AR651KfuUSoDZUhrIZOUEj/2hDJHm5mfYWuMixg0baorB4YCJNfVwa5JcG&#13;
+zwqpOP3g5A==</DigestValue></Reference></SignedInfo><SignatureValue>odlzGD1qEHEagfjP2jVg9irjX6HFcL6HWiPdPq4a8r/hlhr1bCPboL0vV7iDzTelerOoYQ7oj0WQ&#13;
+v8ygO3PV/kDznTHTywdL6RBP5v/GtFHloMg7pVDK/H6sAUNENvGw9r57yWIQwUw0qLE0L/FWiebI&#13;
+HoPTXUSaAss+KJfg/6WRKELnGr4EKS8T9p7qlHdGp7+cX0dJO5zsyuHAd3iMQrUq+msc2JOR9aHB&#13;
+Tatie41PYXNlgUOEMGZWO9yQdZOSOTdrE+TNs8rgB7ybg+C2lTYkLulAytYcntLYNaKhSQPT+6DR&#13;
+O2lcvW1IUBDRfEAmXOWssE2nCq8Fz2EKc27wYA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -319,4 +353,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_374b7423-3ddf-4104-930f-0acd478bfbe1" Target="#_8e6c0bb4-2f06-46e9-b72a-3ec82628fd57"><Timestamp>2024-06-27 12:32:44</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9ccce363-7753-4253-ba13-dd74bd0cf313" Target="#_d8a6badb-1892-4579-9a2f-18175272f7af"><Timestamp>2024-06-27 12:43:35</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
