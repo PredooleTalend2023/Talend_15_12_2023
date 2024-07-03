@@ -2,6 +2,8 @@
   <context confirmationNeeded="false" hide="false" name="Default"/>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -96,13 +98,106 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c74c7de2-ba7d-4f7c-9f72-47a5ea70c547"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tW+LfD00lQXBhVPrsandT37ODehk33Z/nvuY4n6Q22BTGHx0wfv2ifqqaGL1xqwrDuhsgxzJwkV+&#13;
-DzhlgIjuXg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_a629adcf-57d6-46fe-a1c0-1cb5b89380f1"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>p//2nkRPlBqYY4KHpVswMNwMx1JK0G7T3/X7ZNyEJECbxjBphInB3fl6Nq7vKoAjeLFcmnaBmK8U&#13;
-GWIdP2jyPQ==</DigestValue></Reference></SignedInfo><SignatureValue>SDbptxmkrk7Ya4oXp2Dm+S1rVc8PnVpYNHMPiOkfA0Ob1pXVikpabsKJepV1meZjOTRcM2t4YJZO&#13;
-D9dO5rNsuh3psXCwyYX8g8mu15aq9hoyZ7lY2AaCKQ5hs3KyQAA0aPXNO8AhwuMbIj4eSAT46lSA&#13;
-sY7GPmPkso26BUyTHQizeDQ7KmAr9PuOa4vsFj7gH1J2v5Wm3fwpWiqhledLPQjhrQauwv3ApLwV&#13;
-2Gzu4zxBhP5DmtF6YlyRuUCrdUDJcghPaWnpSyTbV//g82aGy7Hc6kj14tSxCBXuvn+g+k/dSDcM&#13;
-4LI69gtYm1OpxtYTFQolXBalJYNkQQ0QbinRbA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+  <node componentName="JDBCInput" componentVersion="2" offsetLabelX="0" offsetLabelY="0" posX="160" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="Input"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="bmV3amRiYyNKREJDI0lucHV0"/>
+    <elementParameter field="TEXT" name="VERSION" show="false" value="2"/>
+    <elementParameter field="TEXT" name="FAMILY" show="false" value="JDBC"/>
+    <elementParameter field="CHECK" name="START" show="false" value="true"/>
+    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
+    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
+    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
+    <elementParameter field="TEXT" name="HELP" show="false" value="HELP"/>
+    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_yWBxwDhDEe-VnIAPF2TpjA"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="TEXT" name="LABEL" value="databricks"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.enableDBType" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.dbType" show="false" value="JDBC"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.setRawUrl" show="false" value="true"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.jdbcUrl" value="&quot;jdbc:databricks://community.cloud.databricks.com:443/default;transportMode=http;ssl=1;httpPath=sql/protocolv1/o/624261290782573/0702-065835-5pf7j2n9;AuthMech=3;&quot;"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.port" show="false" value="&quot;80&quot;"/>
+    <elementParameter field="TABLE" name="configuration.dataSet.dataStore.parameters" show="false"/>
+    <elementParameter field="TABLE" name="configuration.dataSet.dataStore.jdbcDriver">
+      <elementValue elementRef="configuration.dataSet.dataStore.jdbcDriver[].path" value="mvn:Spark/SparkJDBC42/2.6.38.1068/jar"/>
+    </elementParameter>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.dataStore.jdbcClass" value="&quot;com.databricks.client.jdbc.Driver&quot;"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.userId" value="&quot;testing676745@outlook.com&quot;"/>
+    <elementParameter field="PASSWORD" name="configuration.dataSet.dataStore.password" value="enc:system.encryption.key.v1:ibueChYd46gF+7PsYAqRHXBIxORnAj4Cg4CE/bAOvKAP/ntMlnZ/naKtiA=="/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.useSharedDBConnection" show="false" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.useDataSource" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="configuration.dataSet.dataStore.dbMapping" show="false" value="&quot;databricks_delta_lake_id&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.authenticationType" show="false" value="&quot;BASIC&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataSet.dataStore.grantType" show="false" value="CLIENT_CREDENTIALS"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataSet.tableName" value="&quot;customer1&quot;"/>
+    <elementParameter field="MEMO_SQL" name="configuration.dataSet.sqlQuery" value="&quot;select *I from default.customer1&quot;"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.useAutoCommit" show="false" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.autoCommit" show="false" value="false"/>
+    <elementParameter field="CHECK" name="configuration.dataSet.dataStore.defineProtocol" show="false" value="false"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.connectionTimeOut" show="false" value="30"/>
+    <elementParameter field="TEXT" name="configuration.dataSet.dataStore.connectionValidationTimeOut" show="false" value="10"/>
+    <elementParameter field="CHECK" name="configuration.config.useCursor" value="false"/>
+    <elementParameter field="TEXT" name="configuration.config.cursorSize" show="false" value="1000"/>
+    <elementParameter field="CHECK" name="configuration.config.trimAllStringOrCharColumns" value="false"/>
+    <elementParameter field="TABLE" name="configuration.config.columnTrims"/>
+    <elementParameter field="CHECK" name="configuration.config.enableMapping" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.config.mapping" show="false" value="MYSQL"/>
+    <elementParameter field="CHECK" name="configuration.config.allowSpecialName" value="true"/>
+    <elementParameter field="CHECK" name="configuration.config.usePreparedStatement" value="false"/>
+    <elementParameter field="TABLE" name="configuration.config.preparedStatementParameters" show="false"/>
+    <elementParameter field="CHECK" name="configuration.config.useQueryTimeout" value="false"/>
+    <elementParameter field="TEXT" name="configuration.config.queryTimeout" show="false" value="30"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.__version" show="false" value="-1"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataSet.dataStore.__version" show="false" value="-1"/>
+    <elementParameter field="TEXT" name="DATASTORE_PATH" show="false" value="configuration.dataSet.dataStore"/>
+    <metadata connector="FLOW" name="tDBInput_1"/>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" defaultValue="" key="false" length="255" name="errorCode" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="255" name="errorMessage" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="440" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
+    <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
+    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
+    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
+    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
+    <elementParameter field="TEXT" name="FIELDSEPARATOR" value="&quot;|&quot;"/>
+    <elementParameter field="CHECK" name="PRINT_HEADER" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" value="false"/>
+    <elementParameter field="CHECK" name="PRINT_COLNAMES" value="false"/>
+    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" value="false"/>
+    <elementParameter field="TABLE" name="LENGTHS" show="false"/>
+    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
+    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tLogRow_1"/>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tLogRow_1">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_41194c71-d367-4b45-8dd8-d697d924e5f5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>wGXOVEf0rgT+R+xwTOZ2auZq+gZgWlKfehI77alBosRZMzff1iWvF/5wmCv0AYyxxVcDyCe4tQsY&#13;
+1RZ+jNZ+NA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_ff10b633-d712-4171-abb6-f81bb6e5cf0d"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5N/533Q4SHnVxrQaXOkpRb9ZoKWhj9gSv2QlFeaY6zCSoW0bSKr5ptAVQw9YlyrBgKuQwYh+o3mA&#13;
+o7jVqtyWOQ==</DigestValue></Reference></SignedInfo><SignatureValue>KLQeK0o1phF7CM9eKn7XqkzbmfXiTRJYajO868TKAt0rZ6qSX9cnbNAkEqxQ3q4C9PbA4CnRtBQL&#13;
+4QOjqtH2LWGdlrjpRsnArw2aHMAtUXtxsCypcCpgzwyMcZQFgk0ZFWu0Nk3lKrj3RzheJj9F9iUN&#13;
+kQShybmhCIEYQm7W75nTc5pwu0eOTy/KKNU3InwYlyqy9474DzARWJcBow+DQxeXfYTHe4d1bmYG&#13;
+H5xsKELWzWKdB9F5mM+PJLHHsxI5fA81xMQI2bxuFAUTRERUQCBvvOUQx89qy8r0oAHeqh8xUFJ/&#13;
+1DzSP1nwxPB9+qiWWUFSMemkqw1ZrobSK7nhqA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -124,4 +219,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_a629adcf-57d6-46fe-a1c0-1cb5b89380f1" Target="#_c74c7de2-ba7d-4f7c-9f72-47a5ea70c547"><Timestamp>2024-07-03 09:33:37</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_ff10b633-d712-4171-abb6-f81bb6e5cf0d" Target="#_41194c71-d367-4b45-8dd8-d697d924e5f5"><Timestamp>2024-07-03 09:35:01</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
