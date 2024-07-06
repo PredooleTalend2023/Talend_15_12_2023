@@ -452,6 +452,7 @@
     <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
     <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
     <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tMSSqlInput"/>
     <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
     <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Program Files (x86)\Talend-Studio\studio\configuration\lib\java"/>
@@ -502,6 +503,7 @@
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="360" posY="480">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
+    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
     <elementParameter field="RADIO" name="BASIC_MODE" value="true"/>
     <elementParameter field="RADIO" name="TABLE_PRINT" value="false"/>
     <elementParameter field="RADIO" name="VERTICAL" value="false"/>
@@ -625,9 +627,11 @@
   </connection>
   <connection connectorName="FLOW" label="row4" lineStyle="0" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tLogRow_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row4"/>
   </connection>
   <connection connectorName="RUN_IF" label="If" lineStyle="6" metaname="tLogRow_1" offsetLabelX="0" offsetLabelY="0" source="tLogRow_1" target="tSendMail_1">
+    <elementParameter field="CHECK" name="ACTIVATE" show="false" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="If1"/>
   </connection>
   <subjob>
@@ -646,13 +650,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_64ddf491-a1c9-48c7-87fa-789c925248ae"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>tOpqAfSpDzqU/jBrxZxcEs4I/OFWY/eDCeS/Bd7zRlyfhd5mbBjtXd+gQ2hQcctTstsTR+q7DS+5&#13;
-zrVoLv7XJA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_34337a3c-cedf-49c3-ac45-37ad95d162eb"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>e3zyiWOG9LsdWLn0a112xWLiZm5YTmZ7HwDYZaib1GdqiH+AZY9SsQsQTpA5KiS3bH+VB8oJSX1D&#13;
-DPs57IFJaA==</DigestValue></Reference></SignedInfo><SignatureValue>pov9L0X+jHvWpI0dz8knuKUrgQv5kNm+6HhUBQUkRJDxQ7pzMduOW5cCS6tfUMkAzH/lzHAFMpBK&#13;
-sNgUAj1ObDw3fp4zv9KcAsByrFAwIgu6Q1lHFyFchXqlRxU0hvrIHNwbZ6T3pkGw3+8h/NIXtWam&#13;
-jOwTI0Yh23JqhwEuyRUmDj2Ht3LNIVRw7eMav0SR3X5f0JCUV3zoTx3kENBrp1hV96OwHqDTgiir&#13;
-xjG2hSN8vAPNOyOPe0sZQ86PI2VEOABLsZbvLxmUfafO5rr499LUOBhQCsQ1wKevVsHTWaZqsk6H&#13;
-Z+fkrknTJ7bobOQVkeAeyG8J5Aoia6zT6+rWEw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_52dd553c-f2c3-4b4f-9dd8-c9c144674179"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>qGhF9qO7JagIHbegyGEVhHO6ovwoqwUOq/yH7gcuwDvjYJFXk4InOSihC52Vt0A/MUEzo90AtYRr&#13;
+evrs2PMO5w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_742716fa-c650-44aa-9ea1-ca143fd74888"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lx93bWJf1XC2f1hRy2qMiASgx6eCB/fdz617trE2c8KQGTstp8tVLTyn8AhsNspg3B10YpfVuP/v&#13;
+GOTYkmniYQ==</DigestValue></Reference></SignedInfo><SignatureValue>nPSScsaAdlc/xzUZqDguHvQXmuS6tmmdl07IkTS5RgqLvZuQUF2En0QlrBLxOOCGR1M1ORA0xKhY&#13;
+IwfZ8uZ3EBxiJPXekFBAMZjdHqg4SpKPssRGFXPB9bt9e15NrADtlwnTnr3ldo1CLZdARJrbmTqP&#13;
+7OsWeUN/qw+iX2912leiAkhBTLUZvEeGFabayadz3YODPo5V7L3NX8fA+OIcZr3zDQbTQJ2jimov&#13;
+jSRJqQI18w8neiUpFCWvNsBx+/6JgKNBytJAWJTXZnY/Mc5pkcp/P46UcjepI0GpS1/G2r0BonB2&#13;
+yOt3QaBAbwhxxrMfcV5MXYrDxCymNVroGOSyJg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -674,4 +678,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_34337a3c-cedf-49c3-ac45-37ad95d162eb" Target="#_64ddf491-a1c9-48c7-87fa-789c925248ae"><Timestamp>2024-07-06 10:54:11</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_742716fa-c650-44aa-9ea1-ca143fd74888" Target="#_52dd553c-f2c3-4b4f-9dd8-c9c144674179"><Timestamp>2024-07-06 10:54:34</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
