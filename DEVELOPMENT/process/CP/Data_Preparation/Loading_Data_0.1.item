@@ -98,29 +98,6 @@
     <elementParameter field="TEXT" name="FOOTER_CODE" show="false" value=""/>
     <elementParameter field="TEXT" name="FOOTER_IMPORT" show="false" value=""/>
   </parameters>
-  <node componentName="DataPrepRun" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="320" posY="80">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDataPrepRun_1"/>
-    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="ZGF0YXByZXAjRGF0YVByZXAjUnVu"/>
-    <elementParameter field="CHECK" name="ACTIVATE" value="false"/>
-    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
-    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
-    <elementParameter field="CLOSED_LIST" name="configuration.dataStore.endpoint" value="CUSTOM"/>
-    <elementParameter field="TEXT" name="configuration.dataStore.endpointURL" value="&quot;https://tdp.ap.cloud.talend.com&quot;"/>
-    <elementParameter field="TEXT" name="configuration.dataStore.passwordAuthentication.username" value="&quot;4b5x2heto4@trial15291.ap.talend.com&quot;"/>
-    <elementParameter field="PASSWORD" name="configuration.dataStore.passwordAuthentication.password" value="enc:system.encryption.key.v1:CZd+0B+Oq6f/l49ws0D+FXItOIpbx2f1TZeedlY42r3ReDyoF+6BhqOOEGir9GQ0C1goCnrCs70oFbNcgOJiyDn6UjumOfjxURfAxu7QhiB53RvSOSg8K+8hHtXuzQ=="/>
-    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.preparationIdentifier" value="54a80882-fe27-4b1c-877f-3e14843d2504"/>
-    <elementParameter field="TABLE" name="configuration.references.references"/>
-    <elementParameter field="TEXT" name="configuration.dataStore.vaultEndPoint" value="http://localhost"/>
-    <elementParameter field="CHECK" name="configuration.dataStore.dictionary" value="false"/>
-    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataStore.dictionaryConfig.dictionaryVersion" show="false" value="0"/>
-    <elementParameter field="TEXT" name="configuration.dataStore.dictionaryConfig.temporaryFolder" show="false" value="target/demoTmp"/>
-    <elementParameter field="TECHNICAL" name="configuration.dataStore.__version" show="false" value="-1"/>
-    <metadata connector="FLOW" name="tDataPrepRun_1"/>
-    <metadata connector="LOOKUP" name="LOOKUP"/>
-    <metadata connector="MERGE" name="MERGE"/>
-    <metadata connector="REJECT" name="REJECT"/>
-  </node>
   <node componentName="tMSSqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="120" posY="80">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tMSSqlInput"/>
@@ -241,53 +218,25 @@
       </column>
     </metadata>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="280" posY="80">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
-    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
-    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
-    <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="OrderID"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="CustomerID"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="EmployeeID"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="OrderDate"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="RequiredDate"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ShippedDate"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ShipVia"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="Freight"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ShipName"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ShipAddress"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ShipCity"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ShipRegion"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ShipPostalCode"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="ShipCountry"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
-    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" label="Orders" name="tLogRow_1">
+  <node componentName="DataPrepRun" componentVersion="1" offsetLabelX="0" offsetLabelY="0" posX="280" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDataPrepRun_1"/>
+    <elementParameter field="TECHNICAL" name="TACOKIT_COMPONENT_ID" show="false" value="ZGF0YXByZXAjRGF0YVByZXAjUnVu"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="CLOSED_LIST" name="configuration.dataStore.endpoint" value="CUSTOM"/>
+    <elementParameter field="TEXT" name="configuration.dataStore.endpointURL" value="&quot;https://tdp.ap.cloud.talend.com&quot;"/>
+    <elementParameter field="TEXT" name="configuration.dataStore.passwordAuthentication.username" value="&quot;4b5x2heto4@trial15291.ap.talend.com&quot;"/>
+    <elementParameter field="PASSWORD" name="configuration.dataStore.passwordAuthentication.password" value="enc:system.encryption.key.v1:CZd+0B+Oq6f/l49ws0D+FXItOIpbx2f1TZeedlY42r3ReDyoF+6BhqOOEGir9GQ0C1goCnrCs70oFbNcgOJiyDn6UjumOfjxURfAxu7QhiB53RvSOSg8K+8hHtXuzQ=="/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.preparationIdentifier" value="Northwind_Orders_CP"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.version" value="HEAD"/>
+    <elementParameter field="TABLE" name="configuration.references.references"/>
+    <elementParameter field="TEXT" name="configuration.dataStore.vaultEndPoint" value="http://localhost"/>
+    <elementParameter field="CHECK" name="configuration.dataStore.dictionary" value="false"/>
+    <elementParameter field="TACOKIT_VALUE_SELECTION" name="configuration.dataStore.dictionaryConfig.dictionaryVersion" show="false" value="0"/>
+    <elementParameter field="TEXT" name="configuration.dataStore.dictionaryConfig.temporaryFolder" show="false" value="target/demoTmp"/>
+    <elementParameter field="TECHNICAL" name="configuration.dataStore.__version" show="false" value="-1"/>
+    <metadata connector="FLOW" label="Orders" name="tDataPrepRun_1">
       <column comment="" key="true" length="10" name="OrderID" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
@@ -331,28 +280,26 @@
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
+    <metadata connector="LOOKUP" name="LOOKUP"/>
+    <metadata connector="MERGE" name="MERGE"/>
+    <metadata connector="REJECT" name="REJECT"/>
   </node>
-  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tLogRow_1">
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tDataPrepRun_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row1"/>
   </connection>
-  <subjob>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDataPrepRun_1"/>
-    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
-    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
-  </subjob>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_28617e87-e8cd-47e4-96b5-000a25a0c514"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GM36izkDKeEmJm8Ruq5u14pQBb8XTbFiHi041G4ZDtYthbxVvqCX1r9jcd9EoFcahzASAhuysQMF&#13;
-Td+ySxG9VA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3f5695f0-3e74-4272-8fd2-fb13da11c344"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>pWqqqQWqc/gPga3pxzYzL6wnQ+1bCMn1fO9fNgvJEaA3wT72xQpboK8Bs6XIsENSLQinoEZ+xfrK&#13;
-Wyac+i6gag==</DigestValue></Reference></SignedInfo><SignatureValue>TkldGu1VZd2Pk/P+tvoPXvPVI6lHu2UhDVkJKJnm8B+/kyrA7lPK/j8Q2ja7Qbo5EkFARgKb9Dh0&#13;
-l+zFPKF+Gc4x/yfHsxlf+CuNE6SxCrcfhEj1npQ6ZlpnZP1IGTkr8QhvEfIF1XDpopsV8SZ+/86W&#13;
-rUg6IU3WHxMMc05ootrEh/y4t3EAfpA9Iwv2MuWwtXgIuwAdNagDZWJKuEZNpgF7GleNdZDMF2jD&#13;
-nv3h7dQ8pAJA14lYUtn2dmB2bmNq7tl+3Hq7bXzfhkH0+xYFIm0niQSoiZ8Yvrs3U7fy1H9PDH60&#13;
-okGA8pf4Fb8poSjAQSva4D0zRLGBoKq+M0Nu+Q==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_016546f1-12d2-472c-aa9e-65b37500ea10"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>b1JVPIt4yQXw76MAmUJ2I4lGCtJs2ncPlS5X8kviHd/kbruRAiajrCJn04kf5o/8V4/0eytY9ZMF&#13;
+BVnfratFjw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_6e21c21d-1ad0-4d46-bf4f-fe811db13aee"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>IfzIJ4q5hQF9iWc1PbLm6oUaaDZznacxLW3h9iY5wCuBJWmm1WwiRJbNLxsto4f09jjXA3gJkp4q&#13;
+qXUmOkIDRA==</DigestValue></Reference></SignedInfo><SignatureValue>CkcP1lM3rDlRbsDNY9c6qLD1RLiEiRx31eKNwTnJlCtUnauBKCkwX9JcUVjGkTdfgCHEx6PMdcCu&#13;
+t9FlaNazacyt8UCc7GLAqkOCtnac37hQhmn6fFg6HB0QOD/XzAj+OnyOtqibd5xMSbU91QeaGCIy&#13;
+xsIrIBHXCeygp14QqO4PCj5ir3cJXBJjCPjrbb6djKklGbo7P7oUInHxm9F9NthWPXTwpXVBM6mg&#13;
+EDOHcRTVY3Nyx2e6wjoOLMcJEVtBS5sMCuI1teeKmCPEkRc6EqrhJFL3ogT2LUhOhX7CI8/LcTaG&#13;
+S2kkXdkxLiWXd871gjziglGUAP3DTEwUoy5HOg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -374,4 +321,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3f5695f0-3e74-4272-8fd2-fb13da11c344" Target="#_28617e87-e8cd-47e4-96b5-000a25a0c514"><Timestamp>2024-07-09 06:22:00</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_6e21c21d-1ad0-4d46-bf4f-fe811db13aee" Target="#_016546f1-12d2-472c-aa9e-65b37500ea10"><Timestamp>2024-07-09 06:25:32</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
