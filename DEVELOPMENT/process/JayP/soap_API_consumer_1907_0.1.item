@@ -221,24 +221,24 @@
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="out1" name="out1">
       <column comment="" key="false" length="-1" name="order_date" nullable="true" originalLength="100" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="order_date_1" nullable="true" originalLength="100" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="order_amount" nullable="true" originalLength="100" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="customer_id" nullable="true" originalLength="-1" precision="-1" sourceType="id_Integer" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row2">
         <nodes expression="" name="payload" type="id_Document" xpath="row2/payload">
           <children main="true" name="tns:newSimpleSOAP_1907OperationResponse" type="id_String" xpath="row2.payload:/tns:newSimpleSOAP_1907OperationResponse">
             <children defaultValue="http://www.talend.org/service/" name="tns" nodeType="NAME_SPACE" type="id_String" xpath="row2.payload:/tns:newSimpleSOAP_1907OperationResponse/xmlns:tns"/>
-            <children loop="true" name="order_date" outgoingConnections="//@node.3/@nodeData/@connections.0" type="id_String" xpath="row2.payload:/tns:newSimpleSOAP_1907OperationResponse/order_date"/>
-            <children name="order_date" outgoingConnections="//@node.3/@nodeData/@connections.1" type="id_String" xpath="row2.payload:/tns:newSimpleSOAP_1907OperationResponse/order_date"/>
-            <children name="order_amount" outgoingConnections="//@node.3/@nodeData/@connections.2" type="id_String" xpath="row2.payload:/tns:newSimpleSOAP_1907OperationResponse/order_amount"/>
+            <children loop="true" name="order_date" outgoingConnections="//@node.3/@nodeData/@connections.0" pattern="&quot;dd-MM-yyyy&quot;" type="id_Date" xpath="row2.payload:/tns:newSimpleSOAP_1907OperationResponse/order_date"/>
+            <children name="order_amount" outgoingConnections="//@node.3/@nodeData/@connections.1" type="id_String" xpath="row2.payload:/tns:newSimpleSOAP_1907OperationResponse/order_amount"/>
+            <children name="customer_id" outgoingConnections="//@node.3/@nodeData/@connections.2" type="id_Integer" xpath="row2.payload:/tns:newSimpleSOAP_1907OperationResponse/customer_id"/>
           </children>
         </nodes>
       </inputTrees>
       <outputTrees name="out1">
         <nodes expression="[row2.payload:/tns:newSimpleSOAP_1907OperationResponse/order_date]" incomingConnections="//@node.3/@nodeData/@connections.0" name="order_date" type="id_String" xpath="out1/order_date"/>
-        <nodes expression="[row2.payload:/tns:newSimpleSOAP_1907OperationResponse/order_date]" incomingConnections="//@node.3/@nodeData/@connections.1" name="order_date_1" type="id_String" xpath="out1/order_date_1"/>
-        <nodes expression="[row2.payload:/tns:newSimpleSOAP_1907OperationResponse/order_amount]" incomingConnections="//@node.3/@nodeData/@connections.2" name="order_amount" type="id_String" xpath="out1/order_amount"/>
+        <nodes expression="[row2.payload:/tns:newSimpleSOAP_1907OperationResponse/order_amount]" incomingConnections="//@node.3/@nodeData/@connections.1" name="order_amount" type="id_String" xpath="out1/order_amount"/>
+        <nodes expression="[row2.payload:/tns:newSimpleSOAP_1907OperationResponse/customer_id]" incomingConnections="//@node.3/@nodeData/@connections.2" name="customer_id" type="id_Integer" xpath="out1/customer_id"/>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
       <connections source="//@node.3/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.1" target="//@node.3/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
@@ -321,14 +321,14 @@
     <elementParameter field="TEXT" name="LABEL" value="sql_Server_229_1907"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="out1" name="tDBOutput_1">
-      <column comment="" key="false" length="100" name="order_date" nullable="true" originalLength="100" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="100" name="order_date_1" nullable="true" originalLength="100" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="100" name="order_amount" nullable="true" originalLength="100" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="order_date" nullable="true" originalLength="100" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="order_date_1" nullable="true" originalLength="100" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="order_amount" nullable="true" originalLength="100" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="REJECT" label="out1" name="REJECT">
-      <column comment="" key="false" length="100" name="order_date" nullable="true" originalLength="100" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="100" name="order_date_1" nullable="true" originalLength="100" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="100" name="order_amount" nullable="true" originalLength="100" precision="-1" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="order_date" nullable="true" originalLength="100" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="order_date_1" nullable="true" originalLength="100" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="order_amount" nullable="true" originalLength="100" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
       <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" originalLength="-1" precision="0" sourceType="VARCHAR" type="id_String" usefulColumn="true"/>
     </metadata>
@@ -354,13 +354,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b7420069-b051-419e-8d86-a8c34b9d59e6"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>j6uXML25rlAWh91wN+1alsCDQQshqrMsJhAnLtpNqOYnIe+jB27DAAIS13a5gE1T+RwZO7G9GfFZ&#13;
-GrTPyD5xJA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_54f9d3c6-4a78-4444-9210-0fbbec96dbe8"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>3wtPoadwCzBCkYo7/A6em/1GPWhEeQaXeYrrf8y5Iz4gINRT3l+DbbTtnHVKf4mbPiFJNZYsi1Pd&#13;
-kzPuTwAeuQ==</DigestValue></Reference></SignedInfo><SignatureValue>Rq5FqRvGSon85voTI7F5MXtdx0S7/Gk/3izREe2QwkBg8SD6Cv+/8ZRJUwaobNkEHaAm0DvHIVi7&#13;
-jK09GPmM/4LLclbFQHlJD9X5eb/niGmdrqFgqmC3kJmozmv3P0AUiUWk78CelXe94RaQI96AwUBS&#13;
-qWl+2rfU1w43WUE6vhuaOTe5Qn2LjpDI2y4sa3n7yeq6aODYCrefRgyfJPDs30jIZyF3jqrM/mG6&#13;
-EHWDpknWhxdr4IFjggfgDAY1tRyVDA4UrnVcIBbRmQ2E21DI0581LZBFV1UlzOnOUTYSeIoSq7z3&#13;
-3J3PVyygSZba48aymHscnqSLIV8aQirZIiz+Ug==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_32183999-e586-4ce9-8d59-c6de02a0e72e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ZbvomXM2EuccpuT8/mDjo+546O9j7as6PCaoxjWjz7kzS8pkoTJMKX0KUakDF0cPcpLrEmKlYOtv&#13;
+oFUgsEmlfg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_05d81613-495a-4f1b-b127-72503795527c"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TwZdCXDYgDSyavaj+eGpAlsdLp3P0sx0uVAElbc1CtmapPfCC4/Y6rzqYVwsU+PxUzBWxoU2PyBh&#13;
+awr+sLkRfQ==</DigestValue></Reference></SignedInfo><SignatureValue>paLzl35wjHl5oy0eZLWcAjonKfBfjZnJM2vDAC2Jozbj7SRTJsbHm1ZU6RLhdr7do4P7Jlt2XfeK&#13;
+LH6wV2y2pP4h/jB1C1ENRTdLXlYbWfT8uPpyUCLyD7G1tR1XCpWykX6YiQCLcFSvZxwQXdiDKnUN&#13;
+WuVvM0ehZsVuSVlOk0zINIdPjeGz0xzBcA4aGg+DIDPi3hed6dgR/v1QXFOSWvIE56Lt7YqUt+sc&#13;
+zh4cAPGdphRMX6Y7xhj0XXAa7rMLhgZUZk56/emOQ9IGYDFvfEL7v3VvsQWzIJdJ6SbPkPep9gWs&#13;
+2yK/HPJqx5wKGVIwAl0ZXOCrCbEzbtBMWE+EXg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -382,4 +382,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_54f9d3c6-4a78-4444-9210-0fbbec96dbe8" Target="#_b7420069-b051-419e-8d86-a8c34b9d59e6"><Timestamp>2024-07-19 11:47:43</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_05d81613-495a-4f1b-b127-72503795527c" Target="#_32183999-e586-4ce9-8d59-c6de02a0e72e"><Timestamp>2024-07-19 11:57:22</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
