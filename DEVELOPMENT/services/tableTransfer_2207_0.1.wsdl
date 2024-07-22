@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="tableTransfer_2207"
+		xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:tns="http://www.talend.org/service/"
+		targetNamespace="http://www.talend.org/service/">
+
+	<wsdl:types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.talend.org/service/">
+			<xsd:element name="tableTransfer_2207OperationRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="in" type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="tableTransfer_2207OperationResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="out" type="tns:outType"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		
+            <xsd:complexType name="outType"></xsd:complexType>
+        </xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="tableTransfer_2207OperationRequest">
+		<wsdl:part name="parameters" element="tns:tableTransfer_2207OperationRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="tableTransfer_2207OperationResponse">
+		<wsdl:part name="parameters" element="tns:tableTransfer_2207OperationResponse"></wsdl:part>
+	</wsdl:message>
+
+	<wsdl:portType name="tableTransfer_2207PortType">
+		<wsdl:operation name="tableTransfer_2207Operation">
+			<wsdl:input message="tns:tableTransfer_2207OperationRequest"></wsdl:input>
+			<wsdl:output message="tns:tableTransfer_2207OperationResponse"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="tableTransfer_2207Binding" type="tns:tableTransfer_2207PortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="tableTransfer_2207Operation">
+			<soap:operation soapAction="http://www.talend.org/service/tableTransfer_2207Operation" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="tableTransfer_2207">
+		<wsdl:port name="tableTransfer_2207Port" binding="tns:tableTransfer_2207Binding">
+			<soap:address location="http://localhost:8090/services/tableTransfer_2207" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
