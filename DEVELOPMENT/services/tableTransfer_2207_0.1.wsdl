@@ -19,11 +19,13 @@
 			<xsd:element name="tableTransfer_2207OperationResponse">
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="out" type="xsd:string"></xsd:element>
+						<xsd:element name="out" type="tns:outType"></xsd:element>
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
-		</xsd:schema>
+		
+            <xsd:complexType name="outType"></xsd:complexType>
+        </xsd:schema>
 	</wsdl:types>
 
 	<wsdl:message name="tableTransfer_2207OperationRequest">
