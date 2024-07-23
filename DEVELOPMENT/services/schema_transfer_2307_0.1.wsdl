@@ -12,18 +12,22 @@
 			<xsd:element name="schema_transfer_2307OperationRequest">
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="in" type="xsd:string"></xsd:element>
+						<xsd:element name="in" type="tns:inType"></xsd:element>
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
 			<xsd:element name="schema_transfer_2307OperationResponse">
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="out" type="xsd:string"></xsd:element>
+						<xsd:element name="out" type="tns:outType"></xsd:element>
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
-		</xsd:schema>
+		
+            <xsd:complexType name="inType"></xsd:complexType>
+        
+            <xsd:complexType name="outType"></xsd:complexType>
+        </xsd:schema>
 	</wsdl:types>
 
 	<wsdl:message name="schema_transfer_2307OperationRequest">
