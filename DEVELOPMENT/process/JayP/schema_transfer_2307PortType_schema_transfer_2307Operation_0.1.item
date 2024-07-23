@@ -222,11 +222,11 @@
     <elementParameter field="TEXT" name="CURSOR_SIZE" show="false" value="1000"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="column_name"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COLUMN_NAME"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="data_type"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DATA_TYPE"/>
       <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="data_length"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="DATA_LENGTH"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
@@ -234,9 +234,9 @@
     <elementParameter field="TEXT" name="LABEL" value="oracle_250"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_1">
-      <column comment="" key="false" length="-1" name="column_name" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_type" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
-      <column comment="" key="false" length="-1" name="data_length" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="INT" type="id_Integer" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="COLUMN_NAME" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="DATA_TYPE" nullable="true" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="-1" name="DATA_LENGTH" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="NUMBER" type="id_BigDecimal" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tXMLMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="640" posY="160">
@@ -250,17 +250,17 @@
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row3">
-        <nodes name="column_name" outgoingConnections="//@node.5/@nodeData/@connections.0" type="id_String" xpath="row3/column_name"/>
-        <nodes name="data_type" outgoingConnections="//@node.5/@nodeData/@connections.1" type="id_String" xpath="row3/data_type"/>
-        <nodes name="data_length" outgoingConnections="//@node.5/@nodeData/@connections.2" type="id_Integer" xpath="row3/data_length"/>
+        <nodes name="COLUMN_NAME" nullable="false" outgoingConnections="//@node.5/@nodeData/@connections.0" type="id_String" xpath="row3/COLUMN_NAME"/>
+        <nodes name="DATA_TYPE" outgoingConnections="//@node.5/@nodeData/@connections.1" type="id_String" xpath="row3/DATA_TYPE"/>
+        <nodes name="DATA_LENGTH" nullable="false" outgoingConnections="//@node.5/@nodeData/@connections.2" type="id_BigDecimal" xpath="row3/DATA_LENGTH"/>
       </inputTrees>
       <outputTrees allInOne="true" name="output">
         <nodes expression="" name="payload" type="id_Document" xpath="output/payload">
           <children main="true" name="tns:schema_transfer_2307OperationResponse" type="id_String" xpath="output.payload:/tns:schema_transfer_2307OperationResponse" xsi:type="TalendXMLMap:OutputTreeNode">
             <children defaultValue="http://www.talend.org/service/" name="tns" nodeType="NAME_SPACE" type="id_String" xpath="output.payload:/tns:schema_transfer_2307OperationResponse/xmlns:tns" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row3.column_name" incomingConnections="//@node.5/@nodeData/@connections.0" loop="true" name="column_name" type="id_String" xpath="output.payload:/tns:schema_transfer_2307OperationResponse/column_name" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row3.data_type" incomingConnections="//@node.5/@nodeData/@connections.1" name="data_type" type="id_String" xpath="output.payload:/tns:schema_transfer_2307OperationResponse/data_type" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row3.data_length" incomingConnections="//@node.5/@nodeData/@connections.2" name="data_length" type="id_Integer" xpath="output.payload:/tns:schema_transfer_2307OperationResponse/data_length" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row3.COLUMN_NAME" incomingConnections="//@node.5/@nodeData/@connections.0" loop="true" name="column_name" type="id_String" xpath="output.payload:/tns:schema_transfer_2307OperationResponse/column_name" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression=" row3.DATA_TYPE" incomingConnections="//@node.5/@nodeData/@connections.1" name="data_type" type="id_String" xpath="output.payload:/tns:schema_transfer_2307OperationResponse/data_type" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression=" row3.DATA_LENGTH" incomingConnections="//@node.5/@nodeData/@connections.2" name="data_length" type="id_Integer" xpath="output.payload:/tns:schema_transfer_2307OperationResponse/data_length" xsi:type="TalendXMLMap:OutputTreeNode"/>
           </children>
         </nodes>
       </outputTrees>
@@ -325,13 +325,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2643c709-8c8d-45b1-9e5e-63add12a2262"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>LTk+4DyHmJWpOL8dmfynPQSsDNV8NK0GrqkWZxTUqKJOoWyamz4IzyxeGSi0twn/crt4rV1Xo2d+&#13;
-rCM9c3JzdQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_aa7100b0-7350-4cd6-863e-4deb308f07c0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lJskK+lr7eYeiXLECGb1GCad1YY9vi1/x/sVlrANB7Vh7hGQnfPASYUSiDaAh50xucaztbWwfPHU&#13;
-AikmCTz6eA==</DigestValue></Reference></SignedInfo><SignatureValue>bbsPzfFsrlERGrlS708oihk27qLXwWv6rdwO93qetjgLNlVjWFC9dZARS5xE2PyDewACOhh95XMe&#13;
-56N2AuYJN3WrhMTKz+yZsLAh3/aJcmxqWV0pCiavOdPrhmzTjHOwC3PcJ0TUGMjeLECyFFaQbxDE&#13;
-wKnB9757++c9jvJtGwJzGoJNkYOvGGRv5UhX1wDWv7taHunK+83+0PvzCZ0b2S6NNqKOxVqbvf1x&#13;
-JxomAhGso/RTMg05gRX4sC9F/hWjMnNxydwRpKOX1l6e48e5TDs0zS+I4p5gIFCtx2/JoSm/rpI4&#13;
-5f8DVMuK+WICe5D9hIxCuvBEybHSYd1oMpdAjw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_92d8ee04-f855-430c-8c06-9bc73976d9e7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>xxLu9yhjzZL93WQRSZN3YQdDo0GIiSumFHnP6+fSPc6yAWatj6pIGOY3ebJDQiq0EHG6kJoWn1x5&#13;
+cZhC24TaLQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0f9005fa-b01f-404b-ada1-df034eef0472"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Bp/pvNx6YbtmowE4m2AiT88f0DIu6H7GW7uD1Rp4jwbPQIGQbmPAxqLBljQkl3fRIiYHyHht3Gdi&#13;
+uVz1dhOw7w==</DigestValue></Reference></SignedInfo><SignatureValue>Kag3gpesaBaPoe4t8fK+SLoQOyKdgbsU5odkXVig0QP+MJ1cohlJrwl8VuhWAVHwuhfpHpPuzebr&#13;
++8pi3lCOm3UC6tLag4KSyx37PRtzerf8/800vAu3W/VRio3D+yFnLpGtTPydYP/Ywc2UjUJU39/q&#13;
+l9SBXtzcW5Qu6VmxywxYbTi/9pujOILeLP1hzg/tO64r01i1G7W5zPaI6lL1/iVj8lToGsMPLFCS&#13;
+nAqXFTUTe6JdORA+wXLHokgw9wWyXeyivRWjl75iSjnJiYoduxdWFdjIgcsaY7h0UjbPLg2u/zO9&#13;
+dRZPLfMPs9goKU+5qoy+EUBa6CK90/czFOF+vA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -353,4 +353,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_aa7100b0-7350-4cd6-863e-4deb308f07c0" Target="#_2643c709-8c8d-45b1-9e5e-63add12a2262"><Timestamp>2024-07-23 09:09:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0f9005fa-b01f-404b-ada1-df034eef0472" Target="#_92d8ee04-f855-430c-8c06-9bc73976d9e7"><Timestamp>2024-07-23 09:20:30</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
