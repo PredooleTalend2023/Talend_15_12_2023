@@ -437,7 +437,7 @@
     <elementParameter field="TEXT" name="CURSOR_SIZE" show="false" value="1000"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="TableSchema"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COLUMN_NAME"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="NO_NULL_VALUES" value="false"/>
@@ -445,16 +445,16 @@
     <elementParameter field="TEXT" name="LABEL" value="oracle_250"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tDBInput_1">
-      <column comment="" key="false" length="-1" name="TableSchema" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR2" type="id_Dynamic" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="COLUMN_NAME" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="360" posY="400">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#13;&#10;output_row.TableSchema = input_row.TableSchema;&#13;&#10;String columnNames = &quot;&quot;;&#10;for (int i = 0; i &lt; input_row.TableSchema.length; i++) {&#10;    columnNames += input_row.TableSchema[i] + &quot; - &quot;;&#10;}&#10;output_row.TableSchema = columnNames.substring(0, columnNames.length() - 3); // Remove the last &quot; - &quot;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#13;&#10;output_row.COLUMN_NAME = input_row.COLUMN_NAME;&#13;&#10;String columnNames = &quot;&quot;;&#10;for (int i = 0; i &lt; input_row.COLUMN_NAME.length; i++) {&#10;    columnNames += input_row.COLUMN_NAME[i] + &quot; - &quot;;&#10;}&#10;output_row.COLUMN_NAME = columnNames.substring(0, columnNames.length() - 3); // Remove the last &quot; - &quot;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_1">
-      <column comment="" key="false" length="-1" name="TableSchema" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR2" type="id_Dynamic" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="COLUMN_NAME" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tFileOutputDelimited" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="400">
@@ -500,7 +500,7 @@
     <elementParameter field="TEXT" name="LABEL" value="Sample_2407"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tFileOutputDelimited_1">
-      <column comment="" key="false" length="-1" name="TableSchema" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR2" type="id_Dynamic" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="COLUMN_NAME" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="640" posY="400">
@@ -517,14 +517,14 @@
     <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
     <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
     <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="TableSchema"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="COLUMN_NAME"/>
       <elementValue elementRef="LENGTH" value="10"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
     <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tLogRow_2">
-      <column comment="" key="false" length="-1" name="TableSchema" nullable="true" originalLength="-1" pattern="&quot;dd-MM-yyyy&quot;" precision="-1" sourceType="VARCHAR2" type="id_Dynamic" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="COLUMN_NAME" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="VARCHAR2" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tMap" componentVersion="2.1" offsetLabelX="0" offsetLabelY="0" posX="600" posY="560">
@@ -634,13 +634,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_c75c0891-4512-41eb-acfe-8daeaceae694"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>WVjlM9kEiPyQtNZLD+TKAhs3O1yFCP0mfrA7xNGqtolH1B0047CO4H0wYCTQ7JgiCJ+N4H3uY6BG&#13;
-07ylyyQueg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_9aa9e4a4-97c2-41fd-bad9-520183155142"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Ham4EXMpW7i5J1PIOOk+wrWFTNMeeC/QX3Tn3uI/mv0gqfIt+c0WEPto/BGKSGQ/20XBGfEdqOWY&#13;
-JhmDv9vkOQ==</DigestValue></Reference></SignedInfo><SignatureValue>fqgzykCtFRmvuFElxAOj3YE6eN+AuLbGre9p9lRcmnBSuJkgJIxqJwiV5ol06cW6GLwEZNY9MX5e&#13;
-bHOQZU6vY1cj8GqZrkbUKuKSBINniqHQNw2LIwtX9aPz/I5lZsHnHefEADx6u/NAwJjAJPT1o+EU&#13;
-4XUy0Du+IniCXVWN77SNrYTr3lQZMnRQqeM+A18yORuuBYzfgo5ZLLm2u73gKysoP5sQyzPCXDu9&#13;
-8pPCpPN3HWpVNtqgj4fWUuQ50NSs4yM0QhFJWGQ4pDGi3SLXBT5UxqHNjspFjIb6EA/HT8fSWZoR&#13;
-qiFRTQmcB1KZBXYviYywNVqdJcGpxWs3rMcwBw==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_37d7583c-8caa-4146-94dc-c78fc3f357a2"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>fw3NXWPw4Oi09VoddcbVgj1zjllzHnxq1j5XDdsznjN3+r5BQ3k6OVpVCd7V0mHlejBzZPVreU9Q&#13;
+2zUz8VPeug==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_3fc7e44b-af4d-4f4c-9545-0d4482f5fe5b"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>e2A+z/4eTkjLMAh4/ODhbU1PbEXJGSYrmgGOGyByDx6GNVBXc4RGzMNwVKc8j1IoN3nuaSq1du8P&#13;
+GJ2RjnUPew==</DigestValue></Reference></SignedInfo><SignatureValue>P+ZpIP4yfE4BZTrQTvQ9+nBpFidY3cI27H/QYGZiNId4UU+RQt3fifdbvLP3eokkfwE19YtC3Kis&#13;
+hLZiVV5vFimIilLiLOb2AI8kHYgGm3zhhWMsl5chdFKKp/QGVMEV+A02+qc3SxBTjisEW+IGjMnP&#13;
+4crnRyHBIJMsY+Rnnr9wMM/ojVUurqWy5+kq1+er5su1RTXOgW2jA83IAnp83oLFaVRlABIJa+6q&#13;
+yuFidaGtpD8C8/kQphubVXoSdDlb6RqgSp29SxXIs8IiSQLf1HUvqoYkk5+Geh5bIRaoZjY+4zcU&#13;
+1DdOEZLk92D/Ndi8M4QCt/CucRQaik2m9bnn0A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -662,4 +662,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_9aa9e4a4-97c2-41fd-bad9-520183155142" Target="#_c75c0891-4512-41eb-acfe-8daeaceae694"><Timestamp>2024-07-25 06:52:05</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_3fc7e44b-af4d-4f4c-9545-0d4482f5fe5b" Target="#_37d7583c-8caa-4146-94dc-c78fc3f357a2"><Timestamp>2024-07-25 06:54:26</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
