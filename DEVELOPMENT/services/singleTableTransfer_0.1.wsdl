@@ -12,14 +12,26 @@
 			<xsd:element name="singleTableTransferOperationRequest">
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="in" type="xsd:string"></xsd:element>
+						<xsd:element name="TableName" type="xsd:string"></xsd:element>
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
 			<xsd:element name="singleTableTransferOperationResponse">
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="out" type="xsd:string"></xsd:element>
+						<xsd:element name="CUSTOMERID" type="xsd:int"></xsd:element>
+						<xsd:element name="LOANTYPE"
+							type="xsd:string">
+						</xsd:element>
+						<xsd:element name="LOANAMOUNT"
+							type="xsd:double">
+						</xsd:element>
+						<xsd:element name="INTERESTRATE"
+							type="xsd:double">
+						</xsd:element>
+						<xsd:element name="STATUS"
+							type="xsd:string">
+						</xsd:element>
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
