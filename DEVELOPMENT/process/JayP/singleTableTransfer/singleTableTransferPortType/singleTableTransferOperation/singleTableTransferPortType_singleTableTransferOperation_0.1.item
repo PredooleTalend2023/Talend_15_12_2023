@@ -102,16 +102,6 @@
   </parameters>
   <node componentName="tESBProviderRequest" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="120" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tESBProviderRequest_1"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tESBProviderRequest"/>
-    <elementParameter field="TEXT" name="VERSION" show="false" value="0.100 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="ESB/Web Services"/>
-    <elementParameter field="CHECK" name="START" show="false" value="true"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="true"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tESBProviderRequest"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Users\Laptop_User\Downloads\Talend-Studio\Talend-Studio-20240527_1700-V8.0.1\configuration\lib\java"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_x1nucEs-Ee-an6HMI5sjQw - _x4vT4Es-Ee-an6HMI5sjQw - _x4vT4Us-Ee-an6HMI5sjQw"/>
     <elementParameter field="CHECK" name="KEEPLISTENING" value="true"/>
@@ -176,16 +166,6 @@
   </node>
   <node componentName="tOracleInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="720" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDBInput_1"/>
-    <elementParameter field="TEXT" name="COMPONENT_NAME" show="false" value="tOracleInput"/>
-    <elementParameter field="TEXT" name="VERSION" show="false" value="0.102 (ALPHA)"/>
-    <elementParameter field="TEXT" name="FAMILY" show="false" value="Databases/DB Specifics/Oracle"/>
-    <elementParameter field="CHECK" name="START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="STARTABLE" show="false" value="true"/>
-    <elementParameter field="CHECK" name="SUBTREE_START" show="false" value="false"/>
-    <elementParameter field="CHECK" name="END_OF_FLOW" show="false" value="false"/>
-    <elementParameter field="TEXT" name="HELP" show="false" value="org.talend.help.tOracleInput"/>
-    <elementParameter field="DIRECTORY" name="IREPORT_PATH" show="false" value=""/>
-    <elementParameter field="DIRECTORY" name="JAVA_LIBRARY_PATH" show="false" value="C:\Users\Laptop_User\Downloads\Talend-Studio\Talend-Studio-20240527_1700-V8.0.1\configuration\lib\java"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_curM8EfoEe-vWOlXPFNZ9Q"/>
     <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
@@ -202,12 +182,12 @@
     <elementParameter field="TEXT" name="USER" value="&quot;User1&quot;"/>
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:gk9lenWG1FzNJVhi5WSB/12NnkpQs0GnYRWEQeBpWyVYVrdMgWfq7P8B"/>
     <elementParameter field="TEXT" name="JDBC_URL" show="false" value="&quot;jdbc:oracle:oci:/@talend&quot;"/>
-    <elementParameter field="DBTABLE" name="TABLE" value="&quot;LOAN_STATUS&quot;"/>
+    <elementParameter field="DBTABLE" name="TABLE" value="context.TableName"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT CUSTOMERID, LOANTYPE, LOANAMOUNT, INTERESTRATE, STATUS FROM LOAN_STATUS&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT * FROM USER1.&quot; + context.TableName"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -320,13 +300,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_7c7fd9b0-4459-4f49-8a1a-3d4ad6f2ede8"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>U4bN01w8ZsStgsGAXKPrD6fdtCEFUHjbHz/WRPPjyr4JRXcKCAgdtRc05BK/iqF5lfgNfx6iNeFl&#13;
-v487DplNPA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_e9278a8e-15d5-417c-bb64-1f65c72b6b77"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>dsSXQtIStZNJQ353sLdpktIWL+OuFoJbHRLxeUEzHqYT4GOvlcTH39qkKrLyHSzazgMvIz0eyeR0&#13;
-x9elzP1GlA==</DigestValue></Reference></SignedInfo><SignatureValue>NwI1iX/2VkU1AnNS8K2dx6DNxwiBRtKFaX1IbWBdtn1G2aYfDGWQIJemvkPNumTufQIp5OwR7GwQ&#13;
-kZuLqSxoI/l0jVQnr42pZOpFnckZJ1kdW5fcyoN7AKiPFuTUtkczZ87wFYQCQWdB99zQLyJpdujr&#13;
-nqPxzDYDaWS/EnOi2njgHQG4ERclNUXuKrQKNuKmxLDxGL6eSsNvb5bdP5Omu4EhVdeoeMiWqU29&#13;
-dLEdmecAPqrur5JrqRHdAbVrrkX5qY4XUxAyHfHOxKp0kC6+Y2nMyQFTZTgPh5DpWRB8K1jwTaeT&#13;
-0pKM+Cdzo6iJPpLAEsd24Lnv5stQYzbgPGyiXQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_fae887d9-7723-478c-b909-61c2989f436f"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>ya9m6XRZYAmHJukdQ2/40p7ezaqFNpGLD/j4n/zJUWOUhbil+DbhnlfSFLCWyMq0MjUTePXS4OUx&#13;
+w6KxXK7JaA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_94634bc6-3e56-4401-8d5b-fe8db2218a43"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>jMBFotgFC3gVMw+rmtNe/ZuhoTb0BWBwprVeWGMdqSZ46twfY4IHfV8HUQwpMEfYYJ+xBvnwnyNA&#13;
+JmUKHDdReQ==</DigestValue></Reference></SignedInfo><SignatureValue>RFZEvQ/SHzpTgOlvWjOpdX4MsVrJnGpF5mAyJ8wJURkMQVDd8DRJdrRKv55O/bA4/D+m6G9oS22i&#13;
+QrIVDIJBELxUu1t/M4f8MmNa6skrFfLIcjhuFyJwbNdBwyWsyi5UdXoaCJ3zn75bwaSYMSwM0Ul7&#13;
+FyOotdhYSF6/wIDUlxuL6vA5z840SWh6pd81/zZKA7+IOY57vESWJBgEOFvctRAi9fOouUcxEfOA&#13;
+EdK1Vfjlm8bGacNGXVaQeBQndI8ldJo6fUoobfF7ZafGHG/TFopUNeSaQFyqiBU2CF33cgPa2klP&#13;
+CbVjJ1HFY3KEhOfkigtfdbco00oJ+6bjXZ4c4A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -348,4 +328,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_e9278a8e-15d5-417c-bb64-1f65c72b6b77" Target="#_7c7fd9b0-4459-4f49-8a1a-3d4ad6f2ede8"><Timestamp>2024-07-26 11:46:09</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_94634bc6-3e56-4401-8d5b-fe8db2218a43" Target="#_fae887d9-7723-478c-b909-61c2989f436f"><Timestamp>2024-07-26 12:19:11</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
