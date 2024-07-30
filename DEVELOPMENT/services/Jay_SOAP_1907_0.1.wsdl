@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="newSimpleSOAP_1907"
+		xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:tns="http://www.talend.org/service/"
+		targetNamespace="http://www.talend.org/service/">
+
+	<wsdl:types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.talend.org/service/">
+			<xsd:element name="newSimpleSOAP_1907OperationRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="id" type="xsd:int"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="newSimpleSOAP_1907OperationResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="order_date"
+							type="xsd:string">
+						</xsd:element>
+
+						<xsd:element name="order_amount"
+							type="xsd:string">
+						</xsd:element>
+						<xsd:element name="customer_id"
+							type="xsd:int">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		
+            <xsd:complexType name="NewElementType"></xsd:complexType>
+        </xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="newSimpleSOAP_1907OperationRequest">
+		<wsdl:part name="parameters" element="tns:newSimpleSOAP_1907OperationRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="newSimpleSOAP_1907OperationResponse">
+		<wsdl:part name="parameters" element="tns:newSimpleSOAP_1907OperationResponse"></wsdl:part>
+	</wsdl:message>
+
+	<wsdl:portType name="newSimpleSOAP_1907PortType">
+		<wsdl:operation name="newSimpleSOAP_1907Operation">
+			<wsdl:input message="tns:newSimpleSOAP_1907OperationRequest"></wsdl:input>
+			<wsdl:output message="tns:newSimpleSOAP_1907OperationResponse"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="newSimpleSOAP_1907Binding" type="tns:newSimpleSOAP_1907PortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="newSimpleSOAP_1907Operation">
+			<soap:operation soapAction="http://www.talend.org/service/newSimpleSOAP_1907Operation" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="newSimpleSOAP_1907">
+		<wsdl:port name="newSimpleSOAP_1907Port" binding="tns:newSimpleSOAP_1907Binding">
+			<soap:address location="http://localhost:8091/services/newSimpleSOAP_1907" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
