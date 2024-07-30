@@ -12,14 +12,22 @@
 			<xsd:element name="Soap_serverOperationRequest">
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="in" type="xsd:string"></xsd:element>
+						<xsd:element name="id" type="xsd:int"></xsd:element>
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
 			<xsd:element name="Soap_serverOperationResponse">
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="out" type="xsd:string"></xsd:element>
+						<xsd:element name="order_date "
+							type="xsd:string">
+						</xsd:element>
+						<xsd:element name="order_amount"
+							type="xsd:string">
+						</xsd:element>
+						<xsd:element name="customer_id"
+							type="xsd:int">
+						</xsd:element>
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
@@ -55,7 +63,7 @@
 
 	<wsdl:service name="Soap_server">
 		<wsdl:port name="Soap_serverPort" binding="tns:Soap_serverBinding">
-			<soap:address location="http://localhost:8090/services/Soap_server" />
+			<soap:address location="http://192.168.1.253:8090/services/Soap_server" />
 		</wsdl:port>
 	</wsdl:service>
 </wsdl:definitions>
