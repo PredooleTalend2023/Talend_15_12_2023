@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="test1"
+		xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:tns="http://www.talend.org/service/"
+		targetNamespace="http://www.talend.org/service/">
+
+	<wsdl:types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.talend.org/service/">
+			<xsd:element name="test1OperationRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="in" type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="test1OperationResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="out" type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="test1OperationRequest">
+		<wsdl:part name="parameters" element="tns:test1OperationRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="test1OperationResponse">
+		<wsdl:part name="parameters" element="tns:test1OperationResponse"></wsdl:part>
+	</wsdl:message>
+
+	<wsdl:portType name="test1PortType">
+		<wsdl:operation name="test1Operation">
+			<wsdl:input message="tns:test1OperationRequest"></wsdl:input>
+			<wsdl:output message="tns:test1OperationResponse"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="test1Binding" type="tns:test1PortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="test1Operation">
+			<soap:operation soapAction="http://www.talend.org/service/test1Operation" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="test1">
+		<wsdl:port name="test1Port" binding="tns:test1Binding">
+			<soap:address location="http://localhost:8090/services/test1" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
