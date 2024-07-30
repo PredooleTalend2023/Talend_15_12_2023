@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:TalendXMLMap="http://www.talend.org/xmlmap" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" hide="false" name="Default">
-    <contextParameter comment="" internalId="_5qK8AEWwEe-mhfigRoauIw" name="id" prompt="id?" promptNeeded="false" repositoryContextId="built-in" type="id_String" value=""/>
+    <contextParameter comment="" internalId="_5qK8AEWwEe-mhfigRoauIw" name="id" prompt="id?" promptNeeded="false" repositoryContextId="built-in" type="id_Integer" value=""/>
   </context>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" show="false" value="Info"/>
@@ -130,19 +130,19 @@
     <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="getParameter" name="getParameter">
-      <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_Integer" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row1">
         <nodes expression="" name="payload" type="id_Document" xpath="row1/payload">
           <children main="true" name="tns:newSimpleSOAP_1907OperationRequest" type="id_String" xpath="row1.payload:/tns:newSimpleSOAP_1907OperationRequest">
             <children defaultValue="http://www.talend.org/service/" name="tns" nodeType="NAME_SPACE" type="id_String" xpath="row1.payload:/tns:newSimpleSOAP_1907OperationRequest/xmlns:tns"/>
-            <children loop="true" name="id" outgoingConnections="//@node.1/@nodeData/@connections.0" type="id_String" xpath="row1.payload:/tns:newSimpleSOAP_1907OperationRequest/id"/>
+            <children loop="true" name="id" outgoingConnections="//@node.1/@nodeData/@connections.0" type="id_Integer" xpath="row1.payload:/tns:newSimpleSOAP_1907OperationRequest/id"/>
           </children>
         </nodes>
       </inputTrees>
       <outputTrees name="getParameter">
-        <nodes expression="[row1.payload:/tns:newSimpleSOAP_1907OperationRequest/id]" incomingConnections="//@node.1/@nodeData/@connections.0" name="id" type="id_String" xpath="getParameter/id"/>
+        <nodes expression=" [row1.payload:/tns:newSimpleSOAP_1907OperationRequest/id]" incomingConnections="//@node.1/@nodeData/@connections.0" name="id" type="id_Integer" xpath="getParameter/id"/>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
       <connections source="//@node.1/@nodeData/@inputTrees.0/@nodes.0/@children.0/@children.1" target="//@node.1/@nodeData/@outputTrees.0/@nodes.0" xsi:type="TalendXMLMap:Connection"/>
@@ -150,11 +150,11 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="240" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tJavaRow_1"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#13;&#10;context.id = input_row.id;&#10;System.out.println(((java.util.Collection&lt;org.apache.cxf.headers.Header&gt;)globalMap.get(&quot;tESBProviderRequest_1_HEADERS_SOAP&quot;)));&#13;&#10;System.out.println(context.id);"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="//Code generated according to input schema and output schema&#13;&#10;context.id = input_row.id;&#13;&#10;System.out.println(context.id);"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="getParameter" name="tJavaRow_1">
-      <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="-1" name="id" nullable="true" originalLength="-1" precision="-1" sourceType="id_String" type="id_Integer" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tFlowToIterate" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="360" posY="160">
@@ -208,7 +208,7 @@
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="orders" name="tDBInput_1">
-      <column comment="" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT IDENTITY" type="id_Integer" usefulColumn="true">
+      <column comment="" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
       <column comment="" key="false" length="10" name="order_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
@@ -242,8 +242,8 @@
         <nodes expression="" name="payload" type="id_Document" xpath="output/payload">
           <children main="true" name="tns:newSimpleSOAP_1907OperationResponse" type="id_String" xpath="output.payload:/tns:newSimpleSOAP_1907OperationResponse" xsi:type="TalendXMLMap:OutputTreeNode">
             <children defaultValue="http://www.talend.org/service/" name="tns" nodeType="NAME_SPACE" type="id_String" xpath="output.payload:/tns:newSimpleSOAP_1907OperationResponse/xmlns:tns" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row3.order_date" incomingConnections="//@node.5/@nodeData/@connections.0" loop="true" name="order_date" pattern="&quot;dd-MM-yyyy&quot;" type="id_Date" xpath="output.payload:/tns:newSimpleSOAP_1907OperationResponse/order_date" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression=" row3.order_amount" incomingConnections="//@node.5/@nodeData/@connections.1" name="order_amount" type="id_String" xpath="output.payload:/tns:newSimpleSOAP_1907OperationResponse/order_amount" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row3.order_date" incomingConnections="//@node.5/@nodeData/@connections.0" loop="true" name="order_date" type="id_String" xpath="output.payload:/tns:newSimpleSOAP_1907OperationResponse/order_date" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row3.order_amount" incomingConnections="//@node.5/@nodeData/@connections.1" name="order_amount" type="id_String" xpath="output.payload:/tns:newSimpleSOAP_1907OperationResponse/order_amount" xsi:type="TalendXMLMap:OutputTreeNode"/>
             <children expression="row3.customer_id" incomingConnections="//@node.5/@nodeData/@connections.2" name="customer_id" type="id_Integer" xpath="output.payload:/tns:newSimpleSOAP_1907OperationResponse/customer_id" xsi:type="TalendXMLMap:OutputTreeNode"/>
           </children>
         </nodes>
@@ -292,13 +292,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_13136951-91ee-471d-a13a-d3dcc677f3d0"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>lWDc6ySk4z5XhqXJsoJudiyXoXGBe5OI0WGhxl5uDoocdX+OExvh8f5DfC68JkUqs3YQVOsbNfwI&#13;
-zGNtqjukUg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_0c65223e-a293-4fb0-9632-4a5f6f762489"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>5ymyg/ywzQS+Y3v+eA54X70Y5XP9ybUJq51QIpfMp01FjXxxtOFPAwTtivvXX/HDlHH6QovyZnVl&#13;
-jjnujT4beQ==</DigestValue></Reference></SignedInfo><SignatureValue>DPIVJtojcC/XGiquWDxcWID9SUCMA0aRsbh7QMrj0zjHGzx64iBF8u0/emnRkdwvrr5sMje6QTlS&#13;
-BrYKi6s/DfEIqtsZNrPda1RQdJ2c5X0CjpV/OOWBOy4A2iSKIvR/T0N9A5LKdQsRFzAnbIJygToj&#13;
-buchAFBY4RsDj3bUqPEL2wClTGRCnQ5Q4OQ3FewO1G8JhFkwM9ThIC08Ig8dl3hwYGEWwHEzSCSz&#13;
-L4PHT/i6X1CdY2UUlGnSzG7Vi9yHry9thC5mdErK6qmrwcBZXENxEhrWK7MgHYIeXGz6fPJSExrA&#13;
-x+yYV0MWL1tGd8G8duPa0fGEzsgJhTwnHbgSnQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_97c3ba13-8bdc-4581-9ef1-21232adf06f5"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>o9GmzDOCW2/+jk07SHvPp921KrYvlK1QPGlfX+kPD9gX5578WeYJrf+oUqbjUjBIswoGiaPhw5Ax&#13;
+tMHT47IlVA==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_5136de33-39a3-483b-af12-30f00638be60"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>kppced78y3SgJEVuSwZnfkofSm6IBhXHFGXykBFtevOIbt/7/hDy99C5weCagct/zJcF1XbX9de6&#13;
+5v+T4bak9w==</DigestValue></Reference></SignedInfo><SignatureValue>AQUgTQOophLSyJs/EpnlCAsGygNSNeapZ5GPylxwkBeW4PHzYBR0Y/3B/KpOiHFTyFpI4zy7U9Ni&#13;
+qH2OL+uUWLCKhC7lrdn5h38y4l+ob/2GcIUcorxMSDNvPnETuLUCAkzjeAI45mZ2PSZ32cOsgsTy&#13;
+0CWeJlLq9cZPGSnRI5lZdiqKNw4MhAfiCEDv/Ek3zawmbBaWXonys5QHtEP7i8muQf7D0Uw3BCx2&#13;
+yJkk8xjaS44GNltZ2YULrT5gXnqshLNc9iId8cQRTSTMJKTNGnnl4NfCIkE1l2GgQtr3kLCKmUd7&#13;
+dvBeAnbxFqhzpaCr4POQJ+Thr+cUPfYDd4toCg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -320,4 +320,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_0c65223e-a293-4fb0-9632-4a5f6f762489" Target="#_13136951-91ee-471d-a13a-d3dcc677f3d0"><Timestamp>2024-07-22 06:24:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_5136de33-39a3-483b-af12-30f00638be60" Target="#_97c3ba13-8bdc-4581-9ef1-21232adf06f5"><Timestamp>2024-07-30 09:38:59</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="singleTableTransfer"
+		xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:tns="http://www.talend.org/service/"
+		targetNamespace="http://www.talend.org/service/">
+
+	<wsdl:types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.talend.org/service/">
+			<xsd:element name="singleTableTransferOperationRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="TableName" type="xsd:string"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="singleTableTransferOperationResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="CUSTOMERID" type="xsd:int"></xsd:element>
+						<xsd:element name="LOANTYPE"
+							type="xsd:string">
+						</xsd:element>
+						<xsd:element name="LOANAMOUNT"
+							type="xsd:double">
+						</xsd:element>
+						<xsd:element name="INTERESTRATE"
+							type="xsd:double">
+						</xsd:element>
+						<xsd:element name="STATUS"
+							type="xsd:string">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="singleTableTransferOperationRequest">
+		<wsdl:part name="parameters" element="tns:singleTableTransferOperationRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="singleTableTransferOperationResponse">
+		<wsdl:part name="parameters" element="tns:singleTableTransferOperationResponse"></wsdl:part>
+	</wsdl:message>
+
+	<wsdl:portType name="singleTableTransferPortType">
+		<wsdl:operation name="singleTableTransferOperation">
+			<wsdl:input message="tns:singleTableTransferOperationRequest"></wsdl:input>
+			<wsdl:output message="tns:singleTableTransferOperationResponse"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="singleTableTransferBinding" type="tns:singleTableTransferPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="singleTableTransferOperation">
+			<soap:operation soapAction="http://www.talend.org/service/singleTableTransferOperation" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="singleTableTransfer">
+		<wsdl:port name="singleTableTransferPort" binding="tns:singleTableTransferBinding">
+			<soap:address location="http://localhost:8092/services/singleTableTransfer" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

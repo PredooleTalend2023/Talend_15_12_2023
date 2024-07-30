@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Melita_TestAPI"
+		xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:tns="http://www.talend.org/service/"
+		targetNamespace="http://www.talend.org/service/">
+
+	<wsdl:types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.talend.org/service/">
+			<xsd:element name="Melita_TestAPIOperationRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+
+
+						<xsd:element name="in" type="xsd:string"></xsd:element>
+						<xsd:element name="AuthorizationHeader"
+							type="xsd:string">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Melita_TestAPIOperationResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+
+						<xsd:element name="out" type="xsd:string"></xsd:element>
+						<xsd:element name="AuthorizationHeader"
+							type="xsd:string">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="Melita_TestAPIOperationRequest">
+		<wsdl:part name="parameters" element="tns:Melita_TestAPIOperationRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="Melita_TestAPIOperationResponse">
+		<wsdl:part name="parameters" element="tns:Melita_TestAPIOperationResponse"></wsdl:part>
+	</wsdl:message>
+
+	<wsdl:portType name="Melita_TestAPIPortType">
+		<wsdl:operation name="Melita_TestAPIOperation">
+			<wsdl:input message="tns:Melita_TestAPIOperationRequest"></wsdl:input>
+			<wsdl:output message="tns:Melita_TestAPIOperationResponse"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="Melita_TestAPIBinding" type="tns:Melita_TestAPIPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="Melita_TestAPIOperation">
+			<soap:operation soapAction="http://www.talend.org/service/Melita_TestAPIOperation" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="Melita_TestAPI">
+		<wsdl:port name="Melita_TestAPIPort" binding="tns:Melita_TestAPIBinding">
+			<soap:address location="http://localhost:8090/services/Melita_TestAPI" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>

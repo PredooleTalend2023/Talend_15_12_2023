@@ -103,7 +103,7 @@
     <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
     <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" show="false" value="_1kGB4ETIEe-Uvc2d89fs-A"/>
     <elementParameter field="TEXT" name="API_ID" show="false" value=""/>
-    <elementParameter field="TEXT" name="REST_ENDPOINT" value="&quot;/v2/store/inventory&quot;"/>
+    <elementParameter field="TEXT" name="REST_ENDPOINT" value="&quot;/pet/findByStatus&quot;"/>
     <elementParameter field="TABLE" name="SCHEMAS">
       <elementValue elementRef="SCHEMA" value="uploadFile"/>
       <elementValue elementRef="HTTP_VERB" value="POST"/>
@@ -244,13 +244,19 @@
       <elementValue elementRef="PRODUCES" value="XML-JSON"/>
       <elementValue elementRef="STREAMING" value="false"/>
     </elementParameter>
+    <elementParameter field="CHECK" name="NEED_AUTH" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" show="false" value="SAML"/>
+    <elementParameter field="CHECK" name="NEED_AUTHORIZATION" show="false" value="false"/>
+    <elementParameter field="CLOSED_LIST" name="JWT_KEYSTORE_TYPE" show="false" value="JKS"/>
+    <elementParameter field="TEXT" name="JWT_KEYSTORE_URL" show="false" value=""/>
+    <elementParameter field="FILE" name="JWT_KEYSTORE_FILE" show="false" value=""/>
+    <elementParameter field="PASSWORD" name="JWT_KEYSTORE_PASSWORD" show="false" value="enc:system.encryption.key.v1:NNrI1GGUQROODEop19mLJkXWFbV3/AWJK1wfWKqm"/>
+    <elementParameter field="TEXT" name="JWT_KEYSTORE_ALIAS" show="false" value=""/>
+    <elementParameter field="TEXT" name="JWT_AUDIENCE" show="false" value=""/>
     <elementParameter field="CHECK" name="SERVICE_LOCATOR" value="false"/>
     <elementParameter field="TEXT" name="SERVICE_NAMESPACE" show="false" value="&quot;http://www.talend.org/rest/&quot;"/>
     <elementParameter field="TEXT" name="SERVICE_NAME" show="false" value="&quot;jay_REST_API_1807&quot;"/>
     <elementParameter field="CHECK" name="SERVICE_ACTIVITY_MONITOR" value="false"/>
-    <elementParameter field="CHECK" name="NEED_AUTH" value="true"/>
-    <elementParameter field="CLOSED_LIST" name="AUTH_TYPE" value="OIDC_PASSWORD_GRANT"/>
-    <elementParameter field="CHECK" name="NEED_AUTHORIZATION" show="false" value="false"/>
     <elementParameter field="CHECK" name="USE_BUSINESS_CORRELATION" value="false"/>
     <elementParameter field="CHECK" name="LOG_MESSAGES" value="false"/>
     <elementParameter field="CHECK" name="WRAP_JSON_REQUEST" value="false"/>
@@ -258,6 +264,7 @@
     <elementParameter field="TABLE" name="SERVICE_LOCATOR_CUSTOM_PROPERTIES" show="false"/>
     <elementParameter field="TABLE" name="SERVICE_ACTIVITY_MONITOR_CUSTOM_PROPERTIES" show="false"/>
     <elementParameter field="CHECK" name="CONVERT_JSON_VALUES_TO_STRING" value="false"/>
+    <elementParameter field="TABLE" name="JAXRS_PROPS"/>
     <elementParameter field="TEXT" name="LABEL" value="Jay_Swagger_Petstore"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <elementParameter field="MEMO" name="COMMENT" value="This is a sample server Petstore server.  You can find out more about Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).  For this sample, you can use the api key `special-key` to test the authorization filters."/>
@@ -278,7 +285,7 @@
       <column comment="" key="false" length="-1" name="body" nullable="true" originalLength="-1" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" name="findPetsByStatus">
-      <column comment="query(pending)" key="false" length="-1" name="status" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
     <metadata connector="FLOW" name="findPetsByTags">
       <column comment="query(Tags to filter by)" key="false" length="-1" name="tags" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
@@ -334,31 +341,20 @@
     </metadata>
     <metadata connector="FLOW" label="outp" name="outp"/>
   </node>
-  <node componentName="tLogRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="80">
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tLogRow_1"/>
-    <elementParameter field="RADIO" name="BASIC_MODE" value="false"/>
-    <elementParameter field="RADIO" name="TABLE_PRINT" value="true"/>
-    <elementParameter field="RADIO" name="VERTICAL" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE" show="false" value="true"/>
-    <elementParameter field="RADIO" name="PRINT_LABEL" show="false" value="false"/>
-    <elementParameter field="RADIO" name="PRINT_UNIQUE_LABEL" show="false" value="false"/>
-    <elementParameter field="TEXT" name="FIELDSEPARATOR" show="false" value="&quot;|&quot;"/>
-    <elementParameter field="CHECK" name="PRINT_HEADER" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_UNIQUE_NAME" show="false" value="false"/>
-    <elementParameter field="CHECK" name="PRINT_COLNAMES" show="false" value="false"/>
-    <elementParameter field="CHECK" name="USE_FIXED_LENGTH" show="false" value="false"/>
-    <elementParameter field="TABLE" name="LENGTHS" show="false">
-      <elementValue elementRef="SCHEMA_COLUMN" value="status"/>
-      <elementValue elementRef="LENGTH" value="10"/>
-    </elementParameter>
-    <elementParameter field="CHECK" name="PRINT_CONTENT_WITH_LOG4J" value="true"/>
-    <elementParameter field="TEXT" name="SCHEMA_OPT_NUM" show="false" value="100"/>
+  <node componentName="tRESTResponse" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="520" posY="80">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tRESTResponse_1"/>
+    <elementParameter field="REST_RESPONSE_SCHEMA_TYPE" name="RESPONSE_TYPE" value="id_String"/>
+    <elementParameter field="CLOSED_LIST" name="STATUS_CODE" value="200"/>
+    <elementParameter field="TEXT" name="CUSTOM_STATUS_CODE" show="false" value="200"/>
+    <elementParameter field="TABLE" name="RESPONSE_HEADERS"/>
+    <elementParameter field="CHECK" name="UNWRAP_JSON_RESPONSE" value="false"/>
+    <elementParameter field="TEXT" name="JSON_ARRAY_KEYS" value=""/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="tLogRow_1">
-      <column comment="query(pending)" key="false" length="-1" name="status" nullable="false" originalLength="-1" pattern="" precision="-1" sourceType="" type="id_String" usefulColumn="true"/>
+    <metadata connector="FLOW" name="tRESTResponse_1">
+      <column defaultValue="" key="false" length="0" name="body" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
-  <connection connectorName="FLOW" label="findPetsByStatus" lineStyle="0" metaname="findPetsByStatus" offsetLabelX="0" offsetLabelY="0" source="tRESTRequest_1" target="tLogRow_1">
+  <connection connectorName="FLOW" label="findPetsByStatus" lineStyle="0" metaname="findPetsByStatus" offsetLabelX="0" offsetLabelY="0" source="tRESTRequest_1" target="tRESTResponse_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="findPetsByStatus"/>
   </connection>
@@ -367,13 +363,13 @@
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_b867b37d-8784-4ee9-90fd-09f720af85ea"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Ngn6/Pfq/GdBIYZnKjJI+EHwHDxy0RTyv2D/imUccIgAve1Hr2B7mhy8gYByw1z7kz0G/2iGRVCi&#13;
-F2wY2woo0w==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_44682a7c-aaa2-4128-916f-a9e7048113b0"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>k6XzzbkO2qczHe9gq9zliosT5sIsKwSFqy0ZxPWLIER4Py/MA53oVfgR9bkRuc58r3IkC8KKqEHZ&#13;
-W/CIDf7Qow==</DigestValue></Reference></SignedInfo><SignatureValue>K7dnq/xVJaNe9Qiz6whyTcDQrylFDMMUgprVpcLg0OOirIXtLJbnL8ZDyXQ0T1qgvwAqzPxOAAY8&#13;
-5KznqvHhAGlXuuhKFU59SWa/SxNoM+uyVVh1djI//wqIWmo5k94oFUy3oaVy6Qv6SYqBT7nGayCB&#13;
-gr3nBoiV/lNp3l9/tyxGRXP8gIfqXR/B9d3FynXirD8+XVrVqFRp85T6oIMREjLPQCEXMHnNCOcH&#13;
-ZqqlUwOS8Khxpuy8VAtsoq37Qn8ta+AHPl0OzRL80LzThql4HSLrOxMe1UuK6jND/W5EeCB4ow7E&#13;
-sB9TEoxABNOqHjuYikYAzpv+334pB29nmXsCbA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_f203b4e7-9068-4f8f-ac43-9a80b65845db"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>8kmSax/Jz7Xy0wmmM0r0swTWi2Yx0vI/sVDrvtoaLLKPlv5Llvy8Begp0fF+uEPFApJRGp/wYT9N&#13;
+icTsuM6DOg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_c1a1d6cd-1589-4ef5-b4a0-6c58ff146b61"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>TofrgSl2X6pZPY28pDytl3gamXkRsbtGf21Cp+58YmL87gzG7T3mZzG9AqDdXVqkYAaR2XCwyEmq&#13;
+uaTU34yM+w==</DigestValue></Reference></SignedInfo><SignatureValue>GUr22/AqQvyDAreXjY9DJMUHhPcKjTXpkdi+uH8XYDabH92tOpcRev9mkJZHaNmN/yLENIVFg1OM&#13;
+3HqatIDfNLCqW4/qU+6l7aInDbc2pMnexV9FMp1q6UTghOPzqeqzPVopYX4m6bDR5/whtEzPOEZZ&#13;
+jjFvAwPCCwwWNrUdsmse/EX7YJXiANum9EGK3dSB+9Rfj2lERSlm2LXuB99ZYkmZwnSRKdFQpsbI&#13;
+bED1d5m96PE9LqtE9pAXxJO6wVUjFsd2lVxbXmT/uTBEkRHu+74WttbRDTRrT63wOMGNA4iQwN7r&#13;
+Nr2AjEsDVwFAo014lJm/D+wHTpfidub8HXiX4A==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -395,4 +391,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_44682a7c-aaa2-4128-916f-a9e7048113b0" Target="#_b867b37d-8784-4ee9-90fd-09f720af85ea"><Timestamp>2024-07-19 05:01:47</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_c1a1d6cd-1589-4ef5-b4a0-6c58ff146b61" Target="#_f203b4e7-9068-4f8f-ac43-9a80b65845db"><Timestamp>2024-07-30 04:20:31</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>

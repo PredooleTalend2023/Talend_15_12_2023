@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions name="Soap_server"
+		xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:tns="http://www.talend.org/service/"
+		targetNamespace="http://www.talend.org/service/">
+
+	<wsdl:types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.talend.org/service/">
+			<xsd:element name="Soap_serverOperationRequest">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="id" type="xsd:int"></xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="Soap_serverOperationResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="order_date "
+							type="xsd:string">
+						</xsd:element>
+						<xsd:element name="order_amount"
+							type="xsd:string">
+						</xsd:element>
+						<xsd:element name="customer_id"
+							type="xsd:int">
+						</xsd:element>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</wsdl:types>
+
+	<wsdl:message name="Soap_serverOperationRequest">
+		<wsdl:part name="parameters" element="tns:Soap_serverOperationRequest"></wsdl:part>
+	</wsdl:message>
+	<wsdl:message name="Soap_serverOperationResponse">
+		<wsdl:part name="parameters" element="tns:Soap_serverOperationResponse"></wsdl:part>
+	</wsdl:message>
+
+	<wsdl:portType name="Soap_serverPortType">
+		<wsdl:operation name="Soap_serverOperation">
+			<wsdl:input message="tns:Soap_serverOperationRequest"></wsdl:input>
+			<wsdl:output message="tns:Soap_serverOperationResponse"></wsdl:output>
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="Soap_serverBinding" type="tns:Soap_serverPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="Soap_serverOperation">
+			<soap:operation soapAction="http://www.talend.org/service/Soap_serverOperation" />
+			<wsdl:input>
+				<soap:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<wsdl:service name="Soap_server">
+		<wsdl:port name="Soap_serverPort" binding="tns:Soap_serverBinding">
+			<soap:address location="http://192.168.1.253:8091/services/Soap_server" />
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
