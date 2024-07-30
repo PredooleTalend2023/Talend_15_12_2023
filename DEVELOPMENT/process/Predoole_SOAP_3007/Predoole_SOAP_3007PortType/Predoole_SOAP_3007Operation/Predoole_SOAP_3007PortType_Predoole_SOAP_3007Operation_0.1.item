@@ -193,7 +193,7 @@
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" show="false" value=""/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
     <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
-    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.orders.order_amount&#10;FROM&#9;dbo.orders&#13;&#10;WHERE dbo.orders.\&quot;id\&quot; = '&quot;+context.in+&quot;'&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;SELECT dbo.orders.order_amount&#10;FROM&#9;dbo.orders&#13;&#10;WHERE dbo.orders.id = '&quot;+context.in+&quot;'&quot;"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
     <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
     <elementParameter field="TEXT" name="DATASOURCE_ALIAS" show="false" value="&quot;&quot;"/>
@@ -204,13 +204,7 @@
     <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
     <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
     <elementParameter field="TABLE" name="TRIM_COLUMN">
-      <elementValue elementRef="SCHEMA_COLUMN" value="id"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="order_date"/>
-      <elementValue elementRef="TRIM" value="false"/>
       <elementValue elementRef="SCHEMA_COLUMN" value="order_amount"/>
-      <elementValue elementRef="TRIM" value="false"/>
-      <elementValue elementRef="SCHEMA_COLUMN" value="customer_id"/>
       <elementValue elementRef="TRIM" value="false"/>
     </elementParameter>
     <elementParameter field="CHECK" name="SET_QUERY_TIMEOUT" value="false"/>
@@ -218,16 +212,7 @@
     <elementParameter field="TEXT" name="LABEL" value="__TABLE__"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" label="orders" name="tDBInput_1">
-      <column comment="" key="true" length="10" name="id" nullable="false" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="order_date" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
       <column comment="" key="false" length="53" name="order_amount" nullable="true" pattern="" precision="0" sourceType="FLOAT" type="id_Double" usefulColumn="true">
-        <additionalField key="Comment" value=""/>
-      </column>
-      <column comment="" key="false" length="10" name="customer_id" nullable="true" pattern="" precision="0" sourceType="INT" type="id_Integer" usefulColumn="true">
         <additionalField key="Comment" value=""/>
       </column>
     </metadata>
@@ -238,30 +223,23 @@
     <elementParameter field="CHECK" name="DIE_ON_ERROR" show="false" value="false"/>
     <elementParameter field="CHECK" name="KEEP_ORDER_FOR_DOCUMENT" value="false"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
-    <metadata connector="FLOW" name="output">
+    <metadata connector="FLOW" name="out">
       <column defaultValue="" key="false" length="0" name="payload" nullable="true" originalLength="-1" precision="0" sourceType="" type="id_Document" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendXMLMap:XmlMapData">
       <inputTrees lookupMode="LOAD_ONCE" matchingMode="ALL_ROWS" name="row3">
-        <nodes name="id" nullable="false" type="id_Integer" xpath="row3/id"/>
-        <nodes name="order_date" outgoingConnections="//@node.5/@nodeData/@connections.0" type="id_Date" xpath="row3/order_date"/>
-        <nodes name="order_amount" outgoingConnections="//@node.5/@nodeData/@connections.1" type="id_Double" xpath="row3/order_amount"/>
-        <nodes name="customer_id" outgoingConnections="//@node.5/@nodeData/@connections.2" type="id_Integer" xpath="row3/customer_id"/>
+        <nodes name="order_amount" outgoingConnections="//@node.5/@nodeData/@connections.0" type="id_Double" xpath="row3/order_amount"/>
       </inputTrees>
-      <outputTrees name="output">
-        <nodes expression="" name="payload" type="id_Document" xpath="output/payload">
-          <children main="true" name="tns:newSimpleSOAP_1907OperationResponse" type="id_String" xpath="output.payload:/tns:newSimpleSOAP_1907OperationResponse" xsi:type="TalendXMLMap:OutputTreeNode">
-            <children defaultValue="http://www.talend.org/service/" name="tns" nodeType="NAME_SPACE" type="id_String" xpath="output.payload:/tns:newSimpleSOAP_1907OperationResponse/xmlns:tns" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row3.order_date" incomingConnections="//@node.5/@nodeData/@connections.0" loop="true" name="order_date" type="id_String" xpath="output.payload:/tns:newSimpleSOAP_1907OperationResponse/order_date" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row3.order_amount" incomingConnections="//@node.5/@nodeData/@connections.1" name="order_amount" type="id_String" xpath="output.payload:/tns:newSimpleSOAP_1907OperationResponse/order_amount" xsi:type="TalendXMLMap:OutputTreeNode"/>
-            <children expression="row3.customer_id" incomingConnections="//@node.5/@nodeData/@connections.2" name="customer_id" type="id_Integer" xpath="output.payload:/tns:newSimpleSOAP_1907OperationResponse/customer_id" xsi:type="TalendXMLMap:OutputTreeNode"/>
+      <outputTrees name="out">
+        <nodes expression="" name="payload" type="id_Document" xpath="out/payload">
+          <children main="true" name="tns:Predoole_SOAP_3007OperationResponse" type="id_String" xpath="out.payload:/tns:Predoole_SOAP_3007OperationResponse" xsi:type="TalendXMLMap:OutputTreeNode">
+            <children defaultValue="http://www.talend.org/service/" name="tns" nodeType="NAME_SPACE" type="id_String" xpath="out.payload:/tns:Predoole_SOAP_3007OperationResponse/xmlns:tns" xsi:type="TalendXMLMap:OutputTreeNode"/>
+            <children expression="row3.order_amount" incomingConnections="//@node.5/@nodeData/@connections.0" loop="true" name="orderAmount" type="id_Double" xpath="out.payload:/tns:Predoole_SOAP_3007OperationResponse/orderAmount" xsi:type="TalendXMLMap:OutputTreeNode"/>
           </children>
         </nodes>
       </outputTrees>
       <varTables minimized="true" name="Var"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.1" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.2" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.2" xsi:type="TalendXMLMap:Connection"/>
-      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.3" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.3" xsi:type="TalendXMLMap:Connection"/>
+      <connections source="//@node.5/@nodeData/@inputTrees.0/@nodes.0" target="//@node.5/@nodeData/@outputTrees.0/@nodes.0/@children.0/@children.1" xsi:type="TalendXMLMap:Connection"/>
     </nodeData>
   </node>
   <node componentName="tESBProviderResponse" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="840" posY="160">
@@ -293,22 +271,22 @@
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="row3"/>
   </connection>
-  <connection connectorName="FLOW" label="output" lineStyle="0" metaname="output" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_2" target="tESBProviderResponse_1">
+  <connection connectorName="FLOW" label="out" lineStyle="0" metaname="out" offsetLabelX="0" offsetLabelY="0" source="tXMLMap_2" target="tESBProviderResponse_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="output"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="out"/>
   </connection>
   <subjob>
     <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tESBProviderRequest_1"/>
     <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="0;0;0"/>
     <elementParameter field="COLOR" name="SUBJOB_COLOR" value="247;247;247"/>
   </subjob>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_2531f96d-a08a-421d-8e4e-3b6bef1b0ee7"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>0Vw9vqYcY3fCuXdgs0dumoHFE3NOBpREUgh9HvWwxutXH+jqDOD9+YxbPssMLJrih+Jcw9GvznA7&#13;
-1bOF7/fZxg==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_012de870-72ee-4da2-840b-8351b0607662"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>F+PxnLbPYdCqqCeyY1qIL0U8iMzVcaeVJxxRCS0smgLABbIdMEL2AhNnKgPRqzHSyAbDNyRDprKU&#13;
-2Qr0oJlX6w==</DigestValue></Reference></SignedInfo><SignatureValue>Zc+urDfeU/gMDAoMUmbr8OOyMrXRzPW4smYQ0SOJiEq7LAv3PaB0utttz7BLKBO1+CncJnSbLs3j&#13;
-dPoSLPyPjg04LLJkZxw9GEyPHwV9Bc21f6RnO9xtejc+eUq4dPbyxstMU8A0jyiulWxg0Wu90mtq&#13;
-0OJzmf3SXIFG6rcZwu1caPHbrY9n0yq/CY+IP6qsj419JGGN0hOIla+L7qsJU7mTgXG5rV/iP0v3&#13;
-s6KiBIFBHZQq6RdOrrgReq3Mvf7r/1SSpR6+iQsvsSlsd4O6xuSxIxRTPIp9VQ15sf1EobK+egTG&#13;
-S4T2zU0v0/NpR2/FU/dauxjiuMiODZsILfgkjQ==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_1dbed99c-42ed-4c70-9554-70c4148631d9"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>rxBVhVOxZKH8RdGYCHbeS9SBiQaO7nHy8k/Qfqt2i6//+EqjD5TeT/C/KccGE9pzh7xgAJujKIPf&#13;
+Vf9Dhnq0Vw==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_82296696-bed3-4cb4-8f08-25acaef63345"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>Obk3/sB47+yFcK7Yl6qvQNnzQjTYTc2Xx6G+3ZirNx6bIJOUvWtTxJdN2RR/iQ8Y8O/m7bFADDcU&#13;
+vS0KxHszeg==</DigestValue></Reference></SignedInfo><SignatureValue>RXnULMG4KuGEQ/XL3hk+NBywQcJQV1aOM16tC6IRezV58lAKhGCf0VJ2F6T/VsXPErMFVb18r4AM&#13;
+yFuDuk6f9Wx4JZuJjOQzq1QWvPykAxHF0PUvvxGDZzR9hIBxps+Z1LAWwy1P5NDynjstnG6XRtmJ&#13;
+x40qi46SUQ2dolj7yf46Jepwp8XmOEvGmlvg7+a1DBzjhMgleeJvQF230Vu6og2qkF/zmYvCGuud&#13;
+3AMY2pWuHOfYHlfxN+PuO32XpMvY5KifgjEQ8D6hd0OM2Q0y4E82bQmrVpFczpqG2+kOIzKezg3o&#13;
+rUl6ODL/YYSEkGhkFkiLg4HRcwZMdHk87KAXQg==</SignatureValue><KeyInfo><X509Data><X509SubjectName>C=FR,ST=Paris,L=Paris,O=Talend Inc.,OU=R&amp;D,CN=Talend Code Signing certificate</X509SubjectName><X509Certificate>MIIFADCCAuigAwIBAgIIA2OsD6bRyj0wDQYJKoZIhvcNAQELBQAwgY0xCzAJBgNVBAYTAkZSMQ4w&#13;
 DAYDVQQIEwVQYXJpczEOMAwGA1UEBxMFUGFyaXMxFDASBgNVBAoTC1RhbGVuZCBJbmMuMQwwCgYD&#13;
 VQQLDANSJkQxFjAUBgNVBAMMDVRhbGVuZCBSJkQgQ0ExIjAgBgkqhkiG9w0BCQEWE3NlY3VyaXR5&#13;
 QHRhbGVuZC5jb20wHhcNMTkwNjAzMDgxODIwWhcNMjkwNjAzMDAwMDAwWjB7MSgwJgYDVQQDEx9U&#13;
@@ -330,4 +308,4 @@ hakvpzhOyLo91h8YAQrEZJdNuKA8IYmBrFZQZDCz0uywKSyFfzPyJhvxylCLG/iDPPfE0VWcrMJ/&#13
 WQJly/2XPg/NBCTF3pSKS0kCiA7PeaI3cWkMYYA3PMwYDvzqs1opBRglG7ikj0bQxSm3lcjMuuvW&#13;
 gBRksFKjP3K/nztsjSoYITOM9jR29ReIL3v0E8RbAFwA2RGq6Dxd0ixfbucMesy5Gnr8tfYy6rW+&#13;
 qSQqd3ah4+PSzBNVwIB4ytpdrG3SlhCI2i2Th8ek8Sjsaquh9qPAerWNd2+84HWOOGj1Xe1qc6vg&#13;
-qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_012de870-72ee-4da2-840b-8351b0607662" Target="#_2531f96d-a08a-421d-8e4e-3b6bef1b0ee7"><Timestamp>2024-07-30 12:04:54</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+qqu6JoK9EXKDiwBqDVkueIa+MhamE1VDnhn2pPui</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_82296696-bed3-4cb4-8f08-25acaef63345" Target="#_1dbed99c-42ed-4c70-9554-70c4148631d9"><Timestamp>2024-07-30 12:07:13</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
