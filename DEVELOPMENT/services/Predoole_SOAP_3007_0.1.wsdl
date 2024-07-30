@@ -12,14 +12,14 @@
 			<xsd:element name="Predoole_SOAP_3007OperationRequest">
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="in" type="xsd:string"></xsd:element>
+						<xsd:element name="in" type="xsd:int"></xsd:element>
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
 			<xsd:element name="Predoole_SOAP_3007OperationResponse">
 				<xsd:complexType>
 					<xsd:sequence>
-						<xsd:element name="out" type="xsd:string"></xsd:element>
+						<xsd:element name="orderAmount" type="xsd:double"></xsd:element>
 					</xsd:sequence>
 				</xsd:complexType>
 			</xsd:element>
@@ -55,7 +55,7 @@
 
 	<wsdl:service name="Predoole_SOAP_3007">
 		<wsdl:port name="Predoole_SOAP_3007Port" binding="tns:Predoole_SOAP_3007Binding">
-			<soap:address location="http://localhost:8090/services/Predoole_SOAP_3007" />
+			<soap:address location="http://localhost:8092/services/Predoole_SOAP_3007" />
 		</wsdl:port>
 	</wsdl:service>
 </wsdl:definitions>
